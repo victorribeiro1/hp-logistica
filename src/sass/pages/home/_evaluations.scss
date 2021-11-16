@@ -1,0 +1,251 @@
+.home {
+   .evaluations {
+      @include flex-container(column, flex-start, center);
+
+      position: relative;
+
+      overflow: hidden;
+
+      &__noise {
+         position: absolute;
+
+         mix-blend-mode: multiply;
+
+         width: 100%;
+      }
+
+      &__wrapper {
+         @include flex-container(row, flex-start, center);
+
+         border: 1px solid red;
+
+         overflow-y: visible;
+         overflow-x: scroll;
+
+         // margin: 200px 0;
+
+         height: 600px;
+         width: calc(100% - (var(--horizontal-distance) * 2));
+
+         &::-webkit-scrollbar {
+            display: none;
+         }
+
+         &__evaluation {
+            background-color: var(--color-secondary);
+            border-radius: 10px;
+
+            color: var(--color-tertiary);
+
+            cursor: pointer;
+
+            flex: none;
+
+            @include transition;
+
+            &:not(:last-of-type) {
+               margin-right: 100px;
+            }
+
+            &:nth-of-type(even) {
+               position: relative;
+               top: -90px;
+            }
+
+            padding: 20px 20px;
+
+            position: relative;
+            z-index: 1;
+
+            height: 350px;
+            width: 320px;
+
+            &--create {
+               @include flex-container(column, flex-start, flex-start);
+
+               color: var(--color-tertiary);
+
+               &:hover .evaluations__wrapper__evaluation--create {
+                  &__box {
+                     &__add {
+                        background-color: var(--color-tertiary);
+                        border: 1px solid var(--color-secondary);
+
+                        &__line {
+                           background-color: var(--color-secondary);
+                        }
+                     }
+                  }
+               }
+
+               &__question {
+                  font-family: 'aeonik light';
+                  font-size: 1.8rem !important;
+                  line-height: 25px;
+
+                  // margin-left: 20px;
+                  // margin-top: 20px;
+
+                  // color: blue
+                  width: 60%
+               }
+
+               &__box {
+                  @include flex-container(column, flex-start, center);
+
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+
+                  &__add {
+                     border-radius: 99px;
+                     border: 1px solid var(--color-tertiary);
+
+                     height: 80px;
+                     width: 80px;
+
+                     margin-bottom: 15px;
+
+                     position: relative;
+
+
+                     &__line {
+                        background-color: var(--color-tertiary);
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        @include transition;
+
+                        &--1 {
+                           height: 50%;
+                           width: 1px;
+                        }
+
+                        &--2 {
+                           height: 1px;
+                           width: 50%;
+                        }
+                     }
+                  }
+
+                  &__invite-box {
+
+                  }
+               }
+            }
+
+            &__evaluator {
+               @include flex-container(row, flex-start, center);
+
+               margin-bottom: 25px;
+
+               &__image {
+                  background: var(--color-tertiary);
+                  border-radius: 99px;
+
+                  margin-right: 10px;
+
+                  height: 55px;
+                  width: 55px;
+               }
+
+               &__name {
+                  font-size: 1.4rem;
+               }
+            }
+
+            &__text {
+               font-family: 'aeonik light';
+               font-size: 1.4rem;
+
+               line-height: 20px;
+            }
+            &--form {
+               @include flex-container(column, center, center);
+
+               border: 3px solid var(--color-tertiary);
+
+               position: absolute;
+               left: -100px;
+               // top: 70%;
+               transform: translateX(63%);
+               z-index: -10;
+
+               &.active {
+                  z-index: 10 !important;
+               }
+   
+               &__close {
+                  border-radius: 99px;
+                  border: 2px solid var(--color-tertiary);
+   
+                  height: 30px;
+                  width: 30px;
+   
+                  transform: rotate(45deg);
+
+                  position: absolute;
+                  top: 25px;
+                  right: 25px;
+   
+                  &__line {
+                     background-color: var(--color-tertiary);
+   
+                     position: absolute;
+                     left: 50%;
+                     top: 50%;
+                     transform: translate(-50%, -50%);
+   
+                     width: 60%;
+                     height: 2px;
+   
+                     &--2 {
+                        width: 2px;
+                        height: 60%;
+                     }
+                  }
+               }
+
+               &__input {
+                  // background-color: var(--color-tertiary);
+
+                  border: 1px solid var(--color-tertiary);
+                  border-radius: 0px;
+                  color: var(--color-secondary);
+
+
+                  font-size: 1.4rem;
+
+                  outline: none;
+
+                  padding: 10px 15px;
+
+                  // margin-left: 25px;
+
+                  width: 80%;
+
+                  &:last-of-type {
+                     cursor: pointer;
+                  }
+
+                  &--name {
+                     // margin-top: 70px;
+                     // margin-bottom: 25px
+                  }
+               }
+
+            }
+
+            &__input {
+
+            }
+         }
+
+      }
+
+   }
+}

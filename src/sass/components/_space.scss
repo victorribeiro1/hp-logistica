@@ -1,0 +1,35 @@
+.space {
+   height: 65vh;
+
+   @include flex-container;
+
+   position: relative;
+   z-index: 0;
+
+   &__little-text {
+      @include flex-container(column, flex-start, center);
+
+      &__line {
+         height: 85px;
+         width: 1px;
+
+         background-color: #cecece;
+
+         margin-bottom: 30px;
+      }
+
+      &__text {
+         font-size: 1.4rem;
+         font-weight: 600;
+         font-family: 'Aeonik Thin', Arial, Helvetica, sans-serif;
+
+
+         max-width: 80%;
+
+         line-height: 25px;
+         letter-spacing: 3px;
+
+         text-align: center;
+      }
+   }
+}

@@ -1,0 +1,5 @@
+para acessar o site abra o arquivo 'index.html', que está dentro da pasta public.
+Estamos utilizando o webpack para gerar o build do nosso projeto.
+Se você estiver interessado em visualizar os códigos que >nós< escrevemos de fato, olhe os arquivos dentro da pasta 'src'.
+
+INTEGRANTES: Luiz Felipe, Carlos Henrique, Victor Ribeiro Cunha

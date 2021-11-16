@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS hp;
+
+CREATE DATABASE IF NOT EXISTS hp;
+
+USE DATABASE hp;
+
+CREATE TABLE IF NOT EXISTS avaliacoes (
+   id INT AUTO_INCREMENT NOT NULL,
+   avaliador VARCHAR(60) NOT NULL,
+   avaliacao VARCHAR(400) NOT NULL,
+   PRIMARY KEY(id),
+   UNIQUE(id, avaliador, avaliacao)
+);

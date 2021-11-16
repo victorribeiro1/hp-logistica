@@ -1,0 +1,150 @@
+.home {
+   .slider {
+      @include flex-container(row, flex-start, center);
+
+      overflow: scroll;
+
+      &::-webkit-scrollbar{
+         // width: 2px;
+         display: none;
+         height: 0px;
+      }
+
+      &__slide {
+         // border: 2px solid green;
+
+         height: 100vh;
+         width: 100vw;
+
+         flex: none;
+
+         @include flex-container(row, flex-start, center);
+
+         position: relative;
+
+         overflow: hidden;
+
+         &--1 {
+            background-color: #D6D6D6;
+
+            .slider__slide__box {
+               &--dark {
+                  background-color: #CCCCCC;
+               }
+
+               &--light {
+                  background-color: #E6E7E7;
+               }
+            }
+         }
+
+         &--2 {
+            .slider__slide__box {
+               &--dark {
+                  background-color: #6B91B7;
+               }
+
+               &--light {
+                  background-color: #85ABD0;
+               }
+            }
+         }
+
+         &--3 {
+            .slider__slide__box {
+               &--dark {
+                  background-color: #C9A681;
+               }
+
+               &--light {
+                  background-color: #D4BB9C;
+               }
+            }
+         }
+
+         &__noise {
+            mix-blend-mode: multiply;
+
+            position: absolute;
+            z-index: 1;
+         }
+
+         &__box {
+            height: 100vh;
+            width: 50%;
+
+            position: relative;
+
+            // border: 5px solid blue;
+
+            &--dark {
+
+            }
+
+            &--light {
+
+            }
+
+         }
+
+         &__content-box {
+            // border: 10px solid red;
+
+            @include flex-container(row, flex-start, center);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+
+            width: calc(100% - (var(--horizontal-distance) * 2));
+
+            &__text-box {
+               // border: 1px solid blue;
+
+               width: 50%;
+
+               position: absolute;
+               left: 0;
+               z-index: 1;
+
+               &__title {
+                  font-family: 'aeonik light';
+                  font-size: 7rem;
+
+                  letter-spacing: 7px;
+
+                  margin-bottom: 20px;
+
+                  text-transform: uppercase;
+
+                  span {
+                     display: block;
+
+                     position: relative;
+                     right: -50px;
+                  }
+               }
+
+               &__text {
+                  // border: 1px solid purple;
+                  width: 80%;
+               }
+            }
+
+            &__img {
+               background-color: lightblue;
+
+               width: 60%;
+               // height: 300px;
+
+               object-fit: cover;
+
+               position: absolute;
+               right: 0;
+            }
+         }
+      }
+   }
+}

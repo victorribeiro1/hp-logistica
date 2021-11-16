@@ -1,0 +1,157 @@
+.menu {
+   background-color: transparent;
+   position: fixed;
+
+   @include flex-container (row, space-between, center);
+
+   width: 100%;
+   height: 100px;
+
+   z-index: 2;
+
+   // border: 1px solid black;
+   overflow: hidden;
+
+
+   transform: translateY(0%);
+
+   @include transition;
+
+   &.background {
+      background-color: white;
+
+      @include transition; 
+   }
+
+   &.background &__noise {
+      opacity: 1;
+   }
+
+   &.hide {
+      transform: translateY(-30%);
+      opacity: 0;
+   }
+
+   &__noise {
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+
+      opacity: 0;
+
+      object-fit: cover;
+
+      mix-blend-mode: multiply;
+
+      @include transition;
+   }
+
+   &__logo {
+      &,
+      &:link,
+      &:visited {
+         text-decoration: none;
+
+         display: block;
+
+         position: relative;
+
+         // margin-left: var(--horizontal-distance);
+      }
+
+      // background-color: blue;
+
+      img {
+         // image-rendering: crisp-edges;
+         width: 12rem;
+
+         margin-left: var(--horizontal-distance)
+      }
+   }
+
+   &__links {
+      @include flex-container (row, space-between, center);
+
+      position: relative;
+
+      :not(:last-child) {
+         margin-right: 60px;
+      }
+
+      &__link {
+         &,
+         &:link,
+         &:visited {
+            font-size: 1.3rem;
+            font-family: 'Aeonik Light';
+
+            color: var(--color-secondary);
+
+            text-decoration: none;
+            text-transform: uppercase;
+
+            @include transition;
+
+            &:hover {
+               color: var(--color-primary);
+            }
+
+            &--light {
+               &,
+               &:link,
+               &:visited {
+                  color: var(--color-primary) !important;
+               }
+            }
+         }
+
+      }
+   }
+
+   &__call-to-action {
+      &,
+      &:link,
+      &:visited {
+         color: var(--color-secondary);
+         font-family: 'Aeonik Light';
+         text-transform: uppercase;
+         text-decoration: none;
+
+         font-size: 1.3rem;
+
+         position: relative;
+
+         margin-right: var(--horizontal-distance);
+
+         padding: 6px;
+
+         &:hover {
+            color: var(--color-primary)
+         }
+
+         &::before {
+            content: "";
+
+            background-color: red;
+
+            height: 1px;
+            width: 90%;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+         }
+      }
+
+      &--light {
+         &,
+         &:link,
+         *:visited {
+            color: var(--color-primary) !important;
+         }
+      }
+
+   }
+}

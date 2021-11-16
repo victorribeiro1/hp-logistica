@@ -1,0 +1,30 @@
+@import './base/fonts';
+@import './base/normalize';
+@import './base/reset';
+@import './base/base';
+@import './base/typography';
+
+@import './utils/mixins';
+@import './utils/variables';
+
+
+@import './components/icon';
+@import './components/lines';
+@import './components/noises';
+@import './components/space';
+
+@import './layouts/footer';
+@import './layouts/menu';
+
+@import './pages/about';
+
+@import './pages/home/hero-section';
+@import './pages/home/about';
+@import './pages/home/slider';
+@import './pages/home/differential';
+@import './pages/home/faq';
+@import './pages/home/evaluations';
+
+@import './pages/admin';
+
+@import './pages/contato';

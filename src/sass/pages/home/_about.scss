@@ -1,0 +1,151 @@
+.home {
+   position: relative;
+   .about {
+      background-color: #FFF;
+
+      // height: 100vh;
+      // width: 50%;
+
+      // border: 1px solid black;
+
+      // padding: 0 var(--horizontal-distance);
+
+      overflow: hidden;
+
+      position: relative;
+
+      &__box {
+         @include flex-container(row, flex-start, flex-start);
+         height: 100vh;
+         // border: 5px solid black;
+
+         position: relative;
+         z-index: 0;
+
+         &--1 {
+            margin-bottom: 100px;
+         }
+
+         &__text-box-box {
+            // border: 2px solid blue;
+            height: 100vh;
+            width: 45%;
+
+
+
+            position: relative;
+
+
+            &__text-box {
+               // border: 2px solid pink;
+
+               @include flex-container(column, flex-start, flex-start);
+
+               position: absolute;
+               top: 0;
+               left: 50%;
+               transform: translateX(-50%);
+               // transform: translateY(-100%) translateX(-50%);
+
+               --margin-bottom: 25px;
+
+               width: 90%;
+
+               &__titles {
+                  // @include flex-container(column, flex-start, flex-start);
+
+                  margin-bottom: var(--margin-bottom );
+
+                  &__title {
+                     font-size: 3.3rem;
+                     margin-bottom: 5px;
+                     text-transform: capitalize;
+                  }
+
+                  &__subtitle {
+                     color: #424258af;
+                     font-size: 1.4rem;
+                     font-weight: 1000;
+                     letter-spacing: 1px;
+
+                     line-height: 16px;
+
+                     // font-family: 'aeonik bold';
+
+                     // max-width: 80%;
+
+                     text-transform: uppercase;
+                  }
+               }
+
+               &__text {
+                  font-family: 'aeonik light';
+                  font-size: 1.4rem;
+                  letter-spacing: 2px;
+                  line-height: 20px;
+
+                  margin-bottom: var(--margin-bottom );
+               }
+
+               &__button {
+                  &,
+                  &:link,
+                  &:visited {
+                     color: var(--color-secondary);
+                     font-family: 'aeonik light';
+                     font-size: 1.4rem;
+                     text-decoration: none;
+
+                     @include flex-container(row, flex-start, center);
+                  }
+
+                  &__text {
+                     margin-right: 20px;
+                     font-weight: 1000;
+                  }
+
+                  &__arrow {
+                     width: 40px;
+                     height: 8px;
+
+                     // border: 1px solid red;
+
+                     position: relative;
+
+                     &__body,
+                     &__head {
+                        background-color: var(--color-secondary);
+
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%)
+                     }
+
+                     &__body {
+                        width: 100%;
+                        height: 2px;
+                     }
+
+                     &__head {
+                        height: 100%;
+                        width: 2px;
+
+                        right: 0;
+
+                        transform: translateX(-3px) translateY(-87%) rotateZ(-45deg);
+                     }
+                  }
+               }
+            }
+
+         }
+
+         &__img {
+            height: 100vh;
+            width: 55%;
+
+            object-fit: cover;
+         }
+      }
+   }
+}

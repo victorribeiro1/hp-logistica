@@ -1,0 +1,15 @@
+.noises {
+   @include flex-container(column, flex-start, flex-start);
+
+   position: absolute;
+
+   z-index: 0;
+
+   &__noise {
+      width: 100%;
+
+      object-fit: cover;
+
+      mix-blend-mode: multiply;
+   }
+}

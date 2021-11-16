@@ -1,0 +1,113 @@
+.contact {
+    position: relative;
+
+    height: 100vh;
+    overflow: hidden;
+
+    @include flex-container(column, center, center);
+
+    &__noise {
+        mix-blend-mode: multiply;
+        width: 100%;
+
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &__box {
+        @include flex-container(column, flex-start, center);
+
+        position: relative;
+        top: -100px;
+        z-index: 0;
+
+        width: 70%;
+
+        &__title {
+            font-size: 7rem;      
+
+            margin-bottom: 25px;
+        }
+
+        &__form {
+            border: 2px solid var(--color-secondary);
+
+            outline: none;
+            
+            @include flex-container(row, flex-start, center);
+            
+            height: 40px;
+
+            width: 60%;
+            
+            &__input {
+                height: 100%;
+                border-radius: 0;
+                
+                padding: 5px;
+
+                font-size: 1.4rem;
+
+                border: none;
+                outline: none;
+
+                width: calc(100% - 40px);
+            }
+
+            &__arrow-box {
+                height: 100%;
+                width: 40px;
+
+                @include flex-container;
+
+                cursor: pointer;
+
+                background-color: var(--color-secondary);
+
+                &__arrow {
+                    border-top: 1px solid var(--color-tertiary);
+                    border-right: 1px solid var(--color-tertiary);
+
+                    height: 30%;
+                    width: 30%;
+
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__icons {
+        @include flex-container(row, space-between, center);
+
+        position: absolute;
+        bottom: 10%;
+
+        width: calc(100% - (var(--horizontal-distance) * 2));
+
+        &__icon-box {
+            @include flex-container(column, flex-start, center);
+
+            &__icon {
+                width: 30px;
+                height: 30px;
+
+                margin-bottom: 6px;
+            }
+
+            &__call {
+                font-weight: 1000;
+
+                font-size: 1.2rem;
+
+                margin-bottom: 6px;
+            }
+
+            &__more-call {
+
+            }
+        }
+    }
+}

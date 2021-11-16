@@ -1,0 +1,166 @@
+.admin {
+   height: 100vh;
+
+   @include flex-container(row, flex-start, flex-start);
+
+   position: relative;
+
+   overflow: hidden;
+
+   &__noise {
+      mix-blend-mode: multiply;
+
+      position: absolute;
+
+      object-fit: cover;
+
+      width: 100%;
+   }
+
+   &__box {
+      height: 100%;
+      width: 50%;
+
+      padding-top: 150px;
+      padding-left: var(--horizontal-distance);
+
+      // position: relative;
+
+      &--light {
+         background-color: var(--color-tertiary);
+
+         &__text-box {
+            position: relative;
+
+            &__title {
+               font-size: 8rem;
+
+               margin-bottom: 15px;
+            }
+
+            &__text {
+               font-family: 'aeonik light';
+               font-size: 1.4rem;
+
+               letter-spacing: 2px;
+
+               line-height: 20px;
+            }
+         }
+      }
+
+      &--dark {
+         background-color: var(--color-secondary);
+
+         color: var(--color-tertiary);
+
+         padding-right: var(--horizontal-distance);
+
+         &__title {
+            font-size: 2rem;
+
+            margin-bottom: 25px;
+         }
+
+         &__evaluations {
+            @include flex-container(column, flex-start, flex-start);
+
+            overflow-y: scroll;
+
+            max-height: 400px;
+
+            padding-right: 5px;
+
+            position: relative;
+
+            &__evaluation {
+               background-color: var(--color-tertiary);
+               border-radius: 5px;
+
+               color: var(--color-secondary);
+
+               @include flex-container(row, space-evenly, center);
+
+               flex: none;
+
+               font-size: 1.6rem;
+
+               width: 100%;
+               height: 50px;
+
+               // padding: 0 12px;
+
+               :not(:last-child) {
+                  margin-right: 10px;
+               }
+
+               &:not(:last-of-type) {
+                  margin-bottom: 50px;
+               }
+
+               &__id {
+
+               }
+
+               &__divisor {
+                  background-color: var(--color-secondary);
+
+
+                  height: 100%;
+                  width: 1px;
+               }
+
+               &__writer {
+
+               }
+
+               &__tools {
+                  // border: 1px solid blue;
+
+                  height: 100%;
+
+                  @include flex-container(row, flex-start, center);
+
+                  &__update {
+                     height: 20px;
+                     width: 20px;
+
+                     margin-right: 20px !important;
+                  }
+
+                  &__delete {
+                     border: 2px solid var(--color-secondary);
+
+                     border-radius: 99px;
+
+                     position: relative;
+
+                     height: 20px;
+                     width: 20px;
+
+                     transform: rotate(45deg);
+
+                     &__line {
+                        background-color: var(--color-secondary);
+                        height: 1px;
+                        width: 50%;
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        &--1 {
+
+                        }
+
+                        &--2 {
+                           transform: translate(-50%, -50%) rotate(90deg);
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

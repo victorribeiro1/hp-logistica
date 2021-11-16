@@ -1,0 +1,148 @@
+.login {
+   height: 100vh;
+   overflow: hidden;
+   @include flex-container();
+
+   &__form-box {
+      background-color: white;
+
+      height: 100%;
+      width: 30%;
+
+      @include flex-container(column, flex-start, center);
+
+      & > :not(:last-child) {
+         margin-bottom: 50px;
+      }
+
+      &__logo {
+         background-color: lightblue;
+
+         height: 30px;
+         width: 50px;
+
+         margin-top: 50px;
+      }
+
+      &__text {
+         font-size: 2.5rem;
+      }
+
+      &__form {
+         @include flex-container(column, flex-start, center);
+
+         height: 30%;
+
+         // border: 1px solid black;
+
+         width: 70%;
+
+         &__inputs {
+            @include flex-container(column, flex-start, center);
+
+            width: 100%;
+
+            &__input {
+               background-color: #ddd;
+
+               border: none;
+               border-radius: 8px;
+
+               height: 40px;
+               width: 100%;
+
+               position: relative;
+
+               padding-left: 10px;
+
+               font-size: 1.4rem;
+
+               &::before {
+                  background-color: #f0f;
+                  content: "Texto";
+
+                  font-size: 2rem;
+
+                  position: absolute;
+                  top: 50px;
+               }
+
+               &:first-of-type {
+                  margin-bottom: 15px;
+               }
+            }
+         }
+
+         &__button {
+            background-color: red;
+            padding: 10px 45px;
+
+            cursor: pointer;
+
+            border-radius: 13px;
+
+            font-size: 1.4rem;
+
+            border: none;
+
+            height: 35px;
+            width: 80%;
+
+            margin-top: 30px;
+
+            @include flex-container;
+
+            &__text {
+               color: white;
+            }
+         }
+      }
+   }
+
+   &__right-box {
+      background-color: #ddd;
+
+      height: 100%;
+      width: 70%;
+
+      position: relative;
+
+      &__text {
+         position: relative;
+         bottom: -30px;
+         right: -30px;
+
+         font-size: 2rem;
+
+         &__hp {
+            text-transform: uppercase;
+            color: red;
+         }
+      }
+
+      &__logo {
+         background-color: lightblue;
+
+         height: 350px;
+         width: 350px;
+
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      &__line {
+         background-color: red;
+
+         height: 60px;
+         width: 400px;
+
+         position: absolute;
+         bottom: 0;
+         right: 0;
+
+         transform: rotate(-45deg) translateX(25%) translateY(40%);
+      }
+   }
+}
