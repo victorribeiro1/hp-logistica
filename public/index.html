@@ -20,7 +20,7 @@
                <a href="" class="menu__links__link">Home</a>
             </li>
             <li>
-               <a href="./sobre.html" class="menu__links__link">Sobre Nós</a>
+               <a href="./sobre-nos" class="menu__links__link">Sobre Nós</a>
             </li>
             <li>
                <a href="" class="menu__links__link menu__links__link--light">Contato</a>
@@ -371,74 +371,6 @@
                </div>
             </div>
          </div>
-
-         <div class="evaluations">
-            <div class="noises">
-               <img src="assets/noise.jpg" alt="" class="noises__noise noises__noise--1">
-               <img src="assets/noise.jpg" alt="" class="noises__noise noises__noise--2">
-            </div>
-
-            <div class="space space--1">
-               <div class="space__little-text">
-                  <div class="space__little-text__line"></div>
-                     <p class="space__little-text__text">Ajudando a sua empresa a entregar os produtos com o melhor atendimento</p>
-               </div>
-            </div>
-
-            <div class="evaluations__wrapper">
-               <div class="evaluations__wrapper__evaluation evaluations__wrapper__evaluation--create" id="create">
-                  <p class="evaluations__wrapper__evaluation--create__question">Tem algo para compartilhar?</p>
-                  <div class="evaluations__wrapper__evaluation--create__box">
-                     <div class="evaluations__wrapper__evaluation--create__box__add">
-                        <div class="evaluations__wrapper__evaluation--create__box__add__line evaluations__wrapper__evaluation--create__box__add__line--1"></div>
-                        <div class="evaluations__wrapper__evaluation--create__box__add__line evaluations__wrapper__evaluation--create__box__add__line--2"></div>
-                     </div>
-                     <span class="evaluations__wrapper__evaluation--create__box__invite-text">Adicionar comentário</span>
-                  </div>
-               </div>
-
-               <form method="post" action="index.php" class="evaluations__wrapper__evaluation evaluations__wrapper__evaluation--form" id="popUp">
-                  <div class="evaluations__wrapper__evaluation--form__close" id="close">
-                     <div class="evaluations__wrapper__evaluation--form__close__line evaluations__wrapper__evaluation--form__close__line--1"></div>
-                     <div class="evaluations__wrapper__evaluation--form__close__line evaluations__wrapper__evaluation--form__close__line--2"></div>
-                  </div>
-                  <input type="text" name="avaliador" placeholder="Nome" class="evaluations__wrapper__evaluation--form__input evaluations__wrapper__evaluation--form__input--name">
-                  <input type="text" name="avaliacao" placeholder="Avaliação" class="evaluations__wrapper__evaluation--form__input evaluations__wrapper__evaluation--form__input--evaluation">
-                  <input type="submit" name="Adicionar" class="evaluations__wrapper__evaluation--form__input evaluations__wrapper__evaluation--form__input" id='submit'>
-               </form>
-
-               <?php
-                  if($_POST) {
-                     $avaliador = $_POST['avaliador'];
-                     $avaliacao = $_POST['avaliacao'];
-                     
-                     $connection = new mysqli('localhost', 'root', '', 'hp', 3303);
-                     $stmt = $connection->prepare("INSERT INTO avaliacoes (avaliador, avaliacao) VALUES (?,?)");
-                     $stmt->bind_param("ss",$avaliador,$avaliacao);
-                     $stmt->execute();
-                  }
-               ?>
-
-               <?php
-                  $connection = mysqli_connect('localhost', 'root', '', 'hp', 3303);
-                  $sql = "SELECT * FROM avaliacoes";
-                  $result = mysqli_query($connection, $sql);
-
-                  while ($row = $result->fetch_assoc()) {
-                     echo "<div class='evaluations__wrapper__evaluation'>";
-                        echo "<div class='evaluations__wrapper__evaluation__evaluator'>";
-                           echo "<img src='./assets/foto_usuario.png' class='evaluations__wrapper__evaluation__evaluator__image'>";
-                           echo "<span class='evaluations__wrapper__evaluation__evaluator__name'>"; echo $row['avaliador']; echo "</span>";
-                        echo "</div>";
-
-                        echo "<p class='evaluations__wrapper__evaluation__text'>";
-                           echo $row['avaliacao'];
-                        echo "</p>";
-                     echo "</div>";
-                  };
-               ?>
-            </div>
-         </div>
       </main>
 
       <div class="footer">
@@ -470,10 +402,10 @@
                      <a href="" class="footer__content-box__fast-links__list__item__link">Home</a>
                   </li>
                   <li class="footer__content-box__fast-links__list__item">
-                     <a href="./sobre.html" class="footer__content-box__fast-links__list__item__link">Sobre</a>
+                     <a href="./sobre-nos" class="footer__content-box__fast-links__list__item__link">Sobre</a>
                   </li>
                   <li class="footer__content-box__fast-links__list__item">
-                     <a href="./contato.html" class="footer__content-box__fast-links__list__item__link footer__content-box__fast-links__list__item__link--last">Contato</a>
+                     <a href="./contato" class="footer__content-box__fast-links__list__item__link footer__content-box__fast-links__list__item__link--last">Contato</a>
                   </li>
                </ul>
             </div>
@@ -482,7 +414,7 @@
                <h5 class="footer__content-box__fast-links__title">Fale Conosco</h5>
                <ul class="footer__content-box__fast-links__list">
                   <li class="footer__content-box__fast-links__list__item">
-                     <a href="./contato.html" class="footer__content-box__fast-links__list__item__link">Página de contato</a>
+                     <a href="./contato" class="footer__content-box__fast-links__list__item__link">Página de contato</a>
                   </li>
                   <li class="footer__content-box__fast-links__list__item">
                      <span class="footer__content-box__fast-links__list__item__link">Takaharo Urano, 943</span>
