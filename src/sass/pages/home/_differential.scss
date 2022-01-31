@@ -2,14 +2,16 @@
    .differential {
       overflow: hidden;
       // height: 100vh;
-
       position: relative;
+      z-index: 10;
 
       &__differentials {
          background-color: var(--color-secondary);
          border-radius: 20px;
 
          height: 80vh;
+         max-height: 800px;
+
          width: 80%;
 
          overflow: hidden;
@@ -51,65 +53,30 @@
 
                &__text {
                   font-family: 'aeonik light';
-                  font-size: 1.2rem;
+                  font-size: 1.4rem;
                   font-weight: 100;
                   letter-spacing: 2px;
                   word-spacing: 4px;
-                  line-height: 16px;
+                  line-height: 22px;
                   text-align: left;
                }
             }
          }
 
-         &__button {
+         .secondary-button {
             &,
             &:link,
             &:visited {
                color: var(--color-tertiary);
-
-               font-size: 1.4rem;
-
-               text-decoration: none;
             }
-
-            @include flex-container;
 
             position: absolute;
             bottom: 75px;
 
-            &__text {
-               margin-right: 20px;
-            }
-
             &__arrow {
-               width: 40px;
-               height: 8px;
-
-               // border: 1px solid red;
-
-               position: relative;
-
                &__body,
                &__head {
                   background-color: var(--color-tertiary);
-
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%)
-               }
-
-               &__body {
-                  width: 100%;
-                  height: 2px;
-               }
-
-               &__head {
-                  height: 100%;
-                  width: 2px;
-
-                  right: 0;
-
-                  transform: translateX(-3px) translateY(-87%) rotateZ(-45deg);
                }
             }
          }
