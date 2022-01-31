@@ -1,16 +1,40 @@
 .space {
    height: 65vh;
+   min-height: 500px;
+   max-height: 750px;
+
+   width: 100%;
+   max-width: var(--max-width);
+
+   // background-color: red;
 
    @include flex-container;
 
    position: relative;
    z-index: 0;
 
+   // &__noise {
+   //    // margin-left: calc(var(--horizontal-distance) * -1);
+   //    // height: 100%;
+   //    width: 100%;
+   //    max-width: var(--max-width);
+   //    // background-image: url('/src/medias/images/noise.jpg');
+
+   //    mix-blend-mode: multiply;
+
+   //    position: absolute;
+
+   //    &::selection {
+   //       background-color: transparent;
+   //    }
+   // }
+
    &__little-text {
       @include flex-container(column, flex-start, center);
+      z-index: 2;
 
       &__line {
-         height: 85px;
+         height: 110px;
          width: 1px;
 
          background-color: #cecece;
@@ -19,15 +43,14 @@
       }
 
       &__text {
-         font-size: 1.4rem;
-         font-weight: 600;
-         font-family: 'Aeonik Thin', Arial, Helvetica, sans-serif;
-
+         // font-size: 1.4rem;
+         // font-weight: 600;
+         // font-family: 'Aeonik Thin', Arial, Helvetica, sans-serif ;
 
          max-width: 80%;
 
-         line-height: 25px;
-         letter-spacing: 3px;
+         // line-height: 25px;
+         // letter-spacing: 3px;
 
          text-align: center;
       }

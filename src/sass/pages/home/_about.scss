@@ -10,6 +10,8 @@
 
       // padding: 0 var(--horizontal-distance);
 
+      max-width: var(--max-width);
+
       overflow: hidden;
 
       position: relative;
@@ -57,14 +59,16 @@
                   margin-bottom: var(--margin-bottom );
 
                   &__title {
-                     font-size: 3.3rem;
-                     margin-bottom: 5px;
+                     font-size: 3.5rem;
+                     margin-bottom: 8px;
                      text-transform: capitalize;
+                     line-height: 30px;
                   }
 
                   &__subtitle {
+                     // border: 1px solid red;
                      color: #424258af;
-                     font-size: 1.4rem;
+                     font-size: 1.6rem;
                      font-weight: 1000;
                      letter-spacing: 1px;
 
@@ -79,69 +83,18 @@
                }
 
                &__text {
-                  font-family: 'aeonik light';
-                  font-size: 1.4rem;
-                  letter-spacing: 2px;
-                  line-height: 20px;
+                  // font-family: 'aeonik light';
+                  font-size: 1.6rem;
+                  // letter-spacing: 2px;
+                  // line-height: 20px;
 
                   margin-bottom: var(--margin-bottom );
                }
-
-               &__button {
-                  &,
-                  &:link,
-                  &:visited {
-                     color: var(--color-secondary);
-                     font-family: 'aeonik light';
-                     font-size: 1.4rem;
-                     text-decoration: none;
-
-                     @include flex-container(row, flex-start, center);
-                  }
-
-                  &__text {
-                     margin-right: 20px;
-                     font-weight: 1000;
-                  }
-
-                  &__arrow {
-                     width: 40px;
-                     height: 8px;
-
-                     // border: 1px solid red;
-
-                     position: relative;
-
-                     &__body,
-                     &__head {
-                        background-color: var(--color-secondary);
-
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%)
-                     }
-
-                     &__body {
-                        width: 100%;
-                        height: 2px;
-                     }
-
-                     &__head {
-                        height: 100%;
-                        width: 2px;
-
-                        right: 0;
-
-                        transform: translateX(-3px) translateY(-87%) rotateZ(-45deg);
-                     }
-                  }
-               }
             }
-
          }
 
          &__img {
-            height: 100vh;
+            height: 103vh;
             width: 55%;
 
             object-fit: cover;

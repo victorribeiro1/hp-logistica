@@ -6,7 +6,7 @@ html {
 }
 
 p.commum {
-    font-size: 1.8rem;
+    font-size: var(--commum-text-size);
     font-family: 'Aeonik Light';
     word-spacing: 5px;
     letter-spacing: 2px;

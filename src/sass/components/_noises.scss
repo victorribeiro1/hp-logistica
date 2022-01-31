@@ -1,6 +1,9 @@
 .noises {
    @include flex-container(column, flex-start, flex-start);
 
+   width: 100%;
+   max-width: var(--max-width);
+
    position: absolute;
 
    z-index: 0;
