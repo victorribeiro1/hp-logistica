@@ -1,9 +1,14 @@
 .home {
+   max-width: var(--max-width);
+   
    .hero-section {
       background-color: var(--color-tertiary);
 
       height: 100vh;
-      min-height: 635px;
+      max-height: 1200px;
+      min-height: 800px;
+
+      max-width: var(--max-width);
 
       @include flex-container(row, space-between, center);
 
@@ -17,6 +22,7 @@
          // margin-left: calc(var(--horizontal-distance) * -1);
          height: 100%;
          width: 100vw !important;
+         max-width: var(--max-width);
          // background-image: url('/src/medias/images/noise.jpg');
 
          mix-blend-mode: multiply;
@@ -43,17 +49,20 @@
 
          &__main-text {
             letter-spacing: 5px;
-            font-size: 10rem;
+            font-size: 14rem;
+            line-height: 120px;
+            // font-family: 'Aeonik Light';
 
             span {
-               font-style: italic;
+               transform: skewX(-15deg);
+               display: inline-block;
                position: relative;
 
                &::before {
                   content: "";
 
                   position: absolute;
-                  top: 62%;
+                  top: 65%;
                   left: 50%;
                   transform: translate(-50%, -50%);
 
@@ -66,13 +75,9 @@
          }
 
          &__description {
-            font-size: 1.6rem;
-            font-family: 'Aeonik Light';
-            word-spacing: 5px;
-            letter-spacing: 2px;
-            line-height: 22px;
-
             margin-bottom: 40px !important;
+
+            max-width: 90%;
          }
 
          &__main-button {
@@ -87,7 +92,7 @@
                @include flex-container(row, space-around, center);
 
                height: 50px;
-               width: 280px;
+               width: 47%;
 
                margin-bottom: 50px !important;
 
@@ -122,7 +127,7 @@
 
             &__text {
                font-family: 'Aeonik LightItalic';
-               font-size: 1.6rem;
+               font-size: var(--commum-text-size);
                letter-spacing: 3px;
                color: var(--color-primary);
             }
@@ -172,9 +177,9 @@
 
             // background-color: #fff;
 
-            margin-top: 100px;
+            // margin-top: 100px;
 
-            width: 70%;
+            width: 50%;
 
             position: relative;
 
@@ -214,6 +219,8 @@
 
                @include flex-container(row, flex-start, center);
 
+               font-family: 'Aeonik Regular';
+
                &:first-of-type {
                   // margin-right: 50px;
                }
@@ -221,7 +228,7 @@
                &__percentage {
                   // border: 1px solid red;
 
-                  font-size: 1.8rem;
+                  font-size: 2.5rem;
 
                   @include flex-container(row, flex-start, center);
 
@@ -231,7 +238,7 @@
                &__text {
                   // border: 1px solid blue;
 
-                  font-size: 1.2rem;
+                  font-size: 1.4rem;
 
                   width: 50%;
                }
@@ -240,10 +247,11 @@
       }
 
       &__image {
-         width: 600px;
+         width: 70rem;
          position: relative;
          top: -25px;
-         left: -80px;
+         // left: -80px;
+         margin-right: var(--horizontal-distance);
          // height: 250px;
 
          // background-color: #f0f;

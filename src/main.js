@@ -11,8 +11,9 @@ const brownSlideImage = require('./medias/images/brown-slide-image.jpg')
 const blueSlideImage = require('./medias/images/blue-slide-image.jpg')
 const userImage = require('./medias/images/foto_usuario.png')
 
-const menu = require('./js/menu')
 const faq = require('./js/faq')
+const menu = require('./js/menu')
+const onload = require('./js/onload')
 
 // const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
 // const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')

@@ -6,11 +6,21 @@
     box-sizing: inherit;
 }
 
+html {
+   opacity: 0;
+
+   transition: ease .5s;
+}
+
+html.active {
+   opacity: 1;
+}
+
 body {
     box-sizing: border-box;
     color: var(--color-secondary);
 
-   }
+}
 
    html {
       overflow-x: hidden;

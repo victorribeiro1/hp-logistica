@@ -9,9 +9,16 @@ html {
    // font-families
 
    // horizontal distances
-   --horizontal-distance: 100px;
+   --horizontal-distance: 120px;
 
-   //transition
+   // sizes
+   --min-width: 1660px;
+   --max-width: 2100px;
+
+   // transition
    --transition-speed: .5s;
    --transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+   // texts
+   --commum-text-size: 1.8rem;
 }

@@ -1,10 +1,10 @@
 .menu {
-   background-color: transparent;
    position: fixed;
 
    @include flex-container (row, space-between, center);
 
    width: 100%;
+   max-width: var(--max-width);
    height: 100px;
 
    z-index: 2;
@@ -64,7 +64,7 @@
 
       img {
          // image-rendering: crisp-edges;
-         width: 12rem;
+         width: 14rem;
 
          margin-left: var(--horizontal-distance)
       }
@@ -83,7 +83,7 @@
          &,
          &:link,
          &:visited {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-family: 'Aeonik Light';
 
             color: var(--color-secondary);
@@ -118,7 +118,7 @@
          text-transform: uppercase;
          text-decoration: none;
 
-         font-size: 1.3rem;
+         font-size: 1.4rem;
 
          position: relative;
 
