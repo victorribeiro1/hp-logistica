@@ -991,7 +991,7 @@ html {
   background-color: var(--color-tertiary);
   height: 100vh;
   max-height: 1200px;
-  min-height: 800px;
+  min-height: 630px;
   max-width: var(--max-width);
   min-width: 1350px;
   display: flex;
