@@ -2,56 +2,16 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
 @font-face {
-  src: url(e72a0cf9cc8411371947.otf);
-  font-family: "Aeonik Air";
-}
-@font-face {
-  src: url(6cdd44c60938cf4fc034.otf);
-  font-family: "Aeonik AirItalic";
-}
-@font-face {
-  src: url(ccf4024b25eec28be340.otf);
-  font-family: "Aeonik BlackItalic";
-}
-@font-face {
-  src: url(a3a91f0710ce93317733.otf);
+  src: url(a9f9e290a95e54c834cc.otf);
   font-family: "Aeonik Bold";
 }
 @font-face {
-  src: url(770f0c6b6ef6e64a0645.otf);
+  src: url(5641be7aee56a186e841.otf);
   font-family: "Aeonik Light";
 }
 @font-face {
-  src: url(b6becd62c18775ac9910.otf);
-  font-family: "Aeonik LightItalic";
-}
-@font-face {
-  src: url(3ed3617851ca09c5c8ca.otf);
-  font-family: "Aeonik Medium";
-}
-@font-face {
-  src: url(399eaf8c51c1d0096332.otf);
-  font-family: "Aeonik MediumItalic";
-}
-@font-face {
-  src: url(4f36f6880f84f9c9e337.otf);
+  src: url(940015ab3999d5000f04.otf);
   font-family: "Aeonik Regular";
-}
-@font-face {
-  src: url(a86949321979ec66472d.otf);
-  font-family: "Aeonik RegularItalic";
-}
-@font-face {
-  src: url(5f053c6b6c30034467b1.otf);
-  font-family: "Aeonik Thin";
-}
-@font-face {
-  src: url(a160ecb4a72268085e3e.otf);
-  font-family: "Aeonik ThinItalic";
-}
-@font-face {
-  src: url(86e747d8b10ce7e39527.otf);
-  font-family: "new york";
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

@@ -17,8 +17,8 @@ faqs.forEach(faq => {
       
 
       faq.style.height = questionBox.clientHeight + (lineBox.clientHeight / 2) + lineBox.clientHeight + 70 + answerBox.clientHeight +  'px'
-      console.log(faq.querySelector(questionBox).clientHeight)
-      console.log(faq.querySelector(answerBox).clientHeight)
+      // console.log(faq.querySelector(questionBox).clientHeight)
+      // console.log(faq.querySelector(answerBox).clientHeight)
 
    })
 
@@ -29,8 +29,8 @@ faqs.forEach(faq => {
 
       
       faq.style.height = questionBox.clientHeight + (lineBox.clientHeight / 2) + lineBox.clientHeight + 70 + answerBox.clientHeight +  'px'
-      console.log(faq.querySelector(questionBox).clientHeight)
-      console.log(faq.querySelector(answerBox).clientHeight)
+      // console.log(faq.querySelector(questionBox).clientHeight)
+      // console.log(faq.querySelector(answerBox).clientHeight)
 
    })
    
