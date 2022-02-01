@@ -4358,7 +4358,7 @@ eval("document.querySelector('html').classList.add('active');\n\n//# sourceURL=w
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n__webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\nvar logo = __webpack_require__(/*! ./medias/images/logo.png */ \"./src/medias/images/logo.png\");\n\nvar imagem_secundaria = __webpack_require__(/*! ./medias/images/imagem_secundaria.png */ \"./src/medias/images/imagem_secundaria.png\");\n\nvar storageImage = __webpack_require__(/*! ./medias/images/storage.jpg */ \"./src/medias/images/storage.jpg\");\n\nvar trucks = __webpack_require__(/*! ./medias/images/trucks.jpg */ \"./src/medias/images/trucks.jpg\");\n\nvar noise = __webpack_require__(/*! ./medias/images/noise.jpg */ \"./src/medias/images/noise.jpg\");\n\nvar graySlideImage = __webpack_require__(/*! ./medias/images/gray-slide-image.jpg */ \"./src/medias/images/gray-slide-image.jpg\");\n\nvar brownSlideImage = __webpack_require__(/*! ./medias/images/brown-slide-image.jpg */ \"./src/medias/images/brown-slide-image.jpg\");\n\nvar blueSlideImage = __webpack_require__(/*! ./medias/images/blue-slide-image.jpg */ \"./src/medias/images/blue-slide-image.jpg\");\n\nvar userImage = __webpack_require__(/*! ./medias/images/foto_usuario.png */ \"./src/medias/images/foto_usuario.png\");\n\nvar faq = __webpack_require__(/*! ./js/faq */ \"./src/js/faq.js\");\n\nvar menu = __webpack_require__(/*! ./js/menu */ \"./src/js/menu.js\");\n\nvar onload = __webpack_require__(/*! ./js/onload */ \"./src/js/onload.js\"); // const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')\n// const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')\n\n\nvar name = 'Dory';\nvar obj = {\n  name: name\n};\n\nvar newObj = _objectSpread(_objectSpread({}, name), {}, {\n  age: 16\n});\n\nconsole.log(newObj.age);\n\n//# sourceURL=webpack://hp/./src/main.js?");
+eval("__webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\nvar logo = __webpack_require__(/*! ./medias/images/logo.png */ \"./src/medias/images/logo.png\");\n\nvar imagem_secundaria = __webpack_require__(/*! ./medias/images/imagem_secundaria.png */ \"./src/medias/images/imagem_secundaria.png\");\n\nvar storageImage = __webpack_require__(/*! ./medias/images/storage.jpg */ \"./src/medias/images/storage.jpg\");\n\nvar trucks = __webpack_require__(/*! ./medias/images/trucks.jpg */ \"./src/medias/images/trucks.jpg\");\n\nvar noise = __webpack_require__(/*! ./medias/images/noise.jpg */ \"./src/medias/images/noise.jpg\");\n\nvar noise2 = __webpack_require__(/*! ./medias/images/noise-2.jpg */ \"./src/medias/images/noise-2.jpg\");\n\nvar graySlideImage = __webpack_require__(/*! ./medias/images/gray-slide-image.jpg */ \"./src/medias/images/gray-slide-image.jpg\");\n\nvar brownSlideImage = __webpack_require__(/*! ./medias/images/brown-slide-image.jpg */ \"./src/medias/images/brown-slide-image.jpg\");\n\nvar blueSlideImage = __webpack_require__(/*! ./medias/images/blue-slide-image.jpg */ \"./src/medias/images/blue-slide-image.jpg\");\n\nvar userImage = __webpack_require__(/*! ./medias/images/foto_usuario.png */ \"./src/medias/images/foto_usuario.png\");\n\nvar contactUs = __webpack_require__(/*! ./medias/images/contact-us.jpg */ \"./src/medias/images/contact-us.jpg\");\n\nvar faq = __webpack_require__(/*! ./js/faq */ \"./src/js/faq.js\");\n\nvar menu = __webpack_require__(/*! ./js/menu */ \"./src/js/menu.js\");\n\nvar onload = __webpack_require__(/*! ./js/onload */ \"./src/js/onload.js\"); // const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')\n// const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')\n\n//# sourceURL=webpack://hp/./src/main.js?");
 
 /***/ }),
 
@@ -4379,6 +4379,16 @@ eval("module.exports = __webpack_require__.p + \"/assets/blue-slide-image.jpg\";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"/assets/brown-slide-image.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/brown-slide-image.jpg?");
+
+/***/ }),
+
+/***/ "./src/medias/images/contact-us.jpg":
+/*!******************************************!*\
+  !*** ./src/medias/images/contact-us.jpg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/contact-us.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/contact-us.jpg?");
 
 /***/ }),
 
@@ -4419,6 +4429,16 @@ eval("module.exports = __webpack_require__.p + \"/assets/imagem_secundaria.png\"
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"/assets/logo.png\";\n\n//# sourceURL=webpack://hp/./src/medias/images/logo.png?");
+
+/***/ }),
+
+/***/ "./src/medias/images/noise-2.jpg":
+/*!***************************************!*\
+  !*** ./src/medias/images/noise-2.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/noise-2.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/noise-2.jpg?");
 
 /***/ }),
 
