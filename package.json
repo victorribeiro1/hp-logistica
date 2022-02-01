@@ -40,10 +40,7 @@
       "webpack-serve": "^4.0.0"
    },
    "scripts": {
-      "build:frontend": "webpack --progress --config ./webpack.config.build.js",
-      "dev:frontend": "webpack -w --progress --config ./webpack.config.development.js",
-      "start:backend": "nodemon server.js",
-      "start": "concurrently \"npm:dev:frontend\" \"npm:start:backend\""
+      "start:backend": "server.js"
    },
    "keywords": [],
    "author": "",
