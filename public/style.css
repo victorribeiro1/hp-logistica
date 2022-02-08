@@ -445,12 +445,17 @@ html {
   font-family: "Aeonik Regular", "Segoe UI", "Arial", Verdana, sans-serif;
   letter-spacing: 2px;
 }
-
 @media only screen and (max-width: 1600px) {
   html {
     font-size: 50%;
   }
 }
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+}
+
 p.commum {
   font-size: var(--commum-text-size);
   font-family: "Aeonik Light";
@@ -1767,7 +1772,7 @@ html {
 .contact {
   position: relative;
   height: 100vh;
-  max-height: 1000px;
+  max-height: 1200px;
   min-height: 1000px;
   max-width: var(--max-width);
   overflow: hidden;
@@ -1777,7 +1782,6 @@ html {
   align-items: flex-start;
 }
 .contact__content {
-  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1918,7 +1922,7 @@ html {
 }
 @media only screen and (max-width: 670px) {
   .contact {
-    min-height: unset;
+    min-height: 800px;
   }
   .contact__content {
     display: flex;
@@ -1927,8 +1931,8 @@ html {
     align-items: flex-start;
     flex-flow: column-reverse;
     max-height: unset;
-    height: 100vh;
-    min-height: unset;
+    height: calc(100vh - 100px);
+    min-height: 700px;
   }
   .contact__content__image {
     height: 30%;
@@ -1951,7 +1955,7 @@ html {
   .contact__content__container__form-box__form :nth-child(5) {
     height: 28px;
     margin: 0;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     transition: var(--transition-speed) var(--transition-timing-function);
   }
   .contact__content__container__form-box__form :nth-child(5):focus {
@@ -1960,6 +1964,7 @@ html {
   .contact__content__container__form-box__form__input {
     width: 100% !important;
     margin-right: 0;
+    margin-bottom: 30px;
     font-size: 2.75rem;
   }
 }

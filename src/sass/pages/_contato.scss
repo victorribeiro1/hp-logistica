@@ -1,9 +1,10 @@
+
 .contact {
     position: relative;
 
     height: 100vh;
-    
-    max-height: 1000px;
+
+    max-height: 1200px;
     min-height: 1000px;
 
     // min-width: 1290px;
@@ -14,7 +15,7 @@
     @include flex-container(column, flex-end, flex-start);
 
     &__content {
-    margin-top: 100px;
+    // margin-top: 100px;
 
         @include flex-container(row, flex-start, flex-start);
         //    border: 2px solid pink;
@@ -27,7 +28,7 @@
 
 
         width: 100%;
-        
+
         // @media only screen and (max-height: 701px) {
         //     height: 50vh !important;
         // }
@@ -67,7 +68,7 @@
                     }
 
                     &__text {
-                        
+
                     }
                 }
 
@@ -164,7 +165,7 @@
 
                 margin-top: 50px;
             }
-    
+
             &__container {
                 // border: 3px solid rgb(195, 255, 0);
                 width: 100%;
@@ -186,12 +187,12 @@
                         margin-bottom: 0;
                         &__title {
                         }
-    
+
                         &__text {
-                            
+
                         }
                     }
-    
+
                     &__form {
                         // border: 5px solid lightblue;
 
@@ -207,7 +208,7 @@
                                 height: unset;
                             }
                             }
-    
+
                         &__input {
                             &:not(:last-of-type) {
                                 // margin-bottom: 25px;
@@ -218,15 +219,15 @@
 
                             // flex: none;
                         }
-    
+
                         .secondary-button {
                             &__text {
                             }
-    
+
                             &__arrow {
                                 &__body {
                                 }
-    
+
                                 &__head {
                                 }
                             }
@@ -239,21 +240,23 @@
 
     @media only screen and (max-width: 670px) {
 
-        min-height: unset;
+        min-height: 800px;
 
         &__content {
             @include flex-container(column, flex-start, flex-start);
             flex-flow: column-reverse;
 
+            // border: 3px solid blue;
+
             max-height: unset;
-            height: 100vh;
-            min-height: unset;
+            height: calc(100vh - 100px);
+            min-height: 700px;
 
             &__image {
                 height: 30%;
                 // margin-top: 50px;
             }
-    
+
             &__container {
                 height: 65%;
                 padding: 0 25px;
@@ -269,17 +272,17 @@
 
                         &__title {
                         }
-    
+
                         &__text {
                         }
                     }
-    
+
                     &__form {
                         :nth-child(5) {
                             height: 28px;
 
                             margin: 0;
-                            margin-bottom: 0px;
+                            margin-bottom: 30px;
 
                             @include transition;
 
@@ -287,22 +290,24 @@
                                 height: 100px;
                             }
                         }
-    
+
                         &__input {
                             width: 100% !important;
                             margin-right: 0;
 
+                            margin-bottom: 30px;
+
                             font-size: 2.75rem;
                         }
-    
+
                         .secondary-button {
                             &__text {
                             }
-    
+
                             &__arrow {
                                 &__body {
                                 }
-    
+
                                 &__head {
                                 }
                             }
