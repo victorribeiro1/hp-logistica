@@ -5,7 +5,7 @@
     height: 100vh;
 
     max-height: 1200px;
-    min-height: 1000px;
+    min-height: 800px;
 
     // min-width: 1290px;
     max-width: var(--max-width);
@@ -24,7 +24,7 @@
       //   max-height: 900px;
         height: calc(100% - 100px);
         // min-height: 700px;
-        min-height: 900px;
+      //   min-height: 900px;
 
 
         width: 100%;
@@ -90,6 +90,22 @@
 
                         &:focus {
                             height: 275px;
+
+                            @media only screen and (max-height: 1026px) {
+                               height: 150px;
+                            }
+
+                            @media only screen and (max-height: 910px) {
+                               height: 100px;
+                            }
+
+                            @media only screen and (max-height: 860px) {
+                               height: 80px;
+                            }
+
+                            @media only screen and (max-height: 830px) {
+                               height: 60px;
+                            }
                         }
                     }
 
