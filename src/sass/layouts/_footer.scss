@@ -2,6 +2,8 @@
    background-color: var(--color-secondary);
    overflow: hidden;
 
+   min-width: 350px;
+
    max-width: var(--max-width);
    // min-width: 1290px;
 
@@ -34,15 +36,15 @@
       &__company-informations {
          width: 40%;
          font-family: 'aeonik light';
-         
+
          &__company-name {
             font-family: 'aeonik regular';
             font-size: 1.8rem;
-            
+
             margin-bottom: 10px;
-            
+
          }
-         
+
          &__company-description {
             font-family: 'aeonik light';
             font-size: 1.4rem;
@@ -52,7 +54,7 @@
             line-height: 22px;
          }
       }
-      
+
       &__fast-links {
          &__title {
             font-family: 'aeonik regular';
@@ -157,7 +159,7 @@
                fill: var(--color-tertiary);
 
                @include transition;
-               
+
                &:hover {
                   fill: var(--color-primary);
                }

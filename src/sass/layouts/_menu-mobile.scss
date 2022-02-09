@@ -1,6 +1,8 @@
 .menu-mobile {
    display: none;
 
+   min-width: 350px;
+
    @media only screen and (max-width: 900px) {
       @include flex-container(row, space-between, center);
    }
