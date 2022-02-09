@@ -1,6 +1,6 @@
 .home {
    max-width: var(--max-width);
-   
+
    .hero-section {
       background-color: var(--color-tertiary);
 
@@ -86,7 +86,6 @@
             &:link,
             &:visited {
                // background-color: var(--color-primary);
-
                border-top: 2px solid var(--color-primary);
                border-bottom: 2px solid var(--color-primary);
 
@@ -104,12 +103,12 @@
 
                &:hover {
                   .hero-section__text-box__main-button__text {
-                     // font-family: 'Aeonik Bold';
                      // font-weight: 1000;
+                     transform: skewX(-15deg);
                      color: var(--color-tertiary) !important;
                      @include transition;
                   }
-   
+
                   .hero-section__text-box__main-button__arrow {
                      &__body, &__head {
                         background-color: var(--color-tertiary);
@@ -127,7 +126,7 @@
 
 
             &__text {
-               font-family: 'Aeonik LightItalic';
+               font-family: 'Aeonik Light';
                font-size: var(--commum-text-size);
                letter-spacing: 3px;
                color: var(--color-primary);

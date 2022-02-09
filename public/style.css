@@ -1082,6 +1082,7 @@ html {
   text-decoration: none;
 }
 .home .hero-section__text-box__main-button:hover .hero-section__text-box__main-button__text, .home .hero-section__text-box__main-button:link:hover .hero-section__text-box__main-button__text, .home .hero-section__text-box__main-button:visited:hover .hero-section__text-box__main-button__text {
+  transform: skewX(-15deg);
   color: var(--color-tertiary) !important;
   transition: var(--transition-speed) var(--transition-timing-function);
 }
@@ -1093,7 +1094,7 @@ html {
   background-color: var(--color-primary);
 }
 .home .hero-section__text-box__main-button__text {
-  font-family: "Aeonik LightItalic";
+  font-family: "Aeonik Light";
   font-size: var(--commum-text-size);
   letter-spacing: 3px;
   color: var(--color-primary);
