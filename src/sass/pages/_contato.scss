@@ -4,7 +4,7 @@
 
     height: 100vh;
 
-    max-height: 1000px;
+    max-height: 1100px;
     min-height: 720px;
 
     // min-width: 1290px;
@@ -234,9 +234,11 @@
                             margin: 0;
 
                             &:focus {
-                                height: unset;
+                              //   height: unset;
+
+                              height: 100px;
                             }
-                            }
+                        }
 
                         &__input {
                             &:not(:last-of-type) {
