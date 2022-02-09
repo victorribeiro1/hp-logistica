@@ -1,4 +1,7 @@
 .menu {
+   @media only screen and (max-width: 900px) {
+      display: none;
+   }
    position: fixed;
 
    @include flex-container (row, space-between, center);
@@ -21,7 +24,7 @@
    &.background {
       background-color: white;
 
-      @include transition; 
+      @include transition;
    }
 
    &.background &__noise {

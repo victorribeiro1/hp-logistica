@@ -738,6 +738,11 @@ html {
   transform: translateY(0%);
   transition: var(--transition-speed) var(--transition-timing-function);
 }
+@media only screen and (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
 .menu.background {
   background-color: white;
   transition: var(--transition-speed) var(--transition-timing-function);
@@ -817,6 +822,51 @@ html {
 .menu__call-to-action--light, .menu__call-to-action--light:link,
 .menu__call-to-action--light *:visited {
   color: var(--color-primary) !important;
+}
+
+.menu-mobile {
+  display: none;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 0 25px 0 0;
+}
+@media only screen and (max-width: 900px) {
+  .menu-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.menu-mobile__image {
+  width: 14rem;
+}
+
+.toggle-menu {
+  cursor: pointer;
+}
+.toggle-menu__button {
+  width: 80px;
+  height: 10px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.toggle-menu__button__line {
+  background-color: var(--color-secondary);
+  height: 2px;
+}
+.toggle-menu__button__line--1 {
+  width: 100%;
+}
+.toggle-menu__button__line--2 {
+  width: 80%;
 }
 
 .aboutPage__box {
@@ -1772,8 +1822,8 @@ html {
 .contact {
   position: relative;
   height: 100vh;
-  max-height: 1200px;
-  min-height: 800px;
+  max-height: 1000px;
+  min-height: 720px;
   max-width: var(--max-width);
   overflow: hidden;
   display: flex;
@@ -1808,6 +1858,11 @@ html {
 }
 .contact__content__container__form-box__text-box {
   margin-bottom: 100px;
+}
+@media only screen and (max-height: 760px) {
+  .contact__content__container__form-box__text-box {
+    margin-bottom: 50px;
+  }
 }
 .contact__content__container__form-box__text-box__title {
   font-size: 4.5rem;

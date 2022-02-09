@@ -1,0 +1,26 @@
+.toggle-menu {
+   cursor: pointer;
+   
+   &__button {
+      width: 80px;
+      height: 10px;
+
+      overflow: visible;
+
+      // border: 2px solid blue;
+
+      @include flex-container(column, space-between, flex-end);
+      &__line {
+         background-color: var(--color-secondary);
+         height: 2px;
+
+         &--1 {
+            width: 100%;
+         }
+
+         &--2 {
+            width: 80%;
+         }
+      }
+   }
+}

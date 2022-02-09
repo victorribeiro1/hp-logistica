@@ -4,8 +4,8 @@
 
     height: 100vh;
 
-    max-height: 1200px;
-    min-height: 800px;
+    max-height: 1000px;
+    min-height: 720px;
 
     // min-width: 1290px;
     max-width: var(--max-width);
@@ -60,6 +60,16 @@
 
                 &__text-box {
                     margin-bottom: 100px;
+
+                    @media only screen and (max-height: 760px) {
+                     margin-bottom: 50px;
+                  }
+
+                  // @media only screen and (max-height: 725px) {
+                  //    margin-bottom: 25px;
+                  // }
+
+
                     &__title {
                         font-size: 4.5rem;
                         margin-bottom: 8px;
