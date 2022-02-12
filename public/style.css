@@ -853,8 +853,8 @@ html {
   cursor: pointer;
 }
 .toggle-menu__button {
-  width: 80px;
-  height: 10px;
+  width: 50px;
+  height: 6px;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -2000,6 +2000,7 @@ html {
 }
 @media only screen and (max-width: 670px) {
   .contact {
+    max-height: 1000px;
     min-height: 800px;
   }
   .contact__content {
@@ -2009,8 +2010,7 @@ html {
     align-items: flex-start;
     flex-flow: column-reverse;
     max-height: unset;
-    height: calc(100vh - 100px);
-    min-height: 700px;
+    max-height: 1000px;
   }
   .contact__content__image {
     height: 30%;
