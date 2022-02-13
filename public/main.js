@@ -4338,7 +4338,7 @@ eval("var faqs = document.querySelectorAll('.faq__options__option');\nfaqs.forEa
   \************************/
 /***/ (() => {
 
-eval("var menu = document.getElementById('menu');\nvar lastScrollTop = 0;\nwindow.addEventListener('scroll', function () {\n  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;\n\n  if (scrollTop > lastScrollTop) {\n    menu.classList.add('hide');\n  } else {\n    menu.classList.remove('hide');\n  }\n\n  if (scrollTop > 730) {\n    menu.classList.add('background');\n  } else {\n    menu.classList.remove('background');\n  }\n\n  lastScrollTop = scrollTop;\n});\n\n//# sourceURL=webpack://hp/./src/js/menu.js?");
+eval("var menus = document.querySelectorAll('.menu');\nvar lastScrollTop = 0;\nwindow.addEventListener('scroll', function () {\n  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;\n\n  if (scrollTop > lastScrollTop) {\n    menus.forEach(function (menu) {\n      menu.classList.add('hide');\n    });\n  } else {\n    menus.forEach(function (menu) {\n      menu.classList.remove('hide');\n    });\n  }\n\n  if (scrollTop > 730) {\n    menus.forEach(function (menu) {\n      menu.classList.add('background');\n    });\n  } else {\n    menus.forEach(function (menu) {\n      menu.classList.remove('background');\n    });\n  }\n\n  lastScrollTop = scrollTop;\n});\n\n//# sourceURL=webpack://hp/./src/js/menu.js?");
 
 /***/ }),
 
