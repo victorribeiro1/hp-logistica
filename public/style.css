@@ -2001,7 +2001,7 @@ html {
 @media only screen and (max-width: 670px) {
   .contact {
     max-height: 1000px;
-    min-height: 800px;
+    min-height: 1000px;
   }
   .contact__content {
     display: flex;
@@ -2009,7 +2009,6 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column-reverse;
-    max-height: unset;
     max-height: 1000px;
   }
   .contact__content__image {

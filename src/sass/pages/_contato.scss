@@ -272,7 +272,7 @@
     @media only screen and (max-width: 670px) {
 
       max-height: 1000px;
-        min-height: 800px;
+        min-height: 1000px;
 
         &__content {
             @include flex-container(column, flex-start, flex-start);
@@ -280,9 +280,10 @@
 
             // border: 3px solid blue;
 
-            max-height: unset;
+            // max-height: unset;
             // height: calc(100vh - 100px);
             // min-height: 700px;
+
       max-height: 1000px;
 
 
