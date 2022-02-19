@@ -2,6 +2,14 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
 @font-face {
+  src: url(be82886e09e4a50b12ab.otf);
+  font-family: "Aeonik Air";
+}
+@font-face {
+  src: url(a474e91d738e8cb5e58d.otf);
+  font-family: "Aeonik AirItalic";
+}
+@font-face {
   src: url(a9f9e290a95e54c834cc.otf);
   font-family: "Aeonik Bold";
 }
@@ -1873,6 +1881,9 @@ html {
   font-size: 4.5rem;
   margin-bottom: 8px;
 }
+.contact__content__container__form-box__text-box__text {
+  font-size: 1.8rem !important;
+}
 .contact__content__container__form-box__form {
   display: flex;
   flex-direction: row;
@@ -2001,7 +2012,7 @@ html {
 @media only screen and (max-width: 670px) {
   .contact {
     max-height: 1000px;
-    min-height: 1000px;
+    min-height: 801px;
   }
   .contact__content {
     display: flex;
@@ -2012,10 +2023,10 @@ html {
     max-height: 1000px;
   }
   .contact__content__image {
-    height: 30%;
+    height: 25%;
   }
   .contact__content__container {
-    height: 65%;
+    height: 75%;
     padding: 0 25px;
   }
   .contact__content__container__form-box {
@@ -2027,21 +2038,24 @@ html {
     align-items: flex-start;
   }
   .contact__content__container__form-box__text-box {
-    margin-bottom: 0;
+    margin-bottom: 25px;
   }
   .contact__content__container__form-box__form :nth-child(5) {
     height: 28px;
     margin: 0;
-    margin-bottom: 30px;
     transition: var(--transition-speed) var(--transition-timing-function);
   }
   .contact__content__container__form-box__form :nth-child(5):focus {
-    height: 100px;
+    height: 66px;
   }
   .contact__content__container__form-box__form__input {
     width: 100% !important;
     margin-right: 0;
     margin-bottom: 30px;
     font-size: 2.75rem;
+  }
+  .contact__content__container__form-box__form .secondary-button {
+    position: relative;
+    bottom: -22px;
   }
 }

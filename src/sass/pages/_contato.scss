@@ -79,7 +79,8 @@
                     }
 
                     &__text {
-
+                     // font-family: 'Aeonik Regular' !important;
+                     font-size: 1.8rem !important;
                     }
                 }
 
@@ -214,12 +215,6 @@
                     &__text-box {
                         // border: 3px solid blue;
                         margin-bottom: 0;
-                        &__title {
-                        }
-
-                        &__text {
-
-                        }
                     }
 
                     &__form {
@@ -272,80 +267,63 @@
     @media only screen and (max-width: 670px) {
 
       max-height: 1000px;
-        min-height: 1000px;
+        min-height: 801px;
 
         &__content {
-            @include flex-container(column, flex-start, flex-start);
-            flex-flow: column-reverse;
+         @include flex-container(column, flex-start, flex-start);
+         flex-flow: column-reverse;
 
-            // border: 3px solid blue;
+         max-height: 1000px;
 
-            // max-height: unset;
-            // height: calc(100vh - 100px);
-            // min-height: 700px;
+         &__image {
+            height: 25%;
+            // margin-top: 50px;
+         }
 
-      max-height: 1000px;
+         &__container {
+            height: 75%;
+            padding: 0 25px;
 
+            &__form-box {
+               height: 100%;
+               width: 100%;
 
-            &__image {
-                height: 30%;
-                // margin-top: 50px;
-            }
+               @include flex-container(column, space-between, flex-start);
 
-            &__container {
-                height: 65%;
-                padding: 0 25px;
+                  &__text-box {
+                     margin-bottom: 25px;
+                  }
 
-                &__form-box {
-                    height: 100%;
-                    width: 100%;
+                  &__form {
+                     :nth-child(5) {
+                           height: 28px;
 
-                    @include flex-container(column, space-between, flex-start);
+                           margin: 0;
+                        //  margin-bottom: 50px;
 
-                    &__text-box {
-                        margin-bottom: 0;
+                           @include transition;
 
-                        &__title {
-                        }
+                           &:focus {
+                              height: 66px;
+                           }
+                     }
 
-                        &__text {
-                        }
-                    }
+                     &__input {
+                           width: 100% !important;
+                           margin-right: 0;
 
-                    &__form {
-                        :nth-child(5) {
-                            height: 28px;
+                           margin-bottom: 30px;
 
-                            margin: 0;
-                            margin-bottom: 30px;
+                           font-size: 2.75rem;
 
-                            @include transition;
-
-                            &:focus {
-                                height: 100px;
-                            }
-                        }
-
-                        &__input {
-                            width: 100% !important;
-                            margin-right: 0;
-
-                            margin-bottom: 30px;
-
-                            font-size: 2.75rem;
-                        }
+                           &::placeholder {
+                           //  font-family: 'Aeonik Light';
+                           }
+                     }
 
                         .secondary-button {
-                            &__text {
-                            }
-
-                            &__arrow {
-                                &__body {
-                                }
-
-                                &__head {
-                                }
-                            }
+                           position: relative;
+                           bottom: -22px;
                         }
                     }
                 }

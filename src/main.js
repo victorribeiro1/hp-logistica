@@ -23,3 +23,5 @@ const onload = require('./js/onload')
 
 const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
 const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')
+const aeonikAirFont = require('./medias/fonts/aeonik/Aeonik-Air.otf')
+const aeonikAirItalicFont = require('./medias/fonts/aeonik/Aeonik-AirItalic.otf')
