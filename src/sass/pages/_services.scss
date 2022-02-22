@@ -37,7 +37,7 @@
          flex-wrap: wrap;
 
          height: 72vh;
-         min-height: 665px;
+         min-height: 600px;
    // border: 2px solid blue;
 
          // border: 2px solid pink;
@@ -84,6 +84,10 @@
                font-size: 2rem;
 
                max-width: 60%;
+
+               @media only screen and (max-height: 880px) {
+                  max-width: 75%;
+               }
             }
 
             &__img {
@@ -104,8 +108,8 @@
                }
 
                @media only screen and (max-height: 880px) {
-                  // height: 80px;
-                  // width:  80px;
+                  height: 85px;
+                  width:  85px;
                }
             }
 

@@ -912,7 +912,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   height: 72vh;
-  min-height: 665px;
+  min-height: 600px;
 }
 .services__content__services__service {
   border: 3px solid var(--color-secondary);
@@ -944,6 +944,11 @@ html {
   font-size: 2rem;
   max-width: 60%;
 }
+@media only screen and (max-height: 880px) {
+  .services__content__services__service__description {
+    max-width: 75%;
+  }
+}
 .services__content__services__service__img {
   border-radius: 99px;
   object-fit: cover;
@@ -958,6 +963,12 @@ html {
   .services__content__services__service__img {
     height: 100px;
     width: 100px;
+  }
+}
+@media only screen and (max-height: 880px) {
+  .services__content__services__service__img {
+    height: 85px;
+    width: 85px;
   }
 }
 .services__content__services__service__button {
