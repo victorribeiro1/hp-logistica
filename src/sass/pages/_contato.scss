@@ -291,7 +291,10 @@
                @include flex-container(column, space-between, flex-start);
 
                   &__text-box {
-                     margin-bottom: 25px;
+                    @media only screen and (max-height: 930px) {
+                     margin-bottom: 20px;
+                    }
+
                   }
 
                   &__form {

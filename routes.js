@@ -5,7 +5,7 @@ const route = express.Router()
 const homeController = require('./controllers/home')
 
 // about Controllers
-const aboutController = require('./controllers/sobre')
+const ServicesController = require('./controllers/servicos')
 
 // about Controllers
 const contactController = require('./controllers/contato')
@@ -14,7 +14,9 @@ const contactController = require('./controllers/contato')
 route.get('/', homeController.initialPage)
 
 //home Routes
-route.get('/sobre-nos', aboutController.aboutPage)
+route.get('/nossos-servicos', ServicesController.ServicesPage)
+route.get('/nossosServicos', ServicesController.ServicesPage)
+route.get('/nossos_servicos', ServicesController.ServicesPage)
 
 //home Routes
 route.get('/contato', contactController.contactPage)

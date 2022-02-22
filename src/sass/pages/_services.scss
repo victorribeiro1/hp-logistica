@@ -1,0 +1,70 @@
+.services {
+   border: 2px solid blue;
+   height: 100vh;
+   overflow: hidden;
+
+   position: relative;
+
+   &__content {
+      border: 2px solid red;
+
+      @include flex-container(column, flex-start, center);
+
+      margin-top: 100px;
+
+      position: relative;
+      z-index: 1;
+
+      &__text-box {
+         @include flex-container(column, flex-start, center);
+
+         margin-bottom: 75px;
+
+         max-width: 55%;
+
+         &__title {
+            font-size: 5rem;
+
+            margin-bottom: 15px;
+         }
+
+         &__text {
+         }
+      }
+
+      &__services {
+         border: 2px solid pink;
+         &__service {
+            border: 3px solid var(--color-secondary);
+
+            padding: 10px;
+
+            position: relative;
+
+            height: 250px;
+            width: 480px;
+
+            @include flex-container(column, space-between, flex-start);
+
+            &__heading {
+               &__title {
+                  font-size: 4rem;
+               }
+            }
+
+            &__img {
+               border-radius: 99px;
+               object-fit: cover;
+
+               position: absolute;
+               left: 0;
+               top: 50%;
+               transform: translate(-50%, -50%);
+
+               height: 100px;
+               width: 100px;
+            }
+         }
+      }
+   }
+}
