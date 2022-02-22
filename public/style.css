@@ -743,7 +743,7 @@ html {
   max-width: var(--max-width);
   min-width: 350px;
   height: 100px;
-  z-index: 2;
+  z-index: 11;
   overflow: hidden;
   transform: translateY(0%);
   transition: var(--transition-speed) var(--transition-timing-function);
@@ -891,7 +891,7 @@ html {
   align-items: center;
   position: relative;
   z-index: 1;
-  margin: 100px var(--horizontal-distance) 100px var(--horizontal-distance);
+  margin: 100px var(--horizontal-distance) 75px var(--horizontal-distance);
 }
 .services__content__text-box {
   display: flex;
@@ -973,6 +973,18 @@ html {
 }
 .services__content__services__service__button {
   align-self: flex-end;
+}
+@media only screen and (max-width: 1380px) {
+  .services__content__services {
+    border: 2px solid blue;
+    height: 120vh;
+    min-height: 900px;
+    max-height: 990px;
+  }
+  .services__content__services__service {
+    height: calc(33.3333333333% - 70px);
+    width: calc(50% - 50px);
+  }
 }
 
 .home {
@@ -1317,7 +1329,7 @@ html {
 .home .differential {
   overflow: hidden;
   position: relative;
-  z-index: 10;
+  z-index: 5;
 }
 .home .differential__differentials {
   background-color: var(--color-secondary);

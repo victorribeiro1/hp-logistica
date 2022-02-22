@@ -13,7 +13,7 @@
       position: relative;
       z-index: 1;
 
-      margin: 100px var(--horizontal-distance) 100px var(--horizontal-distance);
+      margin: 100px var(--horizontal-distance) 75px var(--horizontal-distance);
 
       &__text-box {
          @include flex-container(column, flex-start, center);
@@ -115,6 +115,21 @@
 
             &__button {
                align-self: flex-end;
+            }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 1380px) {
+      &__content {
+         &__services {
+            border: 2px solid blue;
+            height: 120vh;
+            min-height: 900px;
+            max-height: 990px;
+            &__service {
+               height: calc(100% / 3 - 70px);
+               width:  calc(100% / 2 - 50px);
             }
          }
       }
