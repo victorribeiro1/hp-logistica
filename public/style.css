@@ -881,20 +881,17 @@ html {
 }
 
 .services {
-  border: 2px solid blue;
-  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 .services__content {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 100px;
   position: relative;
   z-index: 1;
+  margin: 100px var(--horizontal-distance) 100px var(--horizontal-distance);
 }
 .services__content__text-box {
   display: flex;
@@ -909,21 +906,43 @@ html {
   margin-bottom: 15px;
 }
 .services__content__services {
-  border: 2px solid pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 72vh;
+  min-height: 665px;
 }
 .services__content__services__service {
   border: 3px solid var(--color-secondary);
+  cursor: pointer;
   padding: 10px;
   position: relative;
-  height: 250px;
-  width: 480px;
+  height: calc(50% - 70px);
+  width: calc(33.3333333333% - 50px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
+.services__content__services__service:hover .services__content__services__service__button .secondary-button__text {
+  transform: skewX(-15deg);
+  transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+}
 .services__content__services__service__heading__title {
   font-size: 4rem;
+}
+.services__content__services__service__heading__subtitle {
+  font-family: "Aeonik Light";
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+.services__content__services__service__description {
+  align-self: center;
+  font-family: "Aeonik Light";
+  font-size: 2rem;
+  max-width: 60%;
 }
 .services__content__services__service__img {
   border-radius: 99px;
@@ -932,8 +951,17 @@ html {
   left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
+}
+@media only screen and (max-height: 980px) {
+  .services__content__services__service__img {
+    height: 100px;
+    width: 100px;
+  }
+}
+.services__content__services__service__button {
+  align-self: flex-end;
 }
 
 .home {

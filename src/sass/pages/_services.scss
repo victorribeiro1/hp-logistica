@@ -1,19 +1,19 @@
 .services {
-   border: 2px solid blue;
-   height: 100vh;
+   // border: 2px solid blue;
+   // height: 100vh;
    overflow: hidden;
 
    position: relative;
 
    &__content {
-      border: 2px solid red;
+      // border: 2px solid red;
 
       @include flex-container(column, flex-start, center);
 
-      margin-top: 100px;
-
       position: relative;
       z-index: 1;
+
+      margin: 100px var(--horizontal-distance) 100px var(--horizontal-distance);
 
       &__text-box {
          @include flex-container(column, flex-start, center);
@@ -33,23 +33,57 @@
       }
 
       &__services {
-         border: 2px solid pink;
+         @include flex-container(row, space-between, center);
+         flex-wrap: wrap;
+
+         height: 72vh;
+         min-height: 665px;
+   // border: 2px solid blue;
+
+         // border: 2px solid pink;
          &__service {
             border: 3px solid var(--color-secondary);
+
+            cursor: pointer;
 
             padding: 10px;
 
             position: relative;
 
-            height: 250px;
-            width: 480px;
+            height: calc(100% / 2 - 70px);
+            width: calc(100% / 3 - 50px);
 
             @include flex-container(column, space-between, flex-start);
+
+            &:hover &__button {
+               .secondary-button__text {
+                  // font-family: 'Aeonik Light';
+                  transform: skewX(-15deg);
+                  transition: transform .2s cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+               }
+            }
 
             &__heading {
                &__title {
                   font-size: 4rem;
                }
+
+               &__subtitle {
+                  font-family: 'Aeonik Light';
+                  font-size: 1.8rem;
+
+                  margin-left: 15px;
+               }
+            }
+
+            &__description {
+               // border: 1px solid blue;
+               align-self: center;
+
+               font-family: 'Aeonik Light';
+               font-size: 2rem;
+
+               max-width: 60%;
             }
 
             &__img {
@@ -61,8 +95,22 @@
                top: 50%;
                transform: translate(-50%, -50%);
 
-               height: 100px;
-               width: 100px;
+               height: 120px;
+               width:  120px;
+
+               @media only screen and (max-height: 980px) {
+                  height: 100px;
+                  width:  100px;
+               }
+
+               @media only screen and (max-height: 880px) {
+                  // height: 80px;
+                  // width:  80px;
+               }
+            }
+
+            &__button {
+               align-self: flex-end;
             }
          }
       }
