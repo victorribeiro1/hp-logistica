@@ -70,7 +70,10 @@
 
       img {
          // image-rendering: crisp-edges;
+         // border: 2px solid blue;
          width: 14rem;
+
+         transform: translateX(-21%);
 
          margin-left: var(--horizontal-distance)
       }

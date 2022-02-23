@@ -36,9 +36,11 @@
          @include flex-container(row, space-between, center);
          flex-wrap: wrap;
 
+         display: none;
+
          height: 72vh;
          min-height: 600px;
-   // border: 2px solid blue;
+      // border: 2px solid blue;
 
          // border: 2px solid pink;
          &__service {
@@ -116,6 +118,38 @@
             &__button {
                align-self: flex-end;
             }
+
+         }
+
+         &--mobile {
+            @include flex-container(column, flex-start, center);
+
+            &__service {
+               // background-color: #c6f57b;
+
+               height: 100px;
+               width:  100%;
+
+               &:not(:last-of-type) {
+                  margin-bottom: 25px;
+               }
+
+               &__img {
+                  width: 100%;
+               }
+
+               &__blur {
+
+               }
+
+               &__title {
+
+               }
+
+               &__button {
+
+               }
+            }
          }
       }
    }
@@ -123,13 +157,120 @@
    @media only screen and (max-width: 1380px) {
       &__content {
          &__services {
-            border: 2px solid blue;
             height: 120vh;
             min-height: 900px;
             max-height: 990px;
             &__service {
                height: calc(100% / 3 - 70px);
                width:  calc(100% / 2 - 50px);
+            }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 600px) {
+      & {
+         &__content {
+            @include flex-container(column, flex-start, flex-start);
+
+            border: 2px solid blue;
+            margin: 100px var(--horizontal-distance--mobile) 25px var(--horizontal-distance--mobile);
+
+            // overflow: hidden;
+
+            &__text-box {
+               @include flex-container(column, flex-start, flex-start);
+
+               max-width: 90%;
+            }
+
+            &__services--mobile {
+               border: 1px solid green;
+               width: 100%;
+
+               &__services {
+                  width: 100%;
+
+
+                  &__service {
+                     @include flex-container(column, flex-end, flex-end);
+                     // border: 2px solid red;
+
+                     height: 175px;
+
+                     margin-bottom: 200px;
+
+                     position: relative;
+
+                     &__img {
+                        object-fit: cover;
+
+                        height: 100%;
+                        width:  100%;
+
+                        position: absolute;
+                     }
+
+                     &__blur {
+                        background-color: #00000028;
+
+                        position: absolute;
+
+                        // opacity: .3;
+                        // filter: blur(3rem);
+
+                        backdrop-filter: blur(2px);
+
+                        height: 100%;
+                        width:  100%;
+                     }
+
+                     &__title {
+                        font-size: 6rem;
+                        color: white;
+
+                        font-family: 'Aeonik Thin';
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        z-index: 2;
+
+                        transform: skewX(-15deg) translate(-50%, -50%);
+                     }
+
+                     &__button {
+                        // z-index: 10;
+                        margin-right: 20px;
+                        margin-bottom: 15px;
+                        z-index: 10;
+
+                        .secondary-button__text {
+                           font-size: 1.6rem;
+                           font-family: 'Aeonik Thin' !important;
+                           color: #ffffff !important;
+
+                           letter-spacing: 2px;
+                        }
+
+                        .secondary-button__arrow {
+                           &__body,
+                           &__head {
+                              background-color: white;
+                           }
+
+                           &__body {
+                              height: 1px;
+                           }
+
+                           &__head {
+                              width: 1px;
+                           }
+                        }
+                     }
+                  }
+               }
             }
          }
       }

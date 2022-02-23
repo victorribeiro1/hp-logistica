@@ -10,6 +10,7 @@
       // border: 2px solid blue;
 
       @include flex-container(column, space-between, flex-end);
+
       &__line {
          background-color: var(--color-secondary);
          height: 2px;
