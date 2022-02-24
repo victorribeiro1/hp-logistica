@@ -14,12 +14,15 @@ html {
 
 html.active {
    opacity: 1;
+
+   // min-width: var(--min-width);
 }
 
 body {
     box-sizing: border-box;
     color: var(--color-secondary);
 
+   //  min-width: var(--min-width);
 }
 
    html {

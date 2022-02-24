@@ -739,7 +739,7 @@ html {
 .footer-mobile {
   background-color: var(--color-secondary);
   height: 480px;
-  min-width: 328px;
+  min-width: var(--min-width);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -792,7 +792,7 @@ html {
   width: 53%;
 }
 .footer-mobile__main-content__links__list:first-child {
-  margin-right: 8 0px;
+  margin-right: 80px;
 }
 .footer-mobile__main-content__links__list__item:not(:last-child) {
   margin-bottom: 15px;
@@ -822,6 +822,51 @@ html {
 @media only screen and (max-width: 1100px) {
   .footer-mobile {
     display: flex;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .footer-mobile {
+    height: 430px;
+  }
+  .footer-mobile__copy {
+    transform: translateY(-152%);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .footer-mobile__text-box__title {
+    font-size: 5rem;
+    margin-bottom: 15px;
+  }
+  .footer-mobile__text-box__description {
+    font-size: 1.8rem;
+    max-width: 80%;
+    line-height: 16px;
+  }
+  .footer-mobile__main-content__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .footer-mobile__main-content__heading__title {
+    font-size: 4.179rem;
+    max-width: 80%;
+  }
+  .footer-mobile__main-content__heading__logo {
+    width: 18rem;
+  }
+  .footer-mobile__main-content__links__list:first-child {
+    margin-right: 80px;
+  }
+  .footer-mobile__main-content__links__list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .footer-mobile__main-content__links__list__item__link, .footer-mobile__main-content__links__list__item__link:link, .footer-mobile__main-content__links__list__item__link:visited {
+    font-size: 2.5rem;
+  }
+  .footer-mobile__copy {
+    transform: translateY(-125%);
   }
 }
 
@@ -1104,7 +1149,11 @@ html {
     margin: 100px 0 0px 0;
   }
   .services__content__text-box {
-    margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 var(--horizontal-distance) 50px var(--horizontal-distance);
     max-width: 90%;
   }
   .services__content__services {
@@ -1269,6 +1318,11 @@ html {
   }
   .services__content__services--mobile__services__saiba-mais__button .secondary-button__arrow__head {
     width: 1px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .services__content__text-box {
+    margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
   }
 }
 @media only screen and (max-width: 560px) {

@@ -187,9 +187,9 @@
             // overflow: hidden;
 
             &__text-box {
-               // @include flex-container(column, flex-start, flex-start);
+               @include flex-container(column, flex-start, flex-start);
 
-               margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
+               margin: 0 var(--horizontal-distance) 50px var(--horizontal-distance);
 
                max-width: 90%;
 
@@ -442,6 +442,14 @@
                   }
                }
             }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 900px) {
+      &__content {
+         &__text-box {
+            margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
          }
       }
    }
