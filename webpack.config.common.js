@@ -67,7 +67,7 @@ module.exports = {
             },
 
             {
-               test: /\.(jpe?g|png|gif|svg|ico|otf)$/i,
+               test: /\.(jpe?g|png|gif|svg|ico)$/i,
                use: [
                   {
                     loader: 'file-loader',
@@ -80,6 +80,16 @@ module.exports = {
                     },
                   },
                 ],
+            },
+
+            {
+               test: /\.(woff|woff2|eot|otf|ttf|vsg)$/,
+               exclude: /node_modules/,
+               loader: 'url-loader',
+               options: {
+                  publicPath: '../fonts',
+                  name: './medias/fonts/aeonik/[name].[ext]'
+               }
             }
         ]
     },
