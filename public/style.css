@@ -909,9 +909,11 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  display: none;
   height: 72vh;
   min-height: 600px;
+}
+.services__content__services--mobile {
+  display: none;
 }
 .services__content__services__service {
   border: 3px solid var(--color-secondary);
@@ -973,12 +975,6 @@ html {
 .services__content__services__service__button {
   align-self: flex-end;
 }
-.services__content__services--mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
 .services__content__services--mobile__service {
   height: 100px;
   width: 100%;
@@ -1000,7 +996,7 @@ html {
     width: calc(50% - 50px);
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1150px) {
   .services__content {
     display: flex;
     flex-direction: column;
@@ -1009,12 +1005,24 @@ html {
     margin: 100px 0 0px 0;
   }
   .services__content__text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
     max-width: 90%;
+  }
+  .services__content__services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid pink;
+    align-self: center;
+    width: 75%;
+    height: 180vh;
+    max-height: 2000px;
+  }
+  .services__content__services__service {
+    width: 100%;
+    height: calc(16.6666666667% - 25px);
   }
   .services__content__services--mobile {
     width: 100%;
@@ -1161,6 +1169,17 @@ html {
   }
   .services__content__services--mobile__services__saiba-mais__button .secondary-button__arrow__head {
     width: 1px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .services__content__services {
+    display: none;
+  }
+  .services__content__services--mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 

@@ -36,13 +36,18 @@
          @include flex-container(row, space-between, center);
          flex-wrap: wrap;
 
-         display: none;
+         // display: none;
 
          height: 72vh;
          min-height: 600px;
       // border: 2px solid blue;
 
          // border: 2px solid pink;
+
+         &--mobile {
+            display: none;
+         }
+
          &__service {
             border: 3px solid var(--color-secondary);
 
@@ -122,8 +127,6 @@
          }
 
          &--mobile {
-            @include flex-container(column, flex-start, center);
-
             &__service {
                // background-color: #c6f57b;
 
@@ -168,7 +171,7 @@
       }
    }
 
-   @media only screen and (max-width: 600px) {
+   @media only screen and (max-width: 1150px) {
       & {
          &__content {
             @include flex-container(column, flex-start, flex-start);
@@ -181,7 +184,7 @@
             // overflow: hidden;
 
             &__text-box {
-               @include flex-container(column, flex-start, flex-start);
+               // @include flex-container(column, flex-start, flex-start);
 
                margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
 
@@ -191,8 +194,27 @@
                }
             }
 
+            &__services {
+               // display: none;
+               @include flex-container(column, space-between, center);
+               flex-wrap: wrap;
+
+               border: 1px solid pink;
+               align-self: center;
+
+               width: 75%;
+               height: 180vh;
+               max-height: 2000px;
+
+               &__service {
+                  width: 100%;
+                  height: calc(100% / 6 - 25px);
+               }
+            }
+
             &__services--mobile {
                // border: 1px solid green;
+               // @include flex-container(column, flex-start, center);
                width: 100%;
 
                &__services {
@@ -415,6 +437,17 @@
                      }
                   }
                }
+            }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 560px) {
+      &__content {
+         &__services {
+            display: none;
+            &--mobile {
+               @include flex-container(column, flex-start, center);
             }
          }
       }
