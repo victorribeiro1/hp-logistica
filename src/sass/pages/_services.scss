@@ -173,34 +173,66 @@
          &__content {
             @include flex-container(column, flex-start, flex-start);
 
-            border: 2px solid blue;
-            margin: 100px var(--horizontal-distance--mobile) 25px var(--horizontal-distance--mobile);
+            // border: 2px solid blue;
+            margin: 100px 0 0px 0;
+
+            // width: 100%;
 
             // overflow: hidden;
 
             &__text-box {
                @include flex-container(column, flex-start, flex-start);
 
+               margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
+
                max-width: 90%;
+
+                  &__text {
+               }
             }
 
             &__services--mobile {
-               border: 1px solid green;
+               // border: 1px solid green;
                width: 100%;
 
                &__services {
+                  // border: 2px solid pink;
+
+                  height: 175px;
                   width: 100%;
+
+                  position: relative;
+
+                  perspective: 950rem;
+                  -moz-perspective: 950rem;
+
+                  margin-bottom: 10px;
 
 
                   &__service {
                      @include flex-container(column, flex-end, flex-end);
                      // border: 2px solid red;
+                     backface-visibility: hidden;
 
-                     height: 175px;
 
+
+                     height: 100%;
                      margin-bottom: 200px;
 
                      position: relative;
+
+                     z-index: 2;
+
+                     transition: all .8s ease;
+
+                     &:hover {
+                        transform: rotateY(-180deg);
+                     }
+
+                     &:hover ~ .services__content__services--mobile__services__saiba-mais {
+                        z-index: 5;
+                        transform: rotateY(0deg);
+                     }
 
                      &__img {
                         object-fit: cover;
@@ -244,12 +276,124 @@
                         // z-index: 10;
                         margin-right: 20px;
                         margin-bottom: 15px;
-                        z-index: 10;
+                        z-index: 2;
 
                         .secondary-button__text {
                            font-size: 1.6rem;
                            font-family: 'Aeonik Thin' !important;
                            color: #ffffff !important;
+
+                           letter-spacing: 2px;
+                        }
+
+                        .secondary-button__arrow {
+                           &__body,
+                           &__head {
+                              background-color: white;
+                           }
+
+                           &__body {
+                              height: 1px;
+                           }
+
+                           &__head {
+                              width: 1px;
+                           }
+                        }
+                     }
+
+                  }
+                  &__saiba-mais {
+                     @include flex-container(column, space-between, flex-start);
+                     background-color: var(--color-secondary);
+
+                     backface-visibility: hidden;
+
+
+                     height: 100%;
+                     width: 100%;
+
+                     position: absolute;
+                     top: 0;
+                     z-index: 1;
+
+                     color: white;
+
+                     transform: rotateY(180deg);
+                     perspective: 150rem;
+                     -moz-perspective: 150rem;
+
+                     padding: 10px 0px 0 20px;
+
+                     transition: all .8s ease;
+
+
+                     &:hover {
+                        // transform: rotateY(0deg);
+                     }
+
+                     &__title {
+                        font-size: 5rem;
+
+                        pointer-events: none;
+                     }
+
+                     &__description {
+                        font-size: 1.8rem;
+                        line-height: 16px;
+
+                        max-width: 50%;
+
+                        pointer-events: none;
+
+                        font-family: 'Aeonik Light';
+                     }
+
+                     &__close {
+                        // border: 2px solid white;
+
+                        height: 25px;
+                        width:  25px;
+
+                        cursor: pointer;
+
+                        position: absolute;
+                        top: 5%;
+                        right: 3.5%;
+
+                        // @include flex-container;
+
+                        &__line {
+                           height: 1px;
+                           width: 100%;
+                           background-color: white;
+
+                           position: absolute;
+                           top: 50%;
+                           left: 0%;
+                           // transform: translate(-0%, 50%);
+
+                           &--1 {
+                              transform: rotateZ(45deg);
+                           }
+
+                           &--2 {
+                              transform: rotateZ(-45deg);
+                           }
+                        }
+                     }
+
+                     &__button {
+                        // z-index: 10;
+                        margin-right: 20px;
+                        margin-bottom: 15px;
+                        align-self: flex-end;
+                        z-index: 2;
+
+                        .secondary-button__text {
+                           font-size: 1.6rem;
+                           font-family: 'Aeonik Thin';
+                           color: white;
 
                            letter-spacing: 2px;
                         }
