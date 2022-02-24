@@ -5,6 +5,8 @@
 
    position: relative;
 
+   min-width: 328px;
+
    &__content {
       // border: 2px solid red;
 
@@ -40,6 +42,7 @@
 
          height: 72vh;
          min-height: 600px;
+         max-height: 800px;
       // border: 2px solid blue;
 
          // border: 2px solid pink;
@@ -205,6 +208,7 @@
 
                width: 75%;
                height: 180vh;
+               min-height: 1400px;
                max-height: 2000px;
 
                &__service {
@@ -230,7 +234,6 @@
                   -moz-perspective: 500rem;
 
                   margin-bottom: 8px;
-
 
                   &__service {
                      @include flex-container(column, flex-end, flex-end);
@@ -452,7 +455,7 @@
 
                &__services {
                   &:last-child {
-                     margin-bottom: var(--footer-distance);
+                     // margin-bottom: var(--footer-distance);
                   }
                }
             }

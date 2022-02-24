@@ -1,7 +1,7 @@
 .menu-mobile {
    display: none;
 
-   min-width: 350px;
+   min-width: 328px;
 
    @media only screen and (max-width: 900px) {
       @include flex-container(row, space-between, center);
@@ -15,9 +15,11 @@
    left: 0;
    z-index: 5;
 
-   padding: 0 25px 0 0;
-
    &__image {
       width: 14rem;
+   }
+
+   .toggle-menu {
+      margin-right: 25px;
    }
 }
