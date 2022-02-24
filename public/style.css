@@ -1027,9 +1027,9 @@ html {
     height: 175px;
     width: 100%;
     position: relative;
-    perspective: 950rem;
-    -moz-perspective: 950rem;
-    margin-bottom: 10px;
+    perspective: 500rem;
+    -moz-perspective: 500rem;
+    margin-bottom: 8px;
   }
   .services__content__services--mobile__services__service {
     display: flex;
