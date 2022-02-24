@@ -1,6 +1,21 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+html {
+  --color-primary: #E12121;
+  --color-secondary: #1A1A1B;
+  --color-tertiary: #E4E4E4;
+  --horizontal-distance: 120px;
+  --horizontal-distance--mobile: 25px;
+  --min-width: 328px;
+  --max-width: 2100px;
+  --min-menu-width: 1030px;
+  --transition-speed: .5s;
+  --transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --commum-text-size: 1.6rem;
+  --footer-distance: 30px;
+}
+
 @font-face {
   src: url(a9f9e290a95e54c834cc.otf);
   font-family: "Aeonik Bold";
@@ -469,20 +484,6 @@ p.commum {
   font-weight: 100;
 }
 
-html {
-  --color-primary: #E12121;
-  --color-secondary: #1A1A1B;
-  --color-tertiary: #E4E4E4;
-  --horizontal-distance: 120px;
-  --horizontal-distance--mobile: 25px;
-  --min-width: 328px;
-  --max-width: 2100px;
-  --transition-speed: .5s;
-  --transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  --commum-text-size: 1.6rem;
-  --footer-distance: 30px;
-}
-
 .icon {
   display: inline-block;
   height: 2rem;
@@ -885,7 +886,7 @@ html {
   transform: translateY(0%);
   transition: var(--transition-speed) var(--transition-timing-function);
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1030px) {
   .menu {
     display: none;
   }
@@ -982,7 +983,7 @@ html {
   left: 0;
   z-index: 5;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1030px) {
   .menu-mobile {
     display: flex;
     flex-direction: row;
@@ -1320,7 +1321,7 @@ html {
     width: 1px;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1030px) {
   .services__content__text-box {
     margin: 0 var(--horizontal-distance--mobile) 50px var(--horizontal-distance--mobile);
   }
