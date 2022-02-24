@@ -449,6 +449,12 @@
             display: none;
             &--mobile {
                @include flex-container(column, flex-start, center);
+
+               &__services {
+                  &:last-child {
+                     margin-bottom: var(--footer-distance);
+                  }
+               }
             }
          }
       }

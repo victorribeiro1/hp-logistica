@@ -1,0 +1,115 @@
+.footer-mobile {
+   background-color: var(--color-secondary);
+
+   height: 50vh;
+
+   @include flex-container(column, space-between, flex-start);
+   display: none;
+
+   color: white;
+
+   padding: 0 var(--horizontal-distance--mobile);
+
+   // overshadowed
+    --overshadowed: #e3e3e360;
+
+   &__text-box {
+      // @include flex-container(row, space-between, center);
+      padding-top: calc(var(--footer-distance) - 3px);
+      &__title {
+         // border: 1px solid pink;
+         font-size: 6rem;
+
+         margin-bottom: 20px;
+      }
+
+      &__description {
+         font-family: 'Aeonik Light';
+         font-size: 2rem;
+
+         max-width: 70%;
+
+         line-height: 16px;
+      }
+   }
+
+   &__line {
+      background-color: var(--overshadowed);
+
+      height: 1px;
+      width:  100%;
+   }
+
+   &__main-content {
+      &__heading {
+         @include flex-container(row, space-between, center);
+
+         margin-bottom: 25px;
+         &__title {
+            font-size: 6rem;
+
+            max-width: 80%;
+         }
+
+         &__logo {
+            width: 20rem;
+         }
+      }
+
+      &__links {
+         @include flex-container(row, space-between, flex-start);
+
+
+         width: 65%;
+         &__list {
+            &:first-child {
+               margin-right: 50px;
+            }
+            &__item {
+               &:not(:last-child) {
+                  margin-bottom: 15px;
+               }
+               &__link {
+                  &,
+                  &:link,
+                  &:visited {
+                     color: currentColor;
+                     text-decoration: none;
+
+                     font-family: 'Aeonik Light';
+                     font-size: 1.8rem;
+
+                     @include transition;
+
+                     &:hover {
+                        color: var(--color-primary);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &__copy {
+      @include flex-container;
+
+      // border: 1px solid blue;
+      color: var(--overshadowed);
+
+      width: 100%;
+
+      // height: 50px;
+
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+
+      font-family: 'Aeonik Thin';
+
+      transform: translateY(-175%);
+   }
+
+   @media only screen and (max-width: 1100px) {
+      display: flex;
+   }
+}
