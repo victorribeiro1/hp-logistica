@@ -2,7 +2,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
 
-@font-face {
+
+  @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
  }
@@ -441,10 +442,6 @@ html {
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
-html.menu-is-active {
-  overflow: hidden;
-}
-
 html.active {
   opacity: 1;
 }
@@ -1048,7 +1045,7 @@ p.commum {
   transform: rotateZ(45deg) translateY(-2px);
 }
 .toggle-menu__background {
-  position: fixed;
+  position: absolute;
   opacity: 0;
   transition: 0.6s ease;
   transition: var(--transition-speed) var(--transition-timing-function);
@@ -1069,10 +1066,12 @@ p.commum {
   backdrop-filter: blur(3px);
   height: 100%;
   width: 100%;
+  min-height: 785px;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 5;
+  overflow: scroll;
   opacity: 1;
   padding: 0 var(--horizontal-distance--mobile);
   flex: none;
