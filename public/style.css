@@ -769,6 +769,9 @@ html {
   height: 1px;
   width: 100%;
 }
+.footer-mobile__main-content {
+  width: 100%;
+}
 .footer-mobile__main-content__heading {
   display: flex;
   flex-direction: row;
@@ -788,10 +791,10 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 65%;
+  width: 53%;
 }
 .footer-mobile__main-content__links__list:first-child {
-  margin-right: 50px;
+  margin-right: 8 0px;
 }
 .footer-mobile__main-content__links__list__item:not(:last-child) {
   margin-bottom: 15px;
@@ -1112,7 +1115,7 @@ html {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     align-self: center;
     width: 75%;
     height: 180vh;
