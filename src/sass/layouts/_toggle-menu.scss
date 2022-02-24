@@ -1,9 +1,13 @@
 .toggle-menu {
+   @include flex-container(column, space-between, flex-start);
    cursor: pointer;
+   color: white;
 
    &__button {
       width: 50px;
       height: 6px;
+
+      cursor: pointer;
 
       overflow: visible;
 
@@ -15,6 +19,8 @@
          background-color: var(--color-secondary);
          height: 2px;
 
+         @include transition;
+
          &--1 {
             width: 100%;
          }
@@ -23,5 +29,132 @@
             width: 80%;
          }
       }
+
+      &.active & {
+         &__line {
+            background-color: var(--color-secondary);
+            height: 2px;
+
+            transform-origin: center;
+
+            &--1 {
+               width: 100%;
+               transform: rotateZ(-45deg) translateY(2px);
+            }
+
+            &--2 {
+               width: 100%;
+               transform: rotateZ(45deg) translateY(-2px);
+            }
+         }
+      }
    }
+
+   &__background {
+      position: fixed;
+      opacity: 0;
+   }
+
+   &.active & {
+      &__background {
+         @include flex-container(column, space-between, flex-start);
+
+         // padding-top: calc(50% + 100px);
+
+         background-color: #00000060;
+         backdrop-filter: blur(3px);
+
+         height: 100%;
+         width:  100%;
+
+         position: fixed;
+         left: 0;
+         top: 0;
+         z-index: 5;
+
+         opacity: 1;
+
+         padding: 0 var(--horizontal-distance--mobile);
+
+         // transform: translateY(-10%);
+
+         flex: none;
+      }
+
+      &__fake-menu {
+         height: 70px;
+      }
+
+      &__list {
+         // position: absolute;
+         // left: 0;
+         // top: 50%;
+         // transform: translateY(-50%);
+         &__item {
+            &:not(:last-child) {
+               margin-bottom: 30px;
+            }
+
+            &__link {
+               &,
+               &:link,
+               &:visited {
+                  text-decoration: none;
+                  color: currentColor;
+
+                  font-family: 'Aeonik Thin';
+                  font-size: 10rem;
+               }
+            }
+         }
+      }
+
+      &__footer {
+         @include flex-container(row, space-between, center);
+
+         height: 70px;
+         width: 100%;
+         position: relative;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+
+            height: 1px;
+            width: calc(100% + var(--horizontal-distance--mobile) * 2);
+            transform: translateX(calc(var(--horizontal-distance--mobile) * -1));
+
+            background-color: #ffffff93;
+         }
+
+         &__icons {
+            // border: 1px solid purple;
+
+            &__icon {
+               &,
+               &:link,
+               &:visited {
+                  text-decoration: none;
+                  color: currentColor;
+
+                  &:not(:last-child) {
+                     margin-right: 25px;
+                  }
+               }
+
+               &__media {
+                  fill: #ffffff93;
+               }
+            }
+         }
+
+         &__hp {
+            color: #ffffff93;
+            font-family: 'Aeonik Thin';
+            font-size: 2.2rem;
+         }
+      }
+   }
+
 }

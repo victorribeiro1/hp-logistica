@@ -13,13 +13,13 @@
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 5;
+   z-index: 6;
 
    &__image {
       width: 14rem;
    }
 
-   .toggle-menu {
+   .toggle-menu__button {
       margin-right: 25px;
    }
 }

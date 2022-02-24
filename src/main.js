@@ -20,6 +20,7 @@ const favIcon = require('./medias/svgs/symbol-defs.svg')
 const faq = require('./js/faq')
 const menu = require('./js/menu')
 const onload = require('./js/onload')
+const toggleMenu = require('./js/toggleMenu')
 
 const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
 const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')

@@ -10,6 +10,13 @@ html {
    opacity: 0;
 
    transition: ease .5s;
+
+   -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    &.menu-is-active {
+        overflow: hidden;
+    }
 }
 
 html.active {
