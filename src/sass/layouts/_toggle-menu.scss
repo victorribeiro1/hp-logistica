@@ -32,7 +32,7 @@
 
       &.active & {
          &__line {
-            background-color: var(--color-secondary);
+            background-color: var(--color-primary);
             height: 2px;
 
             transform-origin: center;
@@ -53,6 +53,20 @@
    &__background {
       position: fixed;
       opacity: 0;
+
+      transition: .6s ease;
+
+      @include transition;
+
+         * {
+            transition: inherit;
+         }
+   }
+
+   &__list {
+      opacity: 0;
+
+      transition: .2s ease .8s;
    }
 
    &.active & {
@@ -82,14 +96,15 @@
       }
 
       &__fake-menu {
-         height: 70px;
+         height: 90px;
       }
 
       &__list {
-         // position: absolute;
-         // left: 0;
-         // top: 50%;
-         // transform: translateY(-50%);
+
+         opacity: 1;
+
+         transition: .2s ease .8s;
+
          &__item {
             &:not(:last-child) {
                margin-bottom: 30px;
@@ -104,6 +119,12 @@
 
                   font-family: 'Aeonik Thin';
                   font-size: 10rem;
+
+                  @include transition;
+
+                  &:hover {
+                     color: var(--color-primary);
+                  }
                }
             }
          }
@@ -112,7 +133,7 @@
       &__footer {
          @include flex-container(row, space-between, center);
 
-         height: 70px;
+         height: 90px;
          width: 100%;
          position: relative;
 

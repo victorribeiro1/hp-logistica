@@ -1,25 +1,24 @@
-/*!************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/base/_fonts.scss ***!
-  \************************************************************************************************************************************************/
-@font-face {
-  src: url(assets/Aeonik-Bold.otf);
-  font-family: "Aeonik Bold";
-}
-@font-face {
-  src: url(assets/Aeonik-Light.otf);
-  font-family: "Aeonik Light";
-}
-@font-face {
-  src: url(assets/Aeonik-Regular.otf);
-  font-family: "Aeonik Regular";
-}
-@font-face {
-  src: url(assets/Aeonik-Thin.otf);
-  font-family: "Aeonik Thin";
-}
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+
+@font-face {
+   src: url(assets/Aeonik-Bold.otf);
+   font-family: "Aeonik Bold";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Light.otf);
+   font-family: "Aeonik Light";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Regular.otf);
+   font-family: "Aeonik Regular";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Thin.otf);
+   font-family: "Aeonik Thin";
+ }
+
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -35,22 +34,6 @@ html {
   --footer-distance: 30px;
 }
 
-@font-face {
-  src: url(bf854af26b40b5e0cf47.otf);
-  font-family: "Aeonik Bold";
-}
-@font-face {
-  src: url(f924b50b7bbdf9b4a159.otf);
-  font-family: "Aeonik Light";
-}
-@font-face {
-  src: url(d643da59dee8c0777775.otf);
-  font-family: "Aeonik Regular";
-}
-@font-face {
-  src: url(bbbf4426465499d53a17.otf);
-  font-family: "Aeonik Thin";
-}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1052,7 +1035,7 @@ p.commum {
   width: 80%;
 }
 .toggle-menu__button.active .toggle-menu__button__line {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   height: 2px;
   transform-origin: center;
 }
@@ -1067,6 +1050,15 @@ p.commum {
 .toggle-menu__background {
   position: fixed;
   opacity: 0;
+  transition: 0.6s ease;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+.toggle-menu__background * {
+  transition: inherit;
+}
+.toggle-menu__list {
+  opacity: 0;
+  transition: 0.2s ease 0.8s;
 }
 .toggle-menu.active .toggle-menu__background {
   display: flex;
@@ -1086,7 +1078,11 @@ p.commum {
   flex: none;
 }
 .toggle-menu.active .toggle-menu__fake-menu {
-  height: 70px;
+  height: 90px;
+}
+.toggle-menu.active .toggle-menu__list {
+  opacity: 1;
+  transition: 0.2s ease 0.8s;
 }
 .toggle-menu.active .toggle-menu__list__item:not(:last-child) {
   margin-bottom: 30px;
@@ -1096,13 +1092,17 @@ p.commum {
   color: currentColor;
   font-family: "Aeonik Thin";
   font-size: 10rem;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+.toggle-menu.active .toggle-menu__list__item__link:hover, .toggle-menu.active .toggle-menu__list__item__link:link:hover, .toggle-menu.active .toggle-menu__list__item__link:visited:hover {
+  color: var(--color-primary);
 }
 .toggle-menu.active .toggle-menu__footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 90px;
   width: 100%;
   position: relative;
 }

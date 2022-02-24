@@ -22,7 +22,7 @@ const menu = require('./js/menu')
 const onload = require('./js/onload')
 const toggleMenu = require('./js/toggleMenu')
 
-require('./sass/base/_fonts.scss')
+// require('./sass/base/_fonts.scss')
 
 // const aeonikBoldFont = require('./medias/fonts/aeonik/Aeonik-Bold.otf')
 // const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
