@@ -1014,7 +1014,7 @@ html {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid pink;
+    margin-bottom: 50px;
     align-self: center;
     width: 75%;
     height: 180vh;

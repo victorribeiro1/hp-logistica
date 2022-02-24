@@ -199,7 +199,8 @@
                @include flex-container(column, space-between, center);
                flex-wrap: wrap;
 
-               border: 1px solid pink;
+               // border: 1px solid pink;
+               margin-bottom: 50px;
                align-self: center;
 
                width: 75%;
