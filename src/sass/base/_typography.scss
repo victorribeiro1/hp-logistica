@@ -13,16 +13,29 @@ html {
    }
 }
 
-
 p.commum {
     font-size: var(--commum-text-size);
     font-family: 'Aeonik Light';
-    word-spacing: 5px;
+    word-spacing: 0px;
     letter-spacing: 2px;
     line-height: 24px;
-    font-weight: 100;
+   //  font-weight: 100;
+
+    @media only screen and (max-width: 1600px) {
+      font-size: var(--commum-text-size);
+      font-family: 'Aeonik Light';
+      word-spacing: 0px;
+      letter-spacing: 2px;
+      line-height: 20px;
+      // font-weight: 100;
+   }
 
    @media only screen and (max-width: 550px) {
+      font-size: var(--commum-text-size);
+      font-family: 'Aeonik Light';
+      word-spacing: 0px;
+      letter-spacing: 2px;
       line-height: 15px;
+      // font-weight: 100;
    }
 }

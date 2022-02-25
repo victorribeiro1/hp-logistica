@@ -7,19 +7,21 @@
 
       height: 100vh;
       max-height: 1200px;
-      min-height: 630px;
+      min-height: 735px;
 
       max-width: var(--max-width);
-      min-width: 1350px;
+      // min-width: 1350px;
 
       @include flex-container(row, space-between, center);
-      display: none;
 
       // padding: 0 var(--horizontal-distance);
 
       position: relative;
       z-index: 1;
 
+      @media only screen and (max-width: 1030px) {
+         display: none;
+      }
 
       &__noise {
          // margin-left: calc(var(--horizontal-distance) * -1);
@@ -55,6 +57,8 @@
             font-size: 14rem;
             line-height: 120px;
             // font-family: 'Aeonik Light';
+
+            @include transition;
 
             span {
                transform: skewX(-15deg);
@@ -257,7 +261,92 @@
          // height: 250px;
 
          // background-color: #f0f;
+
+         @include transition;
       }
 
+      @media only screen and (max-width: 1600px) {
+         & {
+            max-height: 850px;
+            min-height: 680px;
+         }
+      }
+      @media only screen and (max-width: 1350px) {
+         & {
+            max-height: 800px;
+            min-height: 590px;
+         }
+
+         &__text-box {
+            &__main-text {
+               letter-spacing: 5px;
+               line-height: 90px;
+               font-size: 12rem;
+            }
+
+            &__description {
+
+            }
+
+            &__main-button {
+               &,
+               &:link,
+               &:visited {
+                  // display: none !important;
+
+                  width: 250px;
+               }
+            }
+         }
+
+         &__image {
+            width: 60rem;
+         }
+      }
+
+      @media only screen and (max-width: 1220px) {
+         & {
+            max-height: 750px;
+            min-height: 580px;
+         }
+         &__text-box {
+            &__main-text {
+               letter-spacing: 5px;
+               line-height: 75px;
+               font-size: 10rem;
+            }
+
+            &__description {
+
+            }
+         }
+
+         &__image {
+            width: 50rem;
+         }
+      }
+
+      @media only screen and (max-width: 1110px) {
+         & {
+            // max-height: 700px;
+         }
+
+         &__text-box {
+            &__main-text {
+               letter-spacing: 5px;
+               line-height: 75px;
+               font-size: 10rem;
+            }
+
+            &__description {
+
+            }
+         }
+
+         &__image {
+            width: 45rem;
+         }
+      }
    }
+
 }
