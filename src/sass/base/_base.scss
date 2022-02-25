@@ -15,6 +15,7 @@ html {
     outline: none;
 
     &.menu-is-active {
+        overflow: hidden;
     }
 }
 
@@ -27,8 +28,6 @@ html.active {
 body {
     box-sizing: border-box;
     color: var(--color-secondary);
-
-   //  overflow: hidden;
 
    //  min-width: var(--min-width);
 }
