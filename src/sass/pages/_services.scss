@@ -5,7 +5,7 @@
 
    position: relative;
 
-   min-width: 328px;
+   min-width: var(--min-width);
 
    &__content {
       // border: 2px solid red;

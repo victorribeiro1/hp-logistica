@@ -1,15 +1,17 @@
 
 .contact {
-    position: relative;
+   position: relative;
 
-    height: 100vh;
+   height: 100vh;
 
-    max-height: 1100px;
-    min-height: 720px;
+   max-height: 1100px;
+   min-height: 720px;
 
-    // min-width: 1290px;
-    max-width: var(--max-width);
-    min-width: 350px;
+   // min-width: 1290px;
+   max-width: var(--max-width);
+   min-width: var(--min-width);
+
+
 
     overflow: hidden;
 
