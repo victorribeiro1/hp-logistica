@@ -17,6 +17,12 @@
    position: relative;
    z-index: 5;
 
+   @media only screen and (max-width: 550px) {
+      &--2 {
+         display: none
+      }
+   }
+
    // &__noise {
    //    // margin-left: calc(var(--horizontal-distance) * -1);
    //    // height: 100%;

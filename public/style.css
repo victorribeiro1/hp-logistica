@@ -628,6 +628,11 @@ p.commum {
   position: relative;
   z-index: 5;
 }
+@media only screen and (max-width: 550px) {
+  .space--2 {
+    display: none;
+  }
+}
 .space__little-text {
   display: flex;
   flex-direction: column;
