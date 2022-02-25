@@ -1,0 +1,196 @@
+.hero-section--mobile {
+   height: 100vh;
+   // border: 2px solid pink;
+
+   background-color: var(--color-tertiary);
+
+   position: relative;
+   z-index: 1;
+
+   @include flex-container(column, flex-end, flex-start);
+
+   &__content {
+      @include flex-container(column, space-between, center);
+      // border: 2px solid green;
+      // background-color: #e67676;
+      position: relative;
+
+      height: calc(100vh - 100px);
+
+      padding: 0 var(--horizontal-distance--mobile) 100px;
+
+      &__text-box {
+         &__title {
+            font-size: 14rem;
+            line-height: 75px;
+
+            margin-bottom: 30px;
+         }
+
+         &__text {
+
+         }
+      }
+
+      &__img {
+         width: 100%;
+      }
+
+      &__main-button {
+         &,
+         &:link,
+         &:visited {
+            // background-color: var(--color-primary);
+            border-top: 2px solid var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+
+            @include flex-container(row, space-around, center);
+
+            height: 55px;
+            width: 100%;
+
+            margin-bottom: 50px !important;
+
+            position: relative;
+            z-index: 2;
+
+            text-decoration: none;
+
+            &:hover {
+               .hero-section--mobile__content__main-button__text {
+                  // font-weight: 1000;
+                  transform: skewX(-15deg);
+                  color: var(--color-tertiary);
+                  @include transition;
+               }
+
+               .hero-section--mobile__content__main-button__arrow {
+                  &__body, &__head {
+                     background-color: var(--color-tertiary);
+                     @include transition;
+                  }
+               }
+            }
+         }
+
+         @include transition;
+
+         &:hover {
+            background-color: var(--color-primary);
+         }
+
+
+         &__text {
+            font-family: 'Aeonik Light';
+            font-size: var(--commum-text-size);
+            letter-spacing: 3px;
+            color: var(--color-primary);
+         }
+
+         &__arrow {
+            color: var(--color-primary);
+
+            position: relative;
+
+            @include flex-container(row, center, center);
+
+            width: 70px;
+            height: 20px;
+            // border: 1px solid black;
+
+            transition: .25s ease-in;
+
+
+            &__body {
+               // position: absolute;
+               height: 1px;
+               width: 70%;
+               background-color: currentColor;
+
+               // top: 50%;
+               // transform: translateY(-50%);
+
+            }
+
+            &__head {
+               height: 1px;
+               width: 10px;
+               border-radius: 999px;
+               background-color: currentColor;
+
+               position: relative;
+               top: -4px;
+               left: -9px;
+
+               transform: rotate(45deg);
+            }
+         }
+      }
+
+      &__statistics {
+         // border: 1px solid pink;
+         @include flex-container(row, space-between, center);
+
+         // background-color: #fff;
+
+         // margin-top: 100px;
+
+         // height: 10px;
+         width: 70%;
+
+         // position: relative;
+         // right: -40px;
+
+         &::before {
+            content: "";
+
+            background-color: black;
+
+            height: 20px;
+            width: 2px;
+
+            // margin-left: 50px;
+
+            position: absolute;
+            left: 50%;
+            bottom: 100px;
+            transform: translate(-250%, -25%);
+         }
+
+         &__statistic {
+            @include flex-container(row, flex-start, center);
+
+            font-family: 'Aeonik Regular';
+
+            &:first-of-type {
+               margin-right: 25px;
+            }
+
+            // &:last-of-type {
+            //    margin-left: 25px;
+            // }
+
+            position: relative;
+            left: -10px;
+
+            &__percentage {
+               // border: 1px solid red;
+
+               font-size: 3.8rem;
+
+               @include flex-container(row, flex-start, center);
+
+               margin-right: 15px;
+            }
+
+            &__text {
+               // border: 1px solid blue;
+
+               font-size: 2rem;
+
+               width: 50%;
+            }
+         }
+      }
+   }
+}

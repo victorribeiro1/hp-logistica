@@ -28,6 +28,9 @@ html {
 
    // texts
    --commum-text-size: 1.6rem;
+   @media only screen and (max-width: 550px) {
+      --commum-text-size: 1.8rem;
+   }
 
    //others
    --footer-distance: 30px;

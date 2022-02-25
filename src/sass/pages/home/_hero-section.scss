@@ -1,6 +1,7 @@
 .home {
    max-width: var(--max-width);
 
+
    .hero-section {
       background-color: var(--color-tertiary);
 
@@ -12,6 +13,7 @@
       min-width: 1350px;
 
       @include flex-container(row, space-between, center);
+      display: none;
 
       // padding: 0 var(--horizontal-distance);
 
