@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
 
-@font-face {
+  @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
  }
@@ -18,7 +18,7 @@
    src: url(assets/Aeonik-Thin.otf);
    font-family: "Aeonik Thin";
  }
-
+ 
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -1059,13 +1059,11 @@ p.commum {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: -1;
   overflow: scroll;
-  position: absolute;
   opacity: 0;
   min-width: var(--min-width);
-  transition: 0.6s ease;
-  transition: var(--transition-speed) var(--transition-timing-function);
+  transition: z-index 0.1s 0.6s, padding 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .toggle-menu__background * {
   transition: inherit;
@@ -1076,7 +1074,7 @@ p.commum {
   min-height: 100px;
   position: sticky;
   top: 0;
-  z-index: 190182734;
+  z-index: 2;
 }
 .toggle-menu__list {
   opacity: 0;
@@ -1141,7 +1139,9 @@ p.commum {
 }
 .toggle-menu.active .toggle-menu__background {
   opacity: 1;
+  z-index: 5;
   padding: 0 var(--horizontal-distance--mobile);
+  transition: var(--transition-speed) var(--transition-timing-function);
 }
 .toggle-menu.active .toggle-menu__list {
   opacity: 1;

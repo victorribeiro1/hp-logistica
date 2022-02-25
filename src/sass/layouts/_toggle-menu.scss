@@ -68,19 +68,18 @@
       position: fixed;
       left: 0;
       top: 0;
-      z-index: 5;
+      z-index: -1;
 
       overflow: scroll;
 
-      position: absolute;
       opacity: 0;
 
       min-width: var(--min-width);
       // min-width: 900px;
 
-      transition: .6s ease;
-
-      @include transition;
+      transition: z-index .1s .6s,
+                  padding .5s cubic-bezier(0.165, 0.84, 0.44, 1),
+                  opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
          * {
             transition: inherit;
@@ -98,7 +97,7 @@
 
       position: sticky;
       top: 0;
-      z-index: 190182734;
+      z-index: 2;
    }
 
    &__list {
@@ -137,34 +136,6 @@
                @media only screen and (max-height: 750px) {
                   font-size: 7rem;
                }
-
-               // @media only screen and (max-height: 705px) {
-               //    font-size: 7rem;
-               // }
-
-               // @media only screen and (max-height: 670px) {
-               //    font-size: 6rem;
-               // }
-
-               // @media only screen and (max-height: 630px) {
-               //    font-size: 5rem;
-               // }
-
-               // @media only screen and (max-height: 630px) {
-               //    font-size: 5rem;
-               // }
-
-               // @media only screen and (max-height: 585px) {
-               //    font-size: 4rem;
-               // }
-
-               // @media only screen and (max-height: 565px) {
-               //    font-size: 3rem;
-               // }
-
-               // @media only screen and (max-height: 510px) {
-               //    font-size: 2rem;
-               // }
             }
          }
       }
@@ -222,7 +193,11 @@
       &__background {
          opacity: 1;
 
+         z-index: 5;
+
          padding: 0 var(--horizontal-distance--mobile);
+
+         @include transition;
       }
 
       &__list {
