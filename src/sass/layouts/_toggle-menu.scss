@@ -51,6 +51,11 @@
    }
 
    &__background {
+
+      @media only screen and (min-width: 1030px) {
+         display: none;
+      }
+
       @include flex-container(column, space-between, flex-start);
 
       // padding-top: calc(50% + 100px);
@@ -77,9 +82,9 @@
       min-width: var(--min-width);
       // min-width: 900px;
 
-      transition: z-index .1s .6s,
-                  padding .5s cubic-bezier(0.165, 0.84, 0.44, 1),
-                  opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: z-index .1s var(--transition-speed),
+                  padding var(--transition-speed) cubic-bezier(0.165, 0.84, 0.44, 1),
+                  opacity var(--transition-speed) cubic-bezier(0.165, 0.84, 0.44, 1);
 
          * {
             transition: inherit;
