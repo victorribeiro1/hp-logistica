@@ -251,8 +251,8 @@
 
                @include flex-container(row, space-around, center);
 
-               height: 45px;
-               min-height: 45px;
+               height: 50px;
+               min-height: 50px;
                width: calc(100% - var(--horizontal-distance--mobile) * 2);
             }
          }

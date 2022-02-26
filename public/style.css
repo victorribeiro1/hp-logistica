@@ -1893,8 +1893,8 @@ p.commum {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 45px;
-    min-height: 45px;
+    height: 50px;
+    min-height: 50px;
     width: calc(100% - var(--horizontal-distance--mobile) * 2);
   }
   .hero-section--mobile__statistics {
@@ -1905,7 +1905,6 @@ p.commum {
 .home {
   position: relative;
   min-width: var(--min-width);
-  height: 2000px;
   overflow: scroll;
 }
 .home .about {
