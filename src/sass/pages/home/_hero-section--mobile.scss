@@ -3,6 +3,7 @@
 
    background-color: var(--color-tertiary);
 
+   height: 100vh;
    min-height: 1010px;
    max-height: 930px;
    // height: 1200px;
@@ -14,7 +15,7 @@
 
    @media only screen and (max-width: 1030px) {
       display: block;
-      @include flex-container(column, flex-start, flex-start);
+      @include flex-container(column, space-between, flex-start);
    }
 
    &__text-box {
@@ -212,18 +213,47 @@
       }
    }
 
+   @media only screen and (max-width: 775px) {
+      & {
+         &__img {
+            width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
+            width: 55rem;
+         }
+      }
+   }
+
    @media only screen and (max-width: 550px) {
       & {
          height: 100vh;
-         min-height: 900px;
-         max-height: 910px;
+         min-height: 745px;
+         // max-height: 910px;
          // min-height: unset;
          &__text-box {
             &__title {
-               font-size: 14rem;
-               line-height: 80px;
-               margin-bottom: 30px;
+               font-size: 8rem;
+               line-height: 45px;
+               margin-bottom: 25px;
                max-width: 80%;
+            }
+         }
+
+         &__img {
+            width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
+         }
+
+         &__main-button {
+            &,
+            &:link,
+            &:visited {
+               // background-color: var(--color-primary);
+               border-top: 2px solid var(--color-primary);
+               border-bottom: 2px solid var(--color-primary);
+
+               @include flex-container(row, space-around, center);
+
+               height: 45px;
+               min-height: 45px;
+               width: calc(100% - var(--horizontal-distance--mobile) * 2);
             }
          }
 
