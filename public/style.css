@@ -1,6 +1,24 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+
+@font-face {
+   src: url(assets/Aeonik-Bold.otf);
+   font-family: "Aeonik Bold";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Light.otf);
+   font-family: "Aeonik Light";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Regular.otf);
+   font-family: "Aeonik Regular";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Thin.otf);
+   font-family: "Aeonik Thin";
+ }
+
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -375,7 +393,7 @@ template {
   display: none;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -1872,14 +1890,21 @@ p.commum {
     width: 55rem;
   }
 }
+@media only screen and (max-width: 558px) {
+  .hero-section--mobile__text-box__title {
+    font-size: 10rem;
+    line-height: 75px;
+    margin-bottom: 25px;
+  }
+}
 @media only screen and (max-width: 550px) {
   .hero-section--mobile {
     height: 100vh;
     min-height: 745px;
   }
   .hero-section--mobile__text-box__title {
-    font-size: 8rem;
-    line-height: 45px;
+    font-size: 10rem;
+    line-height: 60px;
     margin-bottom: 25px;
     max-width: 80%;
   }
@@ -1898,7 +1923,65 @@ p.commum {
     width: calc(100% - var(--horizontal-distance--mobile) * 2);
   }
   .hero-section--mobile__statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 75%;
+    position: relative;
+    top: -20px;
+    padding-bottom: 60px;
+  }
+  .hero-section--mobile__statistics::before {
+    content: "";
+    height: 20px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-250%, -25%);
+  }
+  .hero-section--mobile__statistics__statistic {
+    position: relative;
+    left: 0px;
+  }
+  .hero-section--mobile__statistics__statistic:first-of-type {
+    margin-right: 0;
+  }
+  .hero-section--mobile__statistics__statistic__percentage {
+    font-family: "Aeonik Regular";
+    font-size: 3rem;
+    margin-right: 15px;
+  }
+  .hero-section--mobile__statistics__statistic__text {
+    font-size: 1.8rem;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 550px) and (max-width: 370px) {
+  .hero-section--mobile__statistics {
+    width: 80%;
+  }
+  .hero-section--mobile__statistics__statistic__percentage {
+    font-size: 2.5rem;
+  }
+  .hero-section--mobile__statistics__statistic__text {
+    font-size: 1.6rem;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 550px) and (max-width: 460px) {
+  .hero-section--mobile__text-box__title {
+    font-size: 8rem;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 550px) and (max-width: 360px) {
+  .hero-section--mobile__text-box__title {
+    font-size: 6.8rem;
+    line-height: 45px;
+    margin-bottom: 25px;
   }
 }
 

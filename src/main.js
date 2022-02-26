@@ -24,8 +24,8 @@ const toggleMenu = require('./js/toggleMenu')
 
 // require('./sass/base/_fonts.scss')
 
-// const aeonikBoldFont = require('./medias/fonts/aeonik/Aeonik-Bold.otf')
-// const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
-// const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')
-// const aeonikThinFont = require('./medias/fonts/aeonik/Aeonik-Thin.otf')
+const aeonikBoldFont = require('./medias/fonts/aeonik/Aeonik-Bold.otf')
+const aeonikRegularFont = require('./medias/fonts/aeonik/Aeonik-Regular.otf')
+const aeonikLightFont = require('./medias/fonts/aeonik/Aeonik-Light.otf')
+const aeonikThinFont = require('./medias/fonts/aeonik/Aeonik-Thin.otf')
 // const aeonikAirItalicFont = require('./medias/fonts/aeonik/Aeonik-AirItalic.otf')
