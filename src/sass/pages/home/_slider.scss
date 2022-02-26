@@ -13,10 +13,12 @@
          height: 0px;
       }
 
+      position: relative;
+
       &__slide {
          // border: 2px solid green;
 
-         height: 100vh;
+         height: 103vh;
          width: 100%;
 
          flex: none;
@@ -24,6 +26,7 @@
          @include flex-container(row, flex-start, center);
 
          position: relative;
+         z-index: 0;
 
          overflow: hidden;
 
@@ -75,7 +78,7 @@
          }
 
          &__box {
-            height: 100vh;
+            height: 100%;
             width: 50%;
 
             position: relative;
@@ -105,14 +108,42 @@
 
             width: calc(100% - (var(--horizontal-distance) * 2));
 
+            @media only screen and (max-width: 1030px) {
+               @include flex-container(row, center, center);
+
+               width: calc(100% - (var(--horizontal-distance--mobile) * 2));
+            }
+
             &__text-box {
                // border: 1px solid blue;
+
+               @include flex-container(column);
 
                width: 50%;
 
                position: absolute;
                left: 0;
                z-index: 1;
+
+               @media only screen and (max-width: 1325px) {
+                  width: 64%;
+               }
+
+               @media only screen and (max-width: 1030px) {
+                  left: unset;
+               }
+
+               @media only screen and (max-width: 1085px) {
+                  width: 75%;
+               }
+
+               @media only screen and (max-width: 960px) {
+                  width: 80%;
+               }
+
+               @media only screen and (max-width: 810px) {
+                  width: 85%;
+               }
 
                &__title {
                   font-family: 'aeonik light';
@@ -124,6 +155,28 @@
                   margin-bottom: 20px;
 
                   text-transform: uppercase;
+
+                  @include transition;
+
+                  @media only screen and (max-width: 810px) {
+                     font-size: 9rem;
+                     line-height: 70px;
+                  }
+
+                  @media only screen and (max-width: 720px) {
+                     font-size: 8rem;
+                     line-height: 60px;
+                  }
+
+                  @media only screen and (max-width: 680px) {
+                     font-size: 7rem;
+                     line-height: 50px;
+                  }
+
+                  @media only screen and (max-width: 630px) {
+                     font-size: 6rem;
+                     line-height: 45px;
+                  }
 
                   span {
                      display: block;
@@ -140,6 +193,10 @@
                   // font-weight: 600;
                   font-family: 'aeonik light';
                   width: 90%;
+
+                  @media only screen and (max-width: 960px) {
+                     width: 100%;
+                  }
                }
             }
 
@@ -153,6 +210,72 @@
 
                position: absolute;
                right: 0;
+
+               &--portrait {
+                  display: none;
+
+                  @include transition;
+               }
+
+               @media only screen and (max-width: 1030px) {
+                  // height: 340px;
+                  height: 700px;
+                  width: 40%;
+
+                  display: none;
+
+                  &--portrait {
+                     object-fit: unset;
+                     width: 17%;
+                     height: unset;
+                     position: absolute;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     display: block;
+                  }
+               }
+
+               @media only screen and (max-width: 780px) {
+                  &--portrait {
+                     width: 22%;
+                     height: unset;
+                  }
+               }
+
+               @media only screen and (max-width: 650px) {
+                  &--portrait {
+                     width: 25%;
+                     height: unset;
+                  }
+               }
+
+               @media only screen and (max-width: 550px) {
+                  &--portrait {
+                     width: 30%;
+                     height: unset;
+                  }
+               }
+
+               @media only screen and (max-width: 480px) {
+                  &--portrait {
+                     width: 35%;
+                     height: unset;
+                  }
+               }
+
+               @media only screen and (max-width: 385px) {
+                  &--portrait {
+                     width: 40%;
+                     height: unset;
+                  }
+               }
+
+               @media only screen and (max-width: 360px) {
+                  &--portrait {
+                     width: 48%;
+                     height: unset;
+                  }
+               }
             }
          }
       }

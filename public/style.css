@@ -574,7 +574,7 @@ p.commum {
   max-width: var(--max-width);
   position: absolute;
   mix-blend-mode: multiply;
-  z-index: 0;
+  z-index: 1;
 }
 .noises__noise {
   width: 100%;
@@ -2135,13 +2135,14 @@ p.commum {
   overflow: scroll;
   width: 100%;
   max-width: var(--max-width);
+  position: relative;
 }
 .home .slider::-webkit-scrollbar {
   display: none;
   height: 0px;
 }
 .home .slider__slide {
-  height: 100vh;
+  height: 103vh;
   width: 100%;
   flex: none;
   display: flex;
@@ -2149,6 +2150,7 @@ p.commum {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
 .home .slider__slide--1 {
@@ -2179,7 +2181,7 @@ p.commum {
   width: 100%;
 }
 .home .slider__slide__box {
-  height: 100vh;
+  height: 100%;
   width: 50%;
   position: relative;
 }
@@ -2195,11 +2197,49 @@ p.commum {
   z-index: 1;
   width: calc(100% - var(--horizontal-distance) * 2);
 }
+@media only screen and (max-width: 1030px) {
+  .home .slider__slide__content-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - var(--horizontal-distance--mobile) * 2);
+  }
+}
 .home .slider__slide__content-box__text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   position: absolute;
   left: 0;
   z-index: 1;
+}
+@media only screen and (max-width: 1325px) {
+  .home .slider__slide__content-box__text-box {
+    width: 64%;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .home .slider__slide__content-box__text-box {
+    left: unset;
+  }
+}
+@media only screen and (max-width: 1085px) {
+  .home .slider__slide__content-box__text-box {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .home .slider__slide__content-box__text-box {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .home .slider__slide__content-box__text-box {
+    width: 85%;
+  }
 }
 .home .slider__slide__content-box__text-box__title {
   font-family: "aeonik light";
@@ -2208,6 +2248,31 @@ p.commum {
   letter-spacing: 7px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+@media only screen and (max-width: 810px) {
+  .home .slider__slide__content-box__text-box__title {
+    font-size: 9rem;
+    line-height: 70px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .home .slider__slide__content-box__text-box__title {
+    font-size: 8rem;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .home .slider__slide__content-box__text-box__title {
+    font-size: 7rem;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .home .slider__slide__content-box__text-box__title {
+    font-size: 6rem;
+    line-height: 45px;
+  }
 }
 .home .slider__slide__content-box__text-box__title span {
   display: block;
@@ -2220,12 +2285,73 @@ p.commum {
   font-family: "aeonik light";
   width: 90%;
 }
+@media only screen and (max-width: 960px) {
+  .home .slider__slide__content-box__text-box__text {
+    width: 100%;
+  }
+}
 .home .slider__slide__content-box__img {
   background-color: lightblue;
   width: 60%;
   object-fit: cover;
   position: absolute;
   right: 0;
+}
+.home .slider__slide__content-box__img--portrait {
+  display: none;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+@media only screen and (max-width: 1030px) {
+  .home .slider__slide__content-box__img {
+    height: 700px;
+    width: 40%;
+    display: none;
+  }
+  .home .slider__slide__content-box__img--portrait {
+    object-fit: unset;
+    width: 17%;
+    height: unset;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 22%;
+    height: unset;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 25%;
+    height: unset;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 30%;
+    height: unset;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 35%;
+    height: unset;
+  }
+}
+@media only screen and (max-width: 385px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 40%;
+    height: unset;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .home .slider__slide__content-box__img--portrait {
+    width: 48%;
+    height: unset;
+  }
 }
 
 .home .differential {
