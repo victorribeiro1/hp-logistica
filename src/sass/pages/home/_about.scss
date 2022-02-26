@@ -146,12 +146,32 @@
 
             height: 650px;
 
+            @media only screen and (max-width: 505px) {
+               &--2 {
+                  height: 680px;
+               }
+            }
+
+            @media only screen and (max-width: 420px) {
+               &--2 {
+                  height: 690px;
+               }
+            }
+
             @media only screen and (max-width: 385px) {
                height: 680px;
+
+               &--2 {
+                  // display: none !important;
+               }
             }
 
             @media only screen and (max-width: 362px) {
                height: 710px;
+
+               &--2 {
+                  height: 730px;
+               }
             }
 
             &--1 {

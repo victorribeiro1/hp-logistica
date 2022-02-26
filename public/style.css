@@ -1,7 +1,6 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -25,6 +24,7 @@ html {
   --horizontal-distance: 120px;
   --horizontal-distance--mobile: 25px;
   --min-width: 328px;
+  --bp-width: 1030px;
   --max-width: 2100px;
   --min-menu-width: 1030px;
   --transition-speed: .5s;
@@ -644,7 +644,7 @@ p.commum {
   position: relative;
   z-index: 5;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 1030px) {
   .space--2 {
     display: none;
   }
@@ -2086,6 +2086,16 @@ p.commum {
     height: 650px;
   }
 }
+@media only screen and (max-width: 550px) and (max-width: 505px) {
+  .home .about__box--2 {
+    height: 680px;
+  }
+}
+@media only screen and (max-width: 550px) and (max-width: 420px) {
+  .home .about__box--2 {
+    height: 690px;
+  }
+}
 @media only screen and (max-width: 550px) and (max-width: 385px) {
   .home .about__box {
     height: 680px;
@@ -2094,6 +2104,9 @@ p.commum {
 @media only screen and (max-width: 550px) and (max-width: 362px) {
   .home .about__box {
     height: 710px;
+  }
+  .home .about__box--2 {
+    height: 730px;
   }
 }
 @media only screen and (max-width: 550px) {
