@@ -213,6 +213,22 @@
       }
    }
 
+   @media only screen and (max-width: 955px) {
+      & {
+         &__statistics {
+            width: 60%;
+         }
+      }
+   }
+
+   @media only screen and (max-width: 700px) {
+      & {
+         &__statistics {
+            width: 70%;
+         }
+      }
+   }
+
    @media only screen and (max-width: 775px) {
       & {
          &__img {
@@ -238,7 +254,7 @@
       & {
          height: 100vh;
          min-height: 750px;
-         max-height: 850px;
+         max-height: 860px;
          // min-height: unset;
          &__text-box {
             &__title {
@@ -249,7 +265,7 @@
             }
 
             &__text {
-               max-width: calc(100% - var(--horizontal-distance--mobile));
+               max-width: 87%;
             }
          }
 
@@ -270,7 +286,7 @@
          &__statistics {
             @include flex-container();
 
-            width: 75%;
+            width: 77%;
 
             position: relative;
             top: -20px;
