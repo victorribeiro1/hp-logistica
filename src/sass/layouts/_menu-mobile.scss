@@ -22,4 +22,10 @@
    .toggle-menu__button {
       margin-right: 25px;
    }
+
+   &.background {
+      background-color: transparent;
+
+      @include transition;
+   }
 }

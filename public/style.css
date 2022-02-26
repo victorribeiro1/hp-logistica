@@ -1,6 +1,7 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -1046,6 +1047,10 @@ p.commum {
 .menu-mobile .toggle-menu__button {
   margin-right: 25px;
 }
+.menu-mobile.background {
+  background-color: transparent;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
 
 .toggle-menu {
   display: flex;
@@ -1991,6 +1996,7 @@ p.commum {
   min-width: var(--min-width);
   overflow: hidden;
   position: relative;
+  z-index: 0;
 }
 .home .about__box {
   display: flex;
@@ -1998,6 +2004,7 @@ p.commum {
   justify-content: flex-start;
   align-items: flex-start;
   height: 100vh;
+  max-height: 1200px;
   position: relative;
   z-index: 0;
 }
@@ -2044,8 +2051,31 @@ p.commum {
 }
 .home .about__box__img {
   height: 103vh;
+  max-height: 1200px;
   width: 55%;
   object-fit: cover;
+}
+@media only screen and (max-width: 1030px) {
+  .home .about__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 755px;
+  }
+  .home .about__box--1 {
+    margin-bottom: 0;
+  }
+  .home .about__box__img {
+    min-height: 450px;
+    width: 100%;
+    order: 1;
+    margin-bottom: 50px;
+  }
+  .home .about__box__text-box-box {
+    width: 100%;
+    order: 2;
+  }
 }
 @media only screen and (max-width: 550px) {
   .home .about__box {
@@ -2053,17 +2083,31 @@ p.commum {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 800px;
+    height: 650px;
   }
+}
+@media only screen and (max-width: 550px) and (max-width: 385px) {
+  .home .about__box {
+    height: 680px;
+  }
+}
+@media only screen and (max-width: 550px) and (max-width: 362px) {
+  .home .about__box {
+    height: 710px;
+  }
+}
+@media only screen and (max-width: 550px) {
   .home .about__box--1 {
     margin-bottom: 0;
   }
+}
+@media only screen and (max-width: 550px) {
   .home .about__box__img {
-    min-height: 500px;
-    width: 100%;
-    order: 1;
+    min-height: 325px;
     margin-bottom: 50px;
   }
+}
+@media only screen and (max-width: 550px) {
   .home .about__box__text-box-box {
     width: 100%;
     order: 2;
