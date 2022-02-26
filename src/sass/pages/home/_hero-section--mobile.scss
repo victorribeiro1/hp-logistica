@@ -237,8 +237,8 @@
    @media only screen and (max-width: 550px) {
       & {
          height: 100vh;
-         min-height: 745px;
-         // max-height: 910px;
+         min-height: 750px;
+         max-height: 850px;
          // min-height: unset;
          &__text-box {
             &__title {
@@ -246,6 +246,10 @@
                line-height: 60px;
                margin-bottom: 25px;
                max-width: 80%;
+            }
+
+            &__text {
+               max-width: calc(100% - var(--horizontal-distance--mobile));
             }
          }
 
@@ -257,12 +261,6 @@
             &,
             &:link,
             &:visited {
-               // background-color: var(--color-primary);
-               border-top: 2px solid var(--color-primary);
-               border-bottom: 2px solid var(--color-primary);
-
-               @include flex-container(row, space-around, center);
-
                height: 50px;
                min-height: 50px;
                width: calc(100% - var(--horizontal-distance--mobile) * 2);
@@ -270,9 +268,7 @@
          }
 
          &__statistics {
-
             @include flex-container();
-            // border: 4px solid pink;
 
             width: 75%;
 
@@ -281,25 +277,11 @@
 
             padding-bottom: 60px;
 
-            &::before {
-               content: "";
-
-               // background-color: black;
-
-               height: 20px;
-               width: 2px;
-
-               position: absolute;
-               left: 50%;
-               bottom: 100px;
-               transform: translate(-250%, -25%);
-            }
-
             &__statistic {
-               // border: 2px solid blue;
                &:first-of-type {
                   margin-right: 0;
                }
+
                position: relative;
                left: 0px;
 

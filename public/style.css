@@ -1,7 +1,6 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -18,7 +17,6 @@
    src: url(assets/Aeonik-Thin.otf);
    font-family: "Aeonik Thin";
  }
-
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -1900,7 +1898,8 @@ p.commum {
 @media only screen and (max-width: 550px) {
   .hero-section--mobile {
     height: 100vh;
-    min-height: 745px;
+    min-height: 750px;
+    max-height: 850px;
   }
   .hero-section--mobile__text-box__title {
     font-size: 10rem;
@@ -1908,16 +1907,13 @@ p.commum {
     margin-bottom: 25px;
     max-width: 80%;
   }
+  .hero-section--mobile__text-box__text {
+    max-width: calc(100% - var(--horizontal-distance--mobile));
+  }
   .hero-section--mobile__img {
     width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
   }
   .hero-section--mobile__main-button, .hero-section--mobile__main-button:link, .hero-section--mobile__main-button:visited {
-    border-top: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     height: 50px;
     min-height: 50px;
     width: calc(100% - var(--horizontal-distance--mobile) * 2);
@@ -1931,15 +1927,6 @@ p.commum {
     position: relative;
     top: -20px;
     padding-bottom: 60px;
-  }
-  .hero-section--mobile__statistics::before {
-    content: "";
-    height: 20px;
-    width: 2px;
-    position: absolute;
-    left: 50%;
-    bottom: 100px;
-    transform: translate(-250%, -25%);
   }
   .hero-section--mobile__statistics__statistic {
     position: relative;
