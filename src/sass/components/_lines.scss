@@ -6,7 +6,7 @@
    width: 100%;
    max-width: var(--max-width);
 
-   transform: translateX(-4px);
+   // transform: translateX(-4px);
 
    @include flex-container(row, space-between, center);
 

@@ -5,7 +5,9 @@
 
    &__button {
       width: 50px;
-      height: 6px;
+      height: 50px;
+
+      // border: 1px solid blue;
 
       cursor: pointer;
 
@@ -13,7 +15,7 @@
 
       // border: 2px solid blue;
 
-      @include flex-container(column, space-between, flex-end);
+      @include flex-container(column, center, flex-end);
 
       &__line {
          background-color: var(--color-secondary);
@@ -23,6 +25,7 @@
 
          &--1 {
             width: 100%;
+            margin-bottom: 2px;
          }
 
          &--2 {
@@ -40,11 +43,13 @@
             &--1 {
                width: 100%;
                transform: rotateZ(-45deg) translateY(2px);
+
+               margin-bottom: 2px;
             }
 
             &--2 {
                width: 100%;
-               transform: rotateZ(45deg) translateY(-2px);
+               transform: rotateZ(45deg) translateY(-3px);
             }
          }
       }

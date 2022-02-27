@@ -1,6 +1,7 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -544,7 +545,6 @@ p.commum {
   height: 100%;
   width: 100%;
   max-width: var(--max-width);
-  transform: translateX(-4px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1062,12 +1062,12 @@ p.commum {
 }
 .toggle-menu__button {
   width: 50px;
-  height: 6px;
+  height: 50px;
   cursor: pointer;
   overflow: visible;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
 }
 .toggle-menu__button__line {
@@ -1077,6 +1077,7 @@ p.commum {
 }
 .toggle-menu__button__line--1 {
   width: 100%;
+  margin-bottom: 2px;
 }
 .toggle-menu__button__line--2 {
   width: 80%;
@@ -1089,10 +1090,11 @@ p.commum {
 .toggle-menu__button.active .toggle-menu__button__line--1 {
   width: 100%;
   transform: rotateZ(-45deg) translateY(2px);
+  margin-bottom: 2px;
 }
 .toggle-menu__button.active .toggle-menu__button__line--2 {
   width: 100%;
-  transform: rotateZ(45deg) translateY(-2px);
+  transform: rotateZ(45deg) translateY(-3px);
 }
 .toggle-menu__background {
   display: flex;
@@ -2143,6 +2145,8 @@ p.commum {
 }
 .home .slider__slide {
   height: 103vh;
+  max-height: 1700px;
+  min-height: 450px;
   width: 100%;
   flex: none;
   display: flex;
@@ -2363,7 +2367,8 @@ p.commum {
   background-color: var(--color-secondary);
   border-radius: 20px;
   height: 80vh;
-  max-height: 800px;
+  max-height: 650px;
+  min-height: 450px;
   width: 80%;
   overflow: hidden;
   position: relative;
