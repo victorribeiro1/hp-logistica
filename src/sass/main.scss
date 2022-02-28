@@ -7,8 +7,6 @@
 @import './base/base';
 @import './base/typography';
 
-
-
 @import './components/icon';
 @import './components/lines';
 @import './components/noises';
@@ -28,6 +26,7 @@
 @import './pages/home/about';
 @import './pages/home/slider';
 @import './pages/home/differential';
+@import './pages/home/differential--mobile';
 @import './pages/home/faq';
 @import './pages/home/evaluations';
 

@@ -1,0 +1,100 @@
+.differential--mobile {
+   height: 100vh;
+
+   position: relative;
+
+   // @include flex-container(row, flex-start, center);
+
+   overflow: hidden;
+
+   &__slider {
+      border: 1px solid red;
+
+      height: 100%;
+      width: 100%;
+
+      @include flex-container(row, flex-start, center);
+
+      max-width: 100%;
+      overflow: scroll;
+
+      position: relative;
+
+      z-index: 1;
+
+      &:hover {
+         border: 1px solid blue;
+      }
+   }
+
+   &__differential {
+      @include flex-container(column, space-between, center);
+      border-radius: 14px;
+      height: 50%;
+
+      width: 60%;
+
+      flex: none;
+
+      background-color: var(--color-secondary);
+
+      padding: calc(var(--horizontal-distance--mobile) * 2) var(--horizontal-distance--mobile);
+
+      margin-right: 50px;
+
+      overflow: hidden;
+      position: relative;
+
+      .lines {
+         transform: translateY(-25%);
+
+         height: 150%;
+      }
+
+      &--1 {
+         margin-left: 25%;
+      }
+
+      &--3 {
+         margin-right: 25%;
+      }
+
+      color: white;
+
+      &__text-box {
+         position: relative;
+
+         &__title {
+            font-size: 3rem;
+
+            margin-bottom: 25px;
+         }
+
+         &__text {
+            color: #EBEBEB;
+            font-family: 'aeonik light';
+            font-size: 2rem;
+            font-weight: 100;
+            letter-spacing: 2px;
+            word-spacing: 4px;
+            line-height: 15px;
+            text-align: left;
+         }
+      }
+
+      &__button {
+         &,
+         &:link,
+         &:visited {
+            color: white;
+         }
+
+         &__arrow {
+            &__head,
+            &__body {
+               background-color: white;
+            }
+         }
+      }
+   }
+}

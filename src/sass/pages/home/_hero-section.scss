@@ -60,6 +60,10 @@
 
             @include transition;
 
+            @media only screen and (max-width: 1600px) {
+               line-height: 100px;
+            }
+
             span {
                transform: skewX(-15deg);
                display: inline-block;
@@ -271,6 +275,7 @@
             min-height: 680px;
          }
       }
+
       @media only screen and (max-width: 1350px) {
          & {
             max-height: 800px;

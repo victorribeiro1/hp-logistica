@@ -5,6 +5,12 @@
       position: relative;
       z-index: 5;
 
+      display: block;
+
+      @media only screen and (max-width: 1030px) {
+         display: none;
+      }
+
       &__differentials {
          background-color: var(--color-secondary);
          border-radius: 20px;
