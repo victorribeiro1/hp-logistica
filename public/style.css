@@ -1,8 +1,6 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-
-
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -2434,12 +2432,20 @@ p.commum {
 }
 
 .differential--mobile {
-  height: 100vh;
+  height: 50vh;
+  min-height: 325px;
+  max-height: 400px;
   position: relative;
+  display: none;
   overflow: hidden;
 }
+@media only screen and (max-width: 1030px) {
+  .differential--mobile {
+    display: block;
+  }
+}
 .differential--mobile__slider {
-  border: 1px solid red;
+  cursor: grab;
   height: 100%;
   width: 100%;
   display: flex;
@@ -2451,8 +2457,8 @@ p.commum {
   position: relative;
   z-index: 1;
 }
-.differential--mobile__slider:hover {
-  border: 1px solid blue;
+.differential--mobile__slider::-webkit-scrollbar {
+  display: none;
 }
 .differential--mobile__differential {
   display: flex;
@@ -2460,14 +2466,15 @@ p.commum {
   justify-content: space-between;
   align-items: center;
   border-radius: 14px;
-  height: 50%;
-  width: 60%;
+  height: 100%;
+  width: 40%;
   flex: none;
   background-color: var(--color-secondary);
   padding: calc(var(--horizontal-distance--mobile) * 2) var(--horizontal-distance--mobile);
   margin-right: 50px;
   overflow: hidden;
   position: relative;
+  transition: var(--transition-speed) var(--transition-timing-function);
   color: white;
 }
 .differential--mobile__differential .lines {
@@ -2475,10 +2482,32 @@ p.commum {
   height: 150%;
 }
 .differential--mobile__differential--1 {
-  margin-left: 25%;
+  margin-left: 30%;
 }
 .differential--mobile__differential--3 {
-  margin-right: 25%;
+  margin-right: 30%;
+}
+@media only screen and (max-width: 670px) {
+  .differential--mobile__differential {
+    width: 50%;
+  }
+  .differential--mobile__differential--1 {
+    margin-left: 25%;
+  }
+  .differential--mobile__differential--3 {
+    margin-right: 25%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .differential--mobile__differential {
+    width: 60%;
+  }
+  .differential--mobile__differential--1 {
+    margin-left: 20%;
+  }
+  .differential--mobile__differential--3 {
+    margin-right: 20%;
+  }
 }
 .differential--mobile__differential__text-box {
   position: relative;
@@ -2490,7 +2519,7 @@ p.commum {
 .differential--mobile__differential__text-box__text {
   color: #EBEBEB;
   font-family: "aeonik light";
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 100;
   letter-spacing: 2px;
   word-spacing: 4px;
@@ -2502,6 +2531,32 @@ p.commum {
 }
 .differential--mobile__differential__button__arrow__head, .differential--mobile__differential__button__arrow__body {
   background-color: white;
+}
+@media only screen and (max-width: 385px) {
+  .differential--mobile__differential__text-box__title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  .differential--mobile__differential__text-box__text {
+    color: #EBEBEB;
+    font-family: "aeonik light";
+    font-size: 1.4rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 15px;
+    text-align: left;
+  }
+  .differential--mobile__differential__button, .differential--mobile__differential__button:link, .differential--mobile__differential__button:visited {
+    color: white;
+  }
+  .differential--mobile__differential__button__text {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  .differential--mobile__differential__button__arrow {
+    width: 30px;
+  }
 }
 
 .faq {

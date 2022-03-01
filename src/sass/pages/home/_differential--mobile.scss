@@ -1,14 +1,23 @@
 .differential--mobile {
-   height: 100vh;
+   height: 50vh;
+   min-height: 325px;
+   max-height: 400px;
 
    position: relative;
 
    // @include flex-container(row, flex-start, center);
 
+   display: none;
+
+   @media only screen and (max-width: 1030px) {
+      display: block;
+   }
+
    overflow: hidden;
 
    &__slider {
-      border: 1px solid red;
+      // border: 1px solid red;
+      cursor: grab;
 
       height: 100%;
       width: 100%;
@@ -23,16 +32,21 @@
       z-index: 1;
 
       &:hover {
-         border: 1px solid blue;
+         // border: 1px solid blue;
+      }
+
+      &::-webkit-scrollbar {
+         display: none
       }
    }
 
    &__differential {
       @include flex-container(column, space-between, center);
       border-radius: 14px;
-      height: 50%;
+      height: 100%;
 
-      width: 60%;
+      width: 40%;
+      // max-width: 450px;
 
       flex: none;
 
@@ -45,6 +59,8 @@
       overflow: hidden;
       position: relative;
 
+      @include transition;
+
       .lines {
          transform: translateY(-25%);
 
@@ -52,14 +68,38 @@
       }
 
       &--1 {
-         margin-left: 25%;
+         margin-left: 30%;
       }
 
       &--3 {
-         margin-right: 25%;
+         margin-right: 30%;
       }
 
       color: white;
+
+      @media only screen and (max-width: 670px) {
+         width: 50%;
+
+         &--1 {
+            margin-left: 25%;
+         }
+
+         &--3 {
+            margin-right: 25%;
+         }
+      }
+
+      @media only screen and (max-width: 500px) {
+         width: 60%;
+
+         &--1 {
+            margin-left: 20%;
+         }
+
+         &--3 {
+            margin-right: 20%;
+         }
+      }
 
       &__text-box {
          position: relative;
@@ -73,13 +113,15 @@
          &__text {
             color: #EBEBEB;
             font-family: 'aeonik light';
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: 100;
             letter-spacing: 2px;
             word-spacing: 4px;
             line-height: 15px;
             text-align: left;
          }
+
+
       }
 
       &__button {
@@ -93,6 +135,44 @@
             &__head,
             &__body {
                background-color: white;
+            }
+         }
+      }
+
+      @media only screen and (max-width: 385px) {
+         &__text-box {
+            &__title {
+               font-size: 2.8rem;
+
+               margin-bottom: 15px;
+            }
+
+            &__text {
+               color: #EBEBEB;
+               font-family: 'aeonik light';
+               font-size: 1.4rem;
+               font-weight: 100;
+               letter-spacing: 2px;
+               word-spacing: 4px;
+               line-height: 15px;
+               text-align: left;
+            }
+         }
+
+         &__button {
+            &,
+            &:link,
+            &:visited {
+               color: white;
+            }
+
+            &__text {
+               font-size: 1.2rem;
+               margin-right: 10px;
+            }
+
+            &__arrow {
+               width: 30px;
             }
          }
       }
