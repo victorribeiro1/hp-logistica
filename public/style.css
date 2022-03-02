@@ -1,22 +1,6 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-@font-face {
-   src: url(assets/Aeonik-Bold.otf);
-   font-family: "Aeonik Bold";
- }
- @font-face {
-   src: url(assets/Aeonik-Light.otf);
-   font-family: "Aeonik Light";
- }
- @font-face {
-   src: url(assets/Aeonik-Regular.otf);
-   font-family: "Aeonik Regular";
- }
- @font-face {
-   src: url(assets/Aeonik-Thin.otf);
-   font-family: "Aeonik Thin";
- }
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -392,7 +376,7 @@ template {
   display: none;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -2500,13 +2484,13 @@ p.commum {
 }
 @media only screen and (max-width: 500px) {
   .differential--mobile__differential {
-    width: 60%;
+    width: 68%;
   }
   .differential--mobile__differential--1 {
-    margin-left: 20%;
+    margin-left: 16%;
   }
   .differential--mobile__differential--3 {
-    margin-right: 20%;
+    margin-right: 16%;
   }
 }
 .differential--mobile__differential__text-box {
@@ -2566,11 +2550,11 @@ p.commum {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 .faq__options {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   width: calc(100% - var(--horizontal-distance) * 2);
   display: flex;
   flex-direction: column;
@@ -2662,7 +2646,6 @@ p.commum {
   background-color: var(--color-secondary);
   height: 1px;
   width: 100%;
-  position: absolute;
   top: 204px;
   opacity: 0;
   transition: var(--transition-speed) var(--transition-timing-function);
@@ -2690,6 +2673,44 @@ p.commum {
 .faq__options__option__answer-box__divisor {
   height: 1px;
   width: 100%;
+}
+@media only screen and (max-width: 1030px) {
+  .faq__options {
+    width: calc(100% - var(--horizontal-distance--mobile) * 2);
+  }
+  .faq__options__option__line-box__number {
+    margin-right: 3px;
+  }
+}
+@media only screen and (max-width: 685px) {
+  .faq__options__option__line-box__number {
+    margin-right: 6px;
+  }
+  .faq__options__option__question-box__question {
+    font-size: 7rem;
+  }
+  .faq__options__option__question-box__arrow-box {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .faq__options__option:hover .faq__options__option__question-box__arrow-box--right {
+    left: -40px;
+  }
+  .faq__options__option__line-box__number {
+    margin-right: 6px;
+  }
+  .faq__options__option__question-box__question {
+    font-size: 6rem;
+  }
+  .faq__options__option__question-box__arrow-box {
+    width: 16rem;
+    height: 16rem;
+  }
+  .faq__options__option__question-box__arrow-box--left {
+    left: 40px;
+  }
 }
 
 .home .evaluations {

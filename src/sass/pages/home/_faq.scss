@@ -5,11 +5,11 @@
 
    @include flex-container;
 
-   padding-bottom: 200px;
+   padding-bottom: 100px;
 
    &__options {
       position: relative;
-      z-index: 0;
+      z-index: 1;
       width: calc(100% - (var(--horizontal-distance) * 2));
 
       @include flex-container(column, flex-start, center);
@@ -45,7 +45,6 @@
 
                &--right {
                   left: -80px;
-
                }
 
                &--left {
@@ -58,6 +57,7 @@
 
          &__line-box {
             width: 100%;
+            // transform: translateY(50%);
             // height: 1px;
 
             // overflow: visible;
@@ -138,13 +138,13 @@
             height: 1px;
             width: 100%;
 
-            position: absolute;
+            // position: absolute;
             top: calc(190px + 14px);
 
             opacity: 0;
 
             &:last-of-type {
-               opacity: 1;     
+               opacity: 1;
             }
 
             @include transition;
@@ -183,6 +183,88 @@
                height: 1px;
                width: 100%;
             }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 1030px) {
+      &__options {
+         // border: 1px solid blue;
+
+         &__option {
+            &__line-box {
+               &__number {
+                  margin-right: 3px;
+               }
+            }
+         }
+         &:hover {
+            // border: 1px solid red;
+         }
+         width: calc(100% - var(--horizontal-distance--mobile) * 2);
+      }
+   }
+
+   @media only screen and (max-width: 685px) {
+
+      &__options {
+         &__option {
+            &__line-box {
+               &__number {
+                  margin-right: 6px;
+               }
+            }
+
+            &__question-box {
+               &__question {
+                  font-size: 7rem;
+               }
+
+               &__arrow-box {
+                  width: 17rem;
+                  height: 17rem;
+               }
+            }
+
+         }
+      }
+   }
+
+   @media only screen and (max-width: 470px) {
+
+      &__options {
+         &__option {
+
+            &:hover & {
+               &__question-box {
+                  &__arrow-box {
+                     &--right {
+                        left: -40px;
+                     }
+                  }
+               }
+            }
+            &__line-box {
+               &__number {
+                  margin-right: 6px;
+               }
+            }
+
+            &__question-box {
+               &__question {
+                  font-size: 6rem;
+               }
+
+               &__arrow-box {
+                  width: 16rem;
+                  height: 16rem;
+
+                  &--left {
+                     left: 40px;
+                  }
+               }
+            }
+
          }
       }
    }
