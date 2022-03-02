@@ -20,6 +20,7 @@ const processoFiscal = require('./medias/images/processo-fiscal.jpg')
 
 const favIcon = require('./medias/svgs/symbol-defs.svg')
 
+const contato = require('./js/contato')
 const faq = require('./js/faq')
 const menu = require('./js/menu')
 const onload = require('./js/onload')

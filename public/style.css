@@ -2930,6 +2930,7 @@ p.commum {
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
+  z-index: 1;
   height: calc(100% - 100px);
   width: 100%;
 }
@@ -2980,14 +2981,19 @@ p.commum {
   transition: var(--transition-speed) var(--transition-timing-function);
 }
 .contact__content__container__form-box__form :nth-child(5):focus {
-  height: 275px;
+  height: 340px;
+}
+@media only screen and (max-height: 1100px) {
+  .contact__content__container__form-box__form :nth-child(5):focus {
+    height: 300px;
+  }
 }
 @media only screen and (max-height: 1026px) {
   .contact__content__container__form-box__form :nth-child(5):focus {
-    height: 150px;
+    height: 225px;
   }
 }
-@media only screen and (max-height: 910px) {
+@media only screen and (max-height: 960px) {
   .contact__content__container__form-box__form :nth-child(5):focus {
     height: 100px;
   }

@@ -23,6 +23,7 @@
         @include flex-container(row, flex-start, flex-start);
         //    border: 2px solid pink;
         position: relative;
+        z-index: 1;
 
       //   max-height: 900px;
         height: calc(100% - 100px);
@@ -103,13 +104,17 @@
                         @include transition;
 
                         &:focus {
-                            height: 275px;
+                            height: 340px;
+
+                            @media only screen and (max-height: 1100px) {
+                              height: 300px;
+                           }
 
                             @media only screen and (max-height: 1026px) {
-                               height: 150px;
+                              height: 225px;
                             }
 
-                            @media only screen and (max-height: 910px) {
+                            @media only screen and (max-height: 960px) {
                                height: 100px;
                             }
 
