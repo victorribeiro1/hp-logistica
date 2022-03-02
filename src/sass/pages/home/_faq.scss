@@ -37,7 +37,18 @@
             &__answer-box {
                opacity: 1;
 
-               transition-delay: .25s
+               transition-delay: .25s;
+
+               &__question {
+                  font-size: 2rem;
+               }
+
+               &__answer {
+                  letter-spacing: 1px;
+
+                  font-family: 'Aeonik Light';
+                  // word-spacing: ;
+               }
             }
 
             &__question-box__arrow-box {
@@ -83,7 +94,7 @@
          &__question-box {
             // border: 1px solid blue;
 
-            cursor: pointer;
+            // cursor: pointer;
 
             @include flex-container(row, space-between, center);
 
@@ -129,6 +140,12 @@
                   height: 8rem;
                   width: 8rem;
                }
+            }
+         }
+
+         &__answer-box {
+            &__answer {
+               width: 90%;
             }
          }
 
@@ -246,7 +263,7 @@
             }
             &__line-box {
                &__number {
-                  margin-right: 6px;
+                  margin-right: 8px;
                }
             }
 
@@ -258,6 +275,45 @@
                &__arrow-box {
                   width: 16rem;
                   height: 16rem;
+
+                  &--left {
+                     left: 40px;
+                  }
+               }
+            }
+
+         }
+      }
+   }
+
+   @media only screen and (max-width: 400px) {
+
+      &__options {
+         &__option {
+
+            &:hover & {
+               &__question-box {
+                  &__arrow-box {
+                     &--right {
+                        left: -40px;
+                     }
+                  }
+               }
+            }
+            &__line-box {
+               &__number {
+                  margin-right: 10px;
+               }
+            }
+
+            &__question-box {
+               &__question {
+                  font-size: 5rem;
+               }
+
+               &__arrow-box {
+                  width: 15rem;
+                  height: 15rem;
 
                   &--left {
                      left: 40px;

@@ -1,6 +1,23 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
+
+@font-face {
+   src: url(assets/Aeonik-Bold.otf);
+   font-family: "Aeonik Bold";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Light.otf);
+   font-family: "Aeonik Light";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Regular.otf);
+   font-family: "Aeonik Regular";
+ }
+ @font-face {
+   src: url(assets/Aeonik-Thin.otf);
+   font-family: "Aeonik Thin";
+ }
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -376,7 +393,7 @@ template {
   display: none;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -687,12 +704,7 @@ p.commum {
   margin-bottom: 10px;
 }
 .footer__content-box__company-informations__company-description {
-  font-family: "aeonik light";
-  font-size: 1.4rem;
-  font-weight: 100;
-  letter-spacing: 2px;
-  word-spacing: 4px;
-  line-height: 22px;
+  font-size: 1.4rem !important;
 }
 .footer__content-box__fast-links__title {
   font-family: "aeonik regular";
@@ -896,9 +908,6 @@ p.commum {
   .footer-mobile__main-content__links__list__item:not(:last-child) {
     margin-bottom: 15px;
   }
-  .footer-mobile__main-content__links__list__item__link, .footer-mobile__main-content__links__list__item__link:link, .footer-mobile__main-content__links__list__item__link:visited {
-    font-size: 2.5rem;
-  }
   .footer-mobile__copy {
     transform: translateY(-125%);
   }
@@ -1008,7 +1017,6 @@ p.commum {
 
 .menu-mobile {
   display: none;
-  min-width: var(--min-width);
   width: 100%;
   height: 100px;
   position: fixed;
@@ -2395,15 +2403,6 @@ p.commum {
   font-size: 2rem;
   margin-bottom: 25px;
 }
-.home .differential__differentials__options__option__text {
-  font-family: "aeonik light";
-  font-size: 1.4rem;
-  font-weight: 100;
-  letter-spacing: 2px;
-  word-spacing: 4px;
-  line-height: 22px;
-  text-align: left;
-}
 .home .differential__differentials .secondary-button {
   position: absolute;
   bottom: 75px;
@@ -2577,6 +2576,13 @@ p.commum {
   opacity: 1;
   transition-delay: 0.25s;
 }
+.faq__options__option:hover .faq__options__option__answer-box__question {
+  font-size: 2rem;
+}
+.faq__options__option:hover .faq__options__option__answer-box__answer {
+  letter-spacing: 1px;
+  font-family: "Aeonik Light";
+}
 .faq__options__option:hover .faq__options__option__question-box__arrow-box {
   transform: rotate(-45deg);
 }
@@ -2604,7 +2610,6 @@ p.commum {
   width: 98%;
 }
 .faq__options__option__question-box {
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2641,6 +2646,9 @@ p.commum {
 .faq__options__option__question-box__arrow-box__arrow {
   height: 8rem;
   width: 8rem;
+}
+.faq__options__option__answer-box__answer {
+  width: 90%;
 }
 .faq__options__option__divisor {
   background-color: var(--color-secondary);
@@ -2699,7 +2707,7 @@ p.commum {
     left: -40px;
   }
   .faq__options__option__line-box__number {
-    margin-right: 6px;
+    margin-right: 8px;
   }
   .faq__options__option__question-box__question {
     font-size: 6rem;
@@ -2707,6 +2715,24 @@ p.commum {
   .faq__options__option__question-box__arrow-box {
     width: 16rem;
     height: 16rem;
+  }
+  .faq__options__option__question-box__arrow-box--left {
+    left: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .faq__options__option:hover .faq__options__option__question-box__arrow-box--right {
+    left: -40px;
+  }
+  .faq__options__option__line-box__number {
+    margin-right: 10px;
+  }
+  .faq__options__option__question-box__question {
+    font-size: 5rem;
+  }
+  .faq__options__option__question-box__arrow-box {
+    width: 15rem;
+    height: 15rem;
   }
   .faq__options__option__question-box__arrow-box--left {
     left: 40px;
