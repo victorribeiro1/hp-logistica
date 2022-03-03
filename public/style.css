@@ -1075,7 +1075,7 @@ p.commum {
 }
 .toggle-menu__button.active .toggle-menu__button__line {
   background-color: var(--color-primary);
-  height: 2px;
+  height: 1px;
   transform-origin: center;
 }
 .toggle-menu__button.active .toggle-menu__button__line--1 {
@@ -2004,7 +2004,7 @@ p.commum {
   height: 100vh;
   max-height: 1200px;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 .home .about__box--1 {
   margin-bottom: 100px;
@@ -3042,6 +3042,12 @@ p.commum {
 }
 .contact__content__container__form-box__form .secondary-button__arrow__head {
   width: 1px;
+}
+.contact__content__container__form-box__form .input {
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+.contact__content__container__form-box__form .input.incorrect {
+  border-bottom: 2px solid var(--color-primary);
 }
 @media only screen and (max-width: 1290px) {
   .contact__content {
