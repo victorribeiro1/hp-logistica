@@ -4368,7 +4368,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\nvar logo = __webpack_require__(/*! ./medias/images/logo.png */ \"./src/medias/images/logo.png\");\n\nvar imagem_secundaria = __webpack_require__(/*! ./medias/images/imagem_secundaria.png */ \"./src/medias/images/imagem_secundaria.png\");\n\nvar storageImage = __webpack_require__(/*! ./medias/images/storage.jpg */ \"./src/medias/images/storage.jpg\");\n\nvar trucks = __webpack_require__(/*! ./medias/images/trucks.jpg */ \"./src/medias/images/trucks.jpg\");\n\nvar noise = __webpack_require__(/*! ./medias/images/noise.jpg */ \"./src/medias/images/noise.jpg\");\n\nvar noise2 = __webpack_require__(/*! ./medias/images/noise-2.jpg */ \"./src/medias/images/noise-2.jpg\");\n\nvar graySlideImage = __webpack_require__(/*! ./medias/images/gray-slide-image.jpg */ \"./src/medias/images/gray-slide-image.jpg\");\n\nvar graySlideImagePortrait = __webpack_require__(/*! ./medias/images/gray-slide-image-portrait.jpg */ \"./src/medias/images/gray-slide-image-portrait.jpg\");\n\nvar brownSlideImage = __webpack_require__(/*! ./medias/images/brown-slide-image.jpg */ \"./src/medias/images/brown-slide-image.jpg\");\n\nvar brownSlideImagePortrait = __webpack_require__(/*! ./medias/images/brown-slide-image-portrait.jpg */ \"./src/medias/images/brown-slide-image-portrait.jpg\");\n\nvar blueSlideImage = __webpack_require__(/*! ./medias/images/blue-slide-image.jpg */ \"./src/medias/images/blue-slide-image.jpg\");\n\nvar blueSlideImagePortrait = __webpack_require__(/*! ./medias/images/blue-slide-image-portrait.jpg */ \"./src/medias/images/blue-slide-image-portrait.jpg\");\n\nvar contactUs = __webpack_require__(/*! ./medias/images/contact-us.jpg */ \"./src/medias/images/contact-us.jpg\");\n\nvar favicon16 = __webpack_require__(/*! ./medias/images/favicon-16x16.png */ \"./src/medias/images/favicon-16x16.png\");\n\nvar favicon32 = __webpack_require__(/*! ./medias/images/favicon-32x32.png */ \"./src/medias/images/favicon-32x32.png\");\n\nvar processoFiscal = __webpack_require__(/*! ./medias/images/processo-fiscal.jpg */ \"./src/medias/images/processo-fiscal.jpg\");\n\nvar favIcon = __webpack_require__(/*! ./medias/svgs/symbol-defs.svg */ \"./src/medias/svgs/symbol-defs.svg\");\n\nvar faq = __webpack_require__(/*! ./js/faq */ \"./src/js/faq.js\");\n\nvar menu = __webpack_require__(/*! ./js/menu */ \"./src/js/menu.js\");\n\nvar onload = __webpack_require__(/*! ./js/onload */ \"./src/js/onload.js\");\n\nvar toggleMenu = __webpack_require__(/*! ./js/toggleMenu */ \"./src/js/toggleMenu.js\"); // require('./sass/base/_fonts.scss')\n\n\nvar aeonikBoldFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Bold.otf */ \"./src/medias/fonts/aeonik/Aeonik-Bold.otf\");\n\nvar aeonikRegularFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Regular.otf */ \"./src/medias/fonts/aeonik/Aeonik-Regular.otf\");\n\nvar aeonikLightFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Light.otf */ \"./src/medias/fonts/aeonik/Aeonik-Light.otf\");\n\nvar aeonikThinFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Thin.otf */ \"./src/medias/fonts/aeonik/Aeonik-Thin.otf\"); // const aeonikAirItalicFont = require('./medias/fonts/aeonik/Aeonik-AirItalic.otf')\n\n//# sourceURL=webpack://hp/./src/main.js?");
+eval("__webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\nvar logo = __webpack_require__(/*! ./medias/images/logo.png */ \"./src/medias/images/logo.png\");\n\nvar imagem_secundaria = __webpack_require__(/*! ./medias/images/imagem_secundaria.png */ \"./src/medias/images/imagem_secundaria.png\");\n\nvar storageImage = __webpack_require__(/*! ./medias/images/storage.jpg */ \"./src/medias/images/storage.jpg\");\n\nvar trucks = __webpack_require__(/*! ./medias/images/trucks.jpg */ \"./src/medias/images/trucks.jpg\");\n\nvar noise = __webpack_require__(/*! ./medias/images/noise.jpg */ \"./src/medias/images/noise.jpg\");\n\nvar noise2 = __webpack_require__(/*! ./medias/images/noise-2.jpg */ \"./src/medias/images/noise-2.jpg\");\n\nvar graySlideImage = __webpack_require__(/*! ./medias/images/gray-slide-image.jpg */ \"./src/medias/images/gray-slide-image.jpg\");\n\nvar graySlideImagePortrait = __webpack_require__(/*! ./medias/images/gray-slide-image-portrait.jpg */ \"./src/medias/images/gray-slide-image-portrait.jpg\");\n\nvar brownSlideImage = __webpack_require__(/*! ./medias/images/brown-slide-image.jpg */ \"./src/medias/images/brown-slide-image.jpg\");\n\nvar brownSlideImagePortrait = __webpack_require__(/*! ./medias/images/brown-slide-image-portrait.jpg */ \"./src/medias/images/brown-slide-image-portrait.jpg\");\n\nvar blueSlideImage = __webpack_require__(/*! ./medias/images/blue-slide-image.jpg */ \"./src/medias/images/blue-slide-image.jpg\");\n\nvar blueSlideImagePortrait = __webpack_require__(/*! ./medias/images/blue-slide-image-portrait.jpg */ \"./src/medias/images/blue-slide-image-portrait.jpg\");\n\nvar contactUs = __webpack_require__(/*! ./medias/images/contact-us.jpg */ \"./src/medias/images/contact-us.jpg\");\n\nvar favicon16 = __webpack_require__(/*! ./medias/images/favicon-16x16.png */ \"./src/medias/images/favicon-16x16.png\");\n\nvar favicon32 = __webpack_require__(/*! ./medias/images/favicon-32x32.png */ \"./src/medias/images/favicon-32x32.png\");\n\nvar processoFiscal = __webpack_require__(/*! ./medias/images/processo-fiscal-1.jpg */ \"./src/medias/images/processo-fiscal-1.jpg\");\n\nvar recebimento = __webpack_require__(/*! ./medias/images/recebimento.jpg */ \"./src/medias/images/recebimento.jpg\");\n\nvar manuseio = __webpack_require__(/*! ./medias/images/manuseio.jpg */ \"./src/medias/images/manuseio.jpg\");\n\nvar storage1 = __webpack_require__(/*! ./medias/images/storage-1.jpg */ \"./src/medias/images/storage-1.jpg\");\n\nvar wms = __webpack_require__(/*! ./medias/images/wms.jpg */ \"./src/medias/images/wms.jpg\");\n\nvar truck2 = __webpack_require__(/*! ./medias/images/truck-2.jpg */ \"./src/medias/images/truck-2.jpg\");\n\nvar favIcon = __webpack_require__(/*! ./medias/svgs/symbol-defs.svg */ \"./src/medias/svgs/symbol-defs.svg\");\n\nvar faq = __webpack_require__(/*! ./js/faq */ \"./src/js/faq.js\");\n\nvar menu = __webpack_require__(/*! ./js/menu */ \"./src/js/menu.js\");\n\nvar onload = __webpack_require__(/*! ./js/onload */ \"./src/js/onload.js\");\n\nvar toggleMenu = __webpack_require__(/*! ./js/toggleMenu */ \"./src/js/toggleMenu.js\"); // require('./sass/base/_fonts.scss')\n\n\nvar aeonikBoldFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Bold.otf */ \"./src/medias/fonts/aeonik/Aeonik-Bold.otf\");\n\nvar aeonikRegularFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Regular.otf */ \"./src/medias/fonts/aeonik/Aeonik-Regular.otf\");\n\nvar aeonikLightFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Light.otf */ \"./src/medias/fonts/aeonik/Aeonik-Light.otf\");\n\nvar aeonikThinFont = __webpack_require__(/*! ./medias/fonts/aeonik/Aeonik-Thin.otf */ \"./src/medias/fonts/aeonik/Aeonik-Thin.otf\"); // const aeonikAirItalicFont = require('./medias/fonts/aeonik/Aeonik-AirItalic.otf')\n\n//# sourceURL=webpack://hp/./src/main.js?");
 
 /***/ }),
 
@@ -4522,6 +4522,16 @@ eval("module.exports = __webpack_require__.p + \"/assets/logo.png\";\n\n//# sour
 
 /***/ }),
 
+/***/ "./src/medias/images/manuseio.jpg":
+/*!****************************************!*\
+  !*** ./src/medias/images/manuseio.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/manuseio.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/manuseio.jpg?");
+
+/***/ }),
+
 /***/ "./src/medias/images/noise-2.jpg":
 /*!***************************************!*\
   !*** ./src/medias/images/noise-2.jpg ***!
@@ -4542,13 +4552,33 @@ eval("module.exports = __webpack_require__.p + \"/assets/noise.jpg\";\n\n//# sou
 
 /***/ }),
 
-/***/ "./src/medias/images/processo-fiscal.jpg":
-/*!***********************************************!*\
-  !*** ./src/medias/images/processo-fiscal.jpg ***!
-  \***********************************************/
+/***/ "./src/medias/images/processo-fiscal-1.jpg":
+/*!*************************************************!*\
+  !*** ./src/medias/images/processo-fiscal-1.jpg ***!
+  \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"/assets/processo-fiscal.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/processo-fiscal.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/processo-fiscal-1.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/processo-fiscal-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/medias/images/recebimento.jpg":
+/*!*******************************************!*\
+  !*** ./src/medias/images/recebimento.jpg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/recebimento.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/recebimento.jpg?");
+
+/***/ }),
+
+/***/ "./src/medias/images/storage-1.jpg":
+/*!*****************************************!*\
+  !*** ./src/medias/images/storage-1.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/storage-1.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/storage-1.jpg?");
 
 /***/ }),
 
@@ -4562,6 +4592,16 @@ eval("module.exports = __webpack_require__.p + \"/assets/storage.jpg\";\n\n//# s
 
 /***/ }),
 
+/***/ "./src/medias/images/truck-2.jpg":
+/*!***************************************!*\
+  !*** ./src/medias/images/truck-2.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/truck-2.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/truck-2.jpg?");
+
+/***/ }),
+
 /***/ "./src/medias/images/trucks.jpg":
 /*!**************************************!*\
   !*** ./src/medias/images/trucks.jpg ***!
@@ -4569,6 +4609,16 @@ eval("module.exports = __webpack_require__.p + \"/assets/storage.jpg\";\n\n//# s
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"/assets/trucks.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/trucks.jpg?");
+
+/***/ }),
+
+/***/ "./src/medias/images/wms.jpg":
+/*!***********************************!*\
+  !*** ./src/medias/images/wms.jpg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"/assets/wms.jpg\";\n\n//# sourceURL=webpack://hp/./src/medias/images/wms.jpg?");
 
 /***/ }),
 

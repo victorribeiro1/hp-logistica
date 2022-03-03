@@ -295,6 +295,9 @@
 
                         z-index: 2;
 
+                        text-align: center;
+
+                        width: calc(100% - var(--horizontal-distance--mobile) * 2);
                         transform: skewX(-15deg) translate(-50%, -50%);
                      }
 
@@ -369,6 +372,10 @@
                         line-height: 16px;
 
                         max-width: 50%;
+
+                        @media only screen and (max-width: 380px) {
+                           max-width: 60%;
+                        }
 
                         pointer-events: none;
 

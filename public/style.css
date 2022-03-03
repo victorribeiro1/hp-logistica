@@ -1396,6 +1396,8 @@ p.commum {
     top: 50%;
     left: 50%;
     z-index: 2;
+    text-align: center;
+    width: calc(100% - var(--horizontal-distance--mobile) * 2);
     transform: skewX(-15deg) translate(-50%, -50%);
   }
   .services__content__services--mobile__services__service__button {
@@ -1448,6 +1450,13 @@ p.commum {
     pointer-events: none;
     font-family: "Aeonik Light";
   }
+}
+@media only screen and (max-width: 1150px) and (max-width: 380px) {
+  .services__content__services--mobile__services__saiba-mais__description {
+    max-width: 60%;
+  }
+}
+@media only screen and (max-width: 1150px) {
   .services__content__services--mobile__services__saiba-mais__close {
     height: 25px;
     width: 25px;
@@ -1470,6 +1479,8 @@ p.commum {
   .services__content__services--mobile__services__saiba-mais__close__line--2 {
     transform: rotateZ(-45deg);
   }
+}
+@media only screen and (max-width: 1150px) {
   .services__content__services--mobile__services__saiba-mais__button {
     margin-right: 20px;
     margin-bottom: 15px;

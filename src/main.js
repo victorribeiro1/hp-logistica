@@ -16,7 +16,12 @@ const blueSlideImagePortrait = require('./medias/images/blue-slide-image-portrai
 const contactUs = require('./medias/images/contact-us.jpg')
 const favicon16 = require('./medias/images/favicon-16x16.png')
 const favicon32 = require('./medias/images/favicon-32x32.png')
-const processoFiscal = require('./medias/images/processo-fiscal.jpg')
+const processoFiscal = require('./medias/images/processo-fiscal-1.jpg')
+const recebimento = require('./medias/images/recebimento.jpg')
+const manuseio = require('./medias/images/manuseio.jpg')
+const storage1 = require('./medias/images/storage-1.jpg')
+const wms = require('./medias/images/wms.jpg')
+const truck2 = require('./medias/images/truck-2.jpg')
 
 const favIcon = require('./medias/svgs/symbol-defs.svg')
 
