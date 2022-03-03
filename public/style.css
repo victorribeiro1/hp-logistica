@@ -3049,6 +3049,145 @@ p.commum {
 .contact__content__container__form-box__form .input.incorrect {
   border-bottom: 2px solid var(--color-primary);
 }
+.contact__message {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 123;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-speed) var(--transition-timing-function);
+  display: none;
+}
+.contact__message__blur {
+  background-color: #0f0f0f46;
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.contact__message__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-secondary);
+  cursor: auto;
+  height: 80vh;
+  width: calc(100% - var(--horizontal-distance) * 2);
+  padding: calc(var(--horizontal-distance) / 2) var(--horizontal-distance);
+  position: relative;
+}
+.contact__message__box__message {
+  color: white;
+  word-wrap: break-word;
+  max-width: 100%;
+  max-height: 83%;
+  overflow: scroll;
+}
+.contact__message__box__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact__message__box__buttons__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 95px;
+  width: calc(50% - 15px);
+  color: white;
+}
+.contact__message__box__buttons__button:hover .contact__message__box__buttons__button__icon--1 {
+  fill: #FFCC00;
+}
+.contact__message__box__buttons__button:hover .contact__message__box__buttons__button__icon--2 {
+  fill: #81F6A4;
+}
+.contact__message__box__buttons__button:hover .contact__message__box__buttons__button__text--1 {
+  color: #FFCC00;
+}
+.contact__message__box__buttons__button:hover .contact__message__box__buttons__button__text--2 {
+  color: #81F6A4;
+}
+.contact__message__box__buttons__button__icon {
+  fill: white;
+  position: relative;
+  left: -25px;
+  height: 2.2rem;
+  width: 2.2rem;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+.contact__message__box__buttons__button__text {
+  font-size: 2rem;
+  transition: var(--transition-speed) var(--transition-timing-function);
+}
+.contact__message.active {
+  display: flex;
+}
+@media only screen and (max-width: 1600px) {
+  .contact__message__box__buttons__button {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .contact__message__box {
+    width: calc(100% - var(--horizontal-distance--mobile) * 2);
+    padding: var(--horizontal-distance--mobile) var(--horizontal-distance--mobile);
+  }
+  .contact__message__box__buttons__button {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contact__message__box__buttons__button {
+    height: 55px;
+  }
+  .contact__message__box__buttons__button__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .contact__message__box__buttons__button__text {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .contact__message__box__message {
+    max-height: 81%;
+  }
+  .contact__message__box__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact__message__box__buttons__button {
+    height: 55px;
+    width: 100%;
+  }
+  .contact__message__box__buttons__button:last-child {
+    margin-top: 10px;
+  }
+  .contact__message__box__buttons__button__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .contact__message__box__buttons__button__text {
+    font-size: 1.8rem;
+  }
+}
 @media only screen and (max-width: 1290px) {
   .contact__content {
     display: flex;

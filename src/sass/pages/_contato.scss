@@ -188,6 +188,231 @@
         }
     }
 
+    &__message {
+       width: 100%;
+       height: 100vh;
+
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 123;
+
+       @include flex-container();
+       @include transition;
+
+       display: none;
+
+       &__blur {
+         background-color: #0f0f0f46;
+         backdrop-filter: blur(3px);
+
+         cursor: pointer;
+
+         height: 100%;
+         width: 100%;
+
+         position: absolute;
+       }
+
+      &__box {
+         @include flex-container(column, space-between, flex-start);
+         background-color: var(--color-secondary);
+         // border-radius: 6px;
+
+         // pointer-events: none;
+
+         cursor: auto;
+
+         height: 80vh;
+         width: calc(100% - var(--horizontal-distance) * 2);
+
+         padding: calc(var(--horizontal-distance) / 2) var(--horizontal-distance);
+
+         position: relative;
+
+         &__message {
+            color: white;
+
+            word-wrap: break-word;
+            max-width: 100%;
+
+            max-height: 83%;
+            overflow: scroll;
+         }
+
+         &__buttons {
+            width: 100%;
+
+            @include flex-container(row, space-between, center);
+            &__button {
+               @include flex-container(row, center, center);
+
+               border: 1px solid #707070;
+               border-radius: 8px;
+
+               cursor: pointer;
+
+               height: 95px;
+               width: calc(50% - 15px);
+
+               color: white;
+
+               &:hover & {
+                  &__icon {
+                     &--1 {
+                        fill: #FFCC00;
+                     }
+
+                     &--2 {
+                        fill: #81F6A4;
+                     }
+                  }
+
+                  &__text {
+                     &--1 {
+                        color: #FFCC00;
+                     }
+
+                     &--2 {
+                        color: #81F6A4;
+                     }
+                  }
+               }
+
+               &__icon {
+                  fill: white;
+
+                  // margin-right: 100px;
+
+                  position: relative;
+                  left: -25px;
+
+                  height: 2.2rem;
+                  width:  2.2rem;
+
+                  @include transition;
+               }
+
+               &__text {
+                  font-size: 2rem;
+
+                  @include transition;
+               }
+            }
+         }
+      }
+
+      &.active {
+         display: flex;
+      }
+
+      @media only screen and (max-width: 1600px) {
+         & {
+            &__box {
+               &__message {
+
+               }
+
+               &__buttons {
+                  &__button {
+                     height: 70px;
+                     &__icon {
+
+                     }
+
+                     &__text {
+
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      @media only screen and (max-width: 1030px) {
+         & {
+            &__box {
+               width: calc(100% - var(--horizontal-distance--mobile) * 2);
+               padding: var(--horizontal-distance--mobile) var(--horizontal-distance--mobile);
+
+               &__message {
+
+               }
+
+               &__buttons {
+                  &__button {
+                     height: 70px;
+                     &__icon {
+
+                     }
+
+                     &__text {
+
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      @media only screen and (max-width: 700px) {
+         & {
+            &__box {
+               &__message {
+
+               }
+
+               &__buttons {
+                  &__button {
+                     height: 55px;
+
+                     &__icon {
+                        height: 2rem;
+                        width:  2rem;
+                     }
+
+                     &__text {
+                        font-size: 1.8rem;
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      @media only screen and (max-width: 550px) {
+         & {
+            &__box {
+               &__message {
+                  max-height: 81%;
+               }
+
+               &__buttons {
+                  @include flex-container(column, flex-start, center);
+                  &__button {
+                     height: 55px;
+                     width: 100%;
+
+                     &:last-child {
+                        margin-top: 10px;
+                     }
+
+                     &__icon {
+                        height: 2rem;
+                        width:  2rem;
+                     }
+
+                     &__text {
+                        font-size: 1.8rem;
+                     }
+                  }
+               }
+            }
+         }
+      }
+    }
+
     @media only screen and (max-width: 1290px) {
         &__content {
             @include flex-container(column, flex-start, flex-start);

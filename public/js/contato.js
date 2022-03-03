@@ -1,8 +1,9 @@
 const form = document.getElementById('form')
 const reviewButton = document.getElementById('reviewButton')
-// const editButton = document.getElementById('editButton')
-// const sendButton = document.getElementById('sendButton')
 const inputs = document.querySelectorAll('.input')
+const reviewBox = document.getElementById('reviewBox')
+const editButton = document.getElementById('editButton')
+const sendButton = document.getElementById('sendButton')
 
 class Validation {
    constructor(inputs) {
@@ -83,10 +84,13 @@ class Validation {
 }
 
 class EmailManagement {
-   constructor(form, reviewButton, inputs) {
+   constructor(form, reviewButton, inputs, reviewBox, editButton, sendButton) {
       this.form = form
       this.reviewButton = reviewButton
       this.inputs = inputs
+      this.reviewBox = reviewBox
+      this.editButton = editButton
+      this.sendButton = sendButton
    }
 
    isValid() {
@@ -99,10 +103,26 @@ class EmailManagement {
       validation.checkEmail()
 
       if (validation.isBlank() || !validation.checkEmail() || !validation.checkLength()) {
-         isValid = false
+         // isValid = false
       }
 
       return isValid
+   }
+
+   getAndSetReviewMessage() {
+      const message = this.inputs[4].value
+
+      const messageDestination = document.getElementById('messageDestination')
+
+      messageDestination.innerText = message
+   }
+
+   activeReviewBox() {
+      this.reviewBox.classList.add('active')
+   }
+
+   closeReviewBox() {
+      this.reviewBox.classList.remove('active')
    }
 
    listenUp() {
@@ -110,11 +130,17 @@ class EmailManagement {
          this.form.addEventListener('submit', event => event.preventDefault())
 
          if(this.isValid()) {
-
+            this.getAndSetReviewMessage()
+            this.activeReviewBox()
          }
       })
+
+      const blur = document.querySelector('.contact__message__blur')
+
+      blur.addEventListener('click', () => this.closeReviewBox())
+      this.editButton.addEventListener('click', () => this.closeReviewBox())
    }
 }
 
-const emailManager = new EmailManagement(form, reviewButton, inputs)
+const emailManager = new EmailManagement(form, reviewButton, inputs, reviewBox, editButton, sendButton)
 emailManager.listenUp()
