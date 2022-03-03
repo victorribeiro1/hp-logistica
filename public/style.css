@@ -3164,6 +3164,9 @@ p.commum {
   }
 }
 @media only screen and (max-width: 550px) {
+  .contact__message__box {
+    border-radius: 8px;
+  }
   .contact__message__box__message {
     max-height: 81%;
   }
@@ -3174,6 +3177,7 @@ p.commum {
     align-items: center;
   }
   .contact__message__box__buttons__button {
+    border-radius: 4px;
     height: 55px;
     width: 100%;
   }

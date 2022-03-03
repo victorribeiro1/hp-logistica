@@ -384,6 +384,7 @@
       @media only screen and (max-width: 550px) {
          & {
             &__box {
+               border-radius: 8px;
                &__message {
                   max-height: 81%;
                }
@@ -391,6 +392,7 @@
                &__buttons {
                   @include flex-container(column, flex-start, center);
                   &__button {
+                     border-radius: 4px;
                      height: 55px;
                      width: 100%;
 
