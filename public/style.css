@@ -1,7 +1,6 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
@@ -1355,6 +1354,14 @@ p.commum {
     perspective: 500rem;
     -moz-perspective: 500rem;
     margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .services__content__services--mobile__services.active .services__content__services--mobile__services__service {
+    transform: rotateY(-180deg);
+  }
+  .services__content__services--mobile__services.active .services__content__services--mobile__services__service ~ .services__content__services--mobile__services__saiba-mais {
+    z-index: 5;
+    transform: rotateY(0deg);
   }
   .services__content__services--mobile__services__service {
     display: flex;
@@ -1367,13 +1374,6 @@ p.commum {
     position: relative;
     z-index: 2;
     transition: all 0.8s ease;
-  }
-  .services__content__services--mobile__services__service:hover {
-    transform: rotateY(-180deg);
-  }
-  .services__content__services--mobile__services__service:hover ~ .services__content__services--mobile__services__saiba-mais {
-    z-index: 5;
-    transform: rotateY(0deg);
   }
   .services__content__services--mobile__services__service__img {
     object-fit: cover;
@@ -1518,6 +1518,127 @@ p.commum {
     justify-content: flex-start;
     align-items: center;
   }
+}
+
+.saiba-mais {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000003a;
+  backdrop-filter: blur(3px);
+  display: none;
+}
+.saiba-mais__box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 879;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.saiba-mais__popUp {
+  height: 75%;
+  width: 30%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: none;
+}
+.saiba-mais__popUp.active {
+  display: flex;
+}
+@media only screen and (max-width: 1500px) {
+  .saiba-mais__popUp {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .saiba-mais__popUp {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .saiba-mais__popUp {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .saiba-mais__popUp {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .saiba-mais__popUp {
+    width: 75%;
+  }
+}
+.saiba-mais__popUp__img {
+  height: 40%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.saiba-mais__popUp__content {
+  padding: var(--horizontal-distance--mobile);
+}
+.saiba-mais__popUp__content__text-box {
+  margin-bottom: 25px;
+}
+.saiba-mais__popUp__content__text-box__title {
+  font-size: 4rem;
+}
+.saiba-mais__popUp__content__text-box__subtitle {
+  font-family: "Aeonik Light";
+  font-size: 1.6rem;
+}
+.saiba-mais__popUp__x {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 620px) {
+  .saiba-mais__popUp__x {
+    height: 40px;
+    width: 40px;
+  }
+}
+.saiba-mais__popUp__x__line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary);
+  flex: none;
+}
+.saiba-mais__popUp__x__line--1 {
+  transform: rotateZ(47deg) translateY(1px);
+}
+.saiba-mais__popUp__x__line--2 {
+  transform: rotateZ(-45deg);
+}
+.saiba-mais__box.active {
+  display: block;
+}
+.saiba-mais__box.active .saiba-mais {
+  display: flex;
 }
 
 .home {

@@ -235,12 +235,23 @@
 
                   margin-bottom: 8px;
 
+                  cursor: pointer;
+
+                  &.active & {
+                     &__service {
+                        transform: rotateY(-180deg);
+
+                        & ~ .services__content__services--mobile__services__saiba-mais {
+                           z-index: 5;
+                           transform: rotateY(0deg);
+                        }
+                     }
+                  }
+
                   &__service {
                      @include flex-container(column, flex-end, flex-end);
                      // border: 2px solid red;
                      backface-visibility: hidden;
-
-
 
                      height: 100%;
                      margin-bottom: 200px;
@@ -251,14 +262,14 @@
 
                      transition: all .8s ease;
 
-                     &:hover {
-                        transform: rotateY(-180deg);
-                     }
+                     // &:hover {
+                     //    transform: rotateY(-180deg);
+                     // }
 
-                     &:hover ~ .services__content__services--mobile__services__saiba-mais {
-                        z-index: 5;
-                        transform: rotateY(0deg);
-                     }
+                     // &:hover ~ .services__content__services--mobile__services__saiba-mais {
+                     //    z-index: 5;
+                     //    transform: rotateY(0deg);
+                     // }
 
                      &__img {
                         object-fit: cover;
@@ -475,6 +486,150 @@
                }
             }
          }
+      }
+   }
+}
+
+.saiba-mais {
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: 6;
+
+   width: 100%;
+   height: 100vh;
+
+   @include flex-container();
+
+   background-color: #0000003a;
+   backdrop-filter: blur(3px);
+
+   display: none;
+
+   &__box {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 879;
+
+      height: 100%;
+      width: 100%;
+
+      display: none;
+
+      // background-color: rgb(187, 53, 53);
+   }
+
+   &__popUp {
+      height: 75%;
+      width: 30%;
+
+      position: relative;
+      z-index: 1;
+
+      overflow: hidden;
+
+      @include flex-container(column, flex-start, flex-start);
+
+      display: none;
+
+      &.active {
+         display: flex;
+      }
+
+      @media only screen and (max-width: 1500px) {
+         width: 40%;
+      }
+
+      @media only screen and (max-width: 1000px) {
+         width: 50%;
+      }
+
+      @media only screen and (max-width: 750px) {
+         width: 60%;
+      }
+
+      @media only screen and (max-width: 620px) {
+         width: 70%;
+      }
+
+      @media only screen and (max-width: 520px) {
+         width: 75%;
+      }
+
+      &__img {
+         height: 40%;
+         width: 100%;
+
+         object-fit: cover;
+
+         position: relative;
+      }
+
+      &__content {
+         padding: var(--horizontal-distance--mobile);
+         &__text-box {
+            margin-bottom: 25px;
+            &__title {
+               font-size: 4rem;
+            }
+
+            &__subtitle {
+               font-family: 'Aeonik Light';
+               font-size: 1.6rem;
+            }
+         }
+
+         &__description {
+
+         }
+      }
+
+      &__x {
+         position: absolute;
+         top: 25px;
+         right: 25px;
+         z-index: 1;
+
+         height: 50px;
+         width: 50px;
+
+         cursor: pointer;
+
+         @media only screen and (max-width: 620px) {
+            height: 40px;
+            width:  40px;
+         }
+
+
+         // border: 1px solid red;
+
+         @include flex-container(column);
+
+         &__line {
+            width: 100%;
+            height: 1px;
+
+            background-color: var(--color-primary);
+
+            flex: none;
+
+            &--1 {
+               transform: rotateZ(47deg) translateY(1px);
+            }
+
+            &--2 {
+               transform: rotateZ(-45deg);
+            }
+         }
+      }
+   }
+
+   &__box.active {
+      display: block;
+
+      .saiba-mais {
+         display: flex;
       }
    }
 }
