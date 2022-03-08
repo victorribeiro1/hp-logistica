@@ -4,19 +4,19 @@
 @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
- }
- @font-face {
+}
+@font-face {
    src: url(assets/Aeonik-Light.otf);
    font-family: "Aeonik Light";
- }
- @font-face {
+}
+@font-face {
    src: url(assets/Aeonik-Regular.otf);
    font-family: "Aeonik Regular";
- }
- @font-face {
+}
+@font-face {
    src: url(assets/Aeonik-Thin.otf);
    font-family: "Aeonik Thin";
- }
+}
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -1723,6 +1723,7 @@ p.commum {
   align-items: center;
   height: 50px;
   width: 47%;
+  min-width: 300px;
   margin-bottom: 50px !important;
   position: relative;
   z-index: 2;
@@ -1798,12 +1799,22 @@ p.commum {
   position: relative;
   z-index: 5;
 }
+@media only screen and (max-width: 1800px) {
+  .home .hero-section__text-box__statistics__divisor {
+    display: none;
+  }
+}
 .home .hero-section__text-box__statistics__statistic {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   font-family: "Aeonik Regular";
+}
+@media only screen and (max-width: 1550px) {
+  .home .hero-section__text-box__statistics__statistic:first-of-type {
+    margin-right: 20px;
+  }
 }
 .home .hero-section__text-box__statistics__statistic__percentage {
   font-size: 2.5rem;
@@ -1839,9 +1850,6 @@ p.commum {
     letter-spacing: 5px;
     line-height: 90px;
     font-size: 12rem;
-  }
-  .home .hero-section__text-box__main-button, .home .hero-section__text-box__main-button:link, .home .hero-section__text-box__main-button:visited {
-    width: 250px;
   }
   .home .hero-section__image {
     width: 60rem;
@@ -2043,7 +2051,7 @@ p.commum {
 @media only screen and (max-width: 550px) {
   .hero-section--mobile {
     height: 100vh;
-    min-height: 750px;
+    min-height: 850px;
     max-height: 860px;
   }
   .hero-section--mobile__text-box__title {
@@ -2548,8 +2556,8 @@ p.commum {
 
 .differential--mobile {
   height: 50vh;
-  min-height: 325px;
-  max-height: 400px;
+  min-height: 390px;
+  max-height: 415px;
   position: relative;
   display: none;
   overflow: hidden;

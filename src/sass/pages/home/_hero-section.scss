@@ -103,6 +103,7 @@
 
                height: 50px;
                width: 47%;
+               min-width: 300px;
 
                margin-bottom: 50px !important;
 
@@ -221,6 +222,10 @@
                position: relative;
                z-index: 5;
 
+
+               @media only screen and (max-width: 1800px) {
+                  display: none;
+               }
             }
 
             &__statistic {
@@ -233,6 +238,10 @@
 
                &:first-of-type {
                   // margin-right: 50px;
+
+                  @media only screen and (max-width: 1550px) {
+                     margin-right: 20px;
+                  }
                }
 
                &__percentage {
@@ -291,16 +300,6 @@
 
             &__description {
 
-            }
-
-            &__main-button {
-               &,
-               &:link,
-               &:visited {
-                  // display: none !important;
-
-                  width: 250px;
-               }
             }
          }
 
