@@ -2,6 +2,8 @@ const toggleMenu = document.getElementById('toggleMenu')
 const button = document.getElementById('toggleMenuButton')
 const htmlForToggleMenu = document.getElementById('html')
 
+const toggleMenuLinks = document.querySelectorAll('.toggle-menu a')
+
 class ToggleMenu {
    constructor(toggleMenu, button) {
       this.toggleMen = toggleMenu
@@ -16,6 +18,9 @@ class ToggleMenu {
 
    listenUp() {
       this.button.addEventListener('click', this.toggleClass)
+      toggleMenuLinks.forEach(link => {
+         link.addEventListener('click', this.toggleClass)
+      })
    }
 }
 

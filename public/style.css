@@ -1021,7 +1021,7 @@ p.commum {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 6;
+  z-index: 8;
 }
 @media only screen and (max-width: 1030px) {
   .menu-mobile {
@@ -1087,6 +1087,7 @@ p.commum {
   transform: rotateZ(45deg) translateY(-3px);
 }
 .toggle-menu__background {
+  cursor: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1142,6 +1143,11 @@ p.commum {
 .toggle-menu__list__item__link:hover, .toggle-menu__list__item__link:link:hover, .toggle-menu__list__item__link:visited:hover {
   color: var(--color-primary);
 }
+@media only screen and (max-width: 460px) {
+  .toggle-menu__list__item__link, .toggle-menu__list__item__link:link, .toggle-menu__list__item__link:visited {
+    font-size: 8rem;
+  }
+}
 @media only screen and (max-height: 750px) {
   .toggle-menu__list__item__link, .toggle-menu__list__item__link:link, .toggle-menu__list__item__link:visited {
     font-size: 7rem;
@@ -1183,7 +1189,7 @@ p.commum {
 }
 .toggle-menu.active .toggle-menu__background {
   opacity: 1;
-  z-index: 5;
+  z-index: 7;
   padding: 0 var(--horizontal-distance--mobile);
   transition: var(--transition-speed) var(--transition-timing-function);
 }
@@ -1629,7 +1635,7 @@ p.commum {
   flex: none;
 }
 .saiba-mais__popUp__x__line--1 {
-  transform: rotateZ(47deg) translateY(1px);
+  transform: rotateZ(47deg) translateY(-1px);
 }
 .saiba-mais__popUp__x__line--2 {
   transform: rotateZ(-45deg);
@@ -2509,12 +2515,13 @@ p.commum {
   background-color: var(--color-secondary);
   border-radius: 20px;
   height: 80vh;
-  max-height: 650px;
+  max-height: 775px;
   min-height: 450px;
   width: 80%;
   overflow: hidden;
   position: relative;
   transform: translateX(13%);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2546,6 +2553,7 @@ p.commum {
 .home .differential__differentials .secondary-button {
   position: absolute;
   bottom: 75px;
+  z-index: 1;
 }
 .home .differential__differentials .secondary-button, .home .differential__differentials .secondary-button:link, .home .differential__differentials .secondary-button:visited {
   color: var(--color-tertiary);

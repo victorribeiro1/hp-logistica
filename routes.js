@@ -14,10 +14,10 @@ const contactController = require('./controllers/contato')
 route.get('/', homeController.initialPage)
 
 //home Routes
-route.get('/servicos', ServicesController.ServicesPage)
 route.get('/nossos-servicos', ServicesController.ServicesPage)
-route.get('/nossosServicos', ServicesController.ServicesPage)
-route.get('/nossos_servicos', ServicesController.ServicesPage)
+// route.get('/servicos', ServicesController.ServicesPage)
+// route.get('/nossosServicos', ServicesController.ServicesPage)
+// route.get('/nossos_servicos', ServicesController.ServicesPage)
 
 //home Routes
 route.get('/contato', contactController.contactPage)
