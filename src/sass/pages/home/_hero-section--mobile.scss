@@ -42,6 +42,7 @@
       align-self: center;
 
       position: relative;
+      top: -40px;
       z-index: 1;
 
       width: 70rem;
@@ -233,7 +234,16 @@
       & {
          &__img {
             width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
-            width: 55rem;
+            width: 70rem;
+         }
+      }
+   }
+
+   @media only screen and (max-width: 630px) {
+      & {
+         &__img {
+            width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
+            width: 60rem;
          }
       }
    }
@@ -253,7 +263,7 @@
    @media only screen and (max-width: 550px) {
       & {
          height: 100vh;
-         min-height: 850px;
+         min-height: 880px;
          max-height: 860px;
          // min-height: unset;
          &__text-box {

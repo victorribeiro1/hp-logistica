@@ -1845,7 +1845,7 @@ p.commum {
   width: 50%;
 }
 .home .hero-section__image {
-  width: 70rem;
+  width: 75rem;
   position: relative;
   top: -25px;
   margin-right: var(--horizontal-distance);
@@ -1892,7 +1892,7 @@ p.commum {
     font-size: 10rem;
   }
   .home .hero-section__image {
-    width: 45rem;
+    width: 50rem;
   }
 }
 
@@ -1932,6 +1932,7 @@ p.commum {
 .hero-section--mobile__img {
   align-self: center;
   position: relative;
+  top: -40px;
   z-index: 1;
   width: 70rem;
   margin-bottom: 20px;
@@ -2054,7 +2055,13 @@ p.commum {
 @media only screen and (max-width: 775px) {
   .hero-section--mobile__img {
     width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
-    width: 55rem;
+    width: 70rem;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .hero-section--mobile__img {
+    width: calc(100% - var(--horizontal-distance--mobile) * 2 - 0px);
+    width: 60rem;
   }
 }
 @media only screen and (max-width: 558px) {
@@ -2067,7 +2074,7 @@ p.commum {
 @media only screen and (max-width: 550px) {
   .hero-section--mobile {
     height: 100vh;
-    min-height: 850px;
+    min-height: 880px;
     max-height: 860px;
   }
   .hero-section--mobile__text-box__title {
