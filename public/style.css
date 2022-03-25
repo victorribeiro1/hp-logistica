@@ -1,7 +1,7 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
   \*****************************************************************************************************************************************/
-@font-face {
+  @font-face {
    src: url(assets/Aeonik-Bold.otf);
    font-family: "Aeonik Bold";
 }
@@ -25,7 +25,7 @@ html {
   --horizontal-distance--mobile: 25px;
   --min-width: 328px;
   --bp-width: 1030px;
-  --max-width: 2100px;
+  --max-width: 2500px;
   --min-menu-width: 1030px;
   --transition-speed: .5s;
   --transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -464,7 +464,6 @@ html {
 html.menu-is-active {
   overflow: hidden;
 }
-
 html.active {
   opacity: 1;
 }
@@ -472,12 +471,22 @@ html.active {
 body {
   box-sizing: border-box;
   color: var(--color-secondary);
+  position: relative;
+  background-color: var(--color-tertiary);
+}
+@media only screen and (min-width: 2000px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 html ::-webkit-scrollbar {
   background: transparent;
   width: 3px;
-  height: 3px;
+  height: 2px;
 }
 html ::-webkit-scrollbar-thumb {
   background-color: red;
@@ -1656,6 +1665,7 @@ p.commum {
   max-height: 1200px;
   min-height: 735px;
   max-width: var(--max-width);
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2702,6 +2712,7 @@ p.commum {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
+  z-index: 1;
 }
 .faq__options {
   position: relative;

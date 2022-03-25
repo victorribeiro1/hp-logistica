@@ -19,19 +19,29 @@ html {
     &.menu-is-active {
         overflow: hidden;
     }
+
+    &.active {
+       opacity: 1;
 }
 
-html.active {
-   opacity: 1;
-
-   // min-width: var(--min-width);
 }
 
 body {
     box-sizing: border-box;
     color: var(--color-secondary);
 
-   //  min-width: var(--min-width);
+   //  background-color: red;
+
+   position: relative;
+
+   background-color: var(--color-tertiary);
+
+   @media only screen and (min-width: 2000px) {
+      @include flex-container(row, center, center);
+   }
+
+   //  @include flex-container;
+
 }
 
    html {
@@ -40,7 +50,7 @@ body {
          background: transparent;
 
          width: 3px;
-         height: 3px;
+         height: 2px;
       }
 
       ::-webkit-scrollbar-thumb {

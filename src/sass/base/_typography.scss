@@ -4,6 +4,10 @@ html {
 
     letter-spacing: 2px;
 
+   //  @media only screen and (min-width: 3000px) {
+   //    font-size: 100%; //1rem => 8px
+   // }
+
    @media only screen and (max-width: 1600px) {
       font-size: 50%; //1rem => 8px
    }

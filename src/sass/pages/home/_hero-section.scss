@@ -10,6 +10,8 @@
       min-height: 735px;
 
       max-width: var(--max-width);
+
+      overflow: hidden;
       // min-width: 1350px;
 
       @include flex-container(row, space-between, center);
