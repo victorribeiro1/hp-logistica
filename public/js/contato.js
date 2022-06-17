@@ -103,7 +103,7 @@ class EmailManagement {
       validation.checkEmail()
 
       if (validation.isBlank() || !validation.checkEmail() || !validation.checkLength()) {
-         // isValid = false
+         isValid = false
       }
 
       return isValid

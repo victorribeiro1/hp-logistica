@@ -5,6 +5,7 @@
    "main": "server.js",
    "dependencies": {
       "express": "^4.17.1",
+      "nodemailer": "^6.7.5",
       "resolve-url-loader": "^4.0.0"
    },
    "devDependencies": {
@@ -44,6 +45,7 @@
       "build:frontend": "webpack --progress --config ./webpack.config.build.js",
       "dev:frontend": "webpack -w --progress --config ./webpack.config.development.js",
       "start:backend": "nodemon server.js",
+      "sendMail": "node public/js/nodemailerConfig.js",
       "start": "concurrently \"npm:dev:frontend\" \"npm:start:backend\""
    },
    "keywords": [],

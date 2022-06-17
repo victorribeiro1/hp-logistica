@@ -1,8 +1,8 @@
 .home {
-   .slider {
-      @include flex-container(row, flex-start, center);
+   .horizontal-section {
+      // @include flex-container(row, flex-start, center);
 
-      overflow: scroll;
+      // overflow: scroll;
 
       width: 100%;
       max-width: var(--max-width);
@@ -13,15 +13,13 @@
          height: 0px;
       }
 
-      position: relative;
-
       &__slide {
          // border: 2px solid green;
 
          height: 103vh;
          max-height: 1700px;
          min-height: 450px;
-         width: 100%;
+         width: 106%;
 
          flex: none;
 
@@ -35,7 +33,7 @@
          &--1 {
             background-color: #D6D6D6;
 
-            .slider__slide__box {
+            .horizontal-section__slide__box {
                &--dark {
                   background-color: #CCCCCC;
                }
@@ -47,7 +45,7 @@
          }
 
          &--2 {
-            .slider__slide__box {
+            .horizontal-section__slide__box {
                &--dark {
                   background-color: #6B91B7;
                }
@@ -59,7 +57,7 @@
          }
 
          &--3 {
-            .slider__slide__box {
+            .horizontal-section__slide__box {
                &--dark {
                   background-color: #C9A681;
                }
@@ -281,5 +279,17 @@
             }
          }
       }
+   }
+
+   .sticky-wrapper {
+      position: sticky;
+      overflow: hidden;
+      width: 100%;
+      top: 0px;
+   }
+
+   .element-wrapper {
+      position: relative;
+      display: flex;
    }
 }

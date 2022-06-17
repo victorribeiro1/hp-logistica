@@ -44,21 +44,27 @@ body {
 
 }
 
-   html {
-      // overflow-x: hidden;
-      ::-webkit-scrollbar {
-         background: transparent;
+html {
+   // overflow-x: hidden;
+   ::-webkit-scrollbar {
+      background: transparent;
 
-         width: 3px;
-         height: 2px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-         background-color: red;
-         // border-radius: 999px;
-      }
-
-      ::-webkit-scrollbar-track {
-         background-color: transparent;
-      }
+      width: 3px;
+      height: 2px;
    }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: red;
+      // border-radius: 999px;
+   }
+
+   ::-webkit-scrollbar-track {
+      background-color: transparent;
+   }
+}
+
+div {
+   selection {
+      background-color: red;
+   }
+}

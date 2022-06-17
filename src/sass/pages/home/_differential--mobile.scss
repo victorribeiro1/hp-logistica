@@ -5,6 +5,8 @@
 
    position: relative;
 
+   background-color: white;
+
    // @include flex-container(row, flex-start, center);
 
    display: none;
@@ -25,7 +27,7 @@
       @include flex-container(row, flex-start, center);
 
       max-width: 100%;
-      overflow: scroll;
+      // overflow: scroll;
 
       position: relative;
 
@@ -103,6 +105,8 @@
 
       &__text-box {
          position: relative;
+
+         pointer-events: none;
 
          &__title {
             font-size: 3rem;

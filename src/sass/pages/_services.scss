@@ -6,6 +6,7 @@
    position: relative;
 
    min-width: var(--min-width);
+   max-width: var(--max-width);
 
    &__content {
       // border: 2px solid red;

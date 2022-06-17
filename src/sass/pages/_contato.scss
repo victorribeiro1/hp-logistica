@@ -153,6 +153,15 @@
                             font-style: italic;
                             font-family: 'Aeonik Light';
                         }
+
+                        &:focus {
+                           background-color: transparent;
+                        }
+
+                        &:-internal-autofill-selected {
+                           background-color: transparent !important;
+                           color: currentColor !important;
+                        }
                     }
 
                     .secondary-button {
