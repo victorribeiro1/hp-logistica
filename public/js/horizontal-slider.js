@@ -15,15 +15,17 @@ let distFromTop = document.querySelector(".horizontal-section").offsetTop;
 
 let scrollDistance = distFromTop + horLength - windowWidth;
 
-document.querySelector(".horizontal-section").style.height = horLength + "px";
+document.querySelector(".horizontal-section").style.height = horLength + 1300 + "px";
 
 
 window.onscroll = function(){
-  let scrollTop = window.pageYOffset;
+   let scrollTop = window.pageYOffset;
 
-  if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+   if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
     document.querySelector(".element-wrapper").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
-  }
+   }
+
+   console.log(scrollTop)
 }
 
 window.onresize = function() {
@@ -33,4 +35,5 @@ window.onresize = function() {
    distFromTop = document.querySelector(".horizontal-section").offsetTop;
 
    scrollDistance = distFromTop + horLength - windowWidth;
+   document.querySelector(".horizontal-section").style.height = horLength + "px";
 }

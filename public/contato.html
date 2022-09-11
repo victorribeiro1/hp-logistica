@@ -124,14 +124,14 @@
                         <p class="contact__content__container__form-box__text-box__text commum">Preencha os campos abaixo e envie o formulário. <br> Retornaremos o mais rápido possível!</p>
                      </div>
 
-                     <form action="" class="contact__content__container__form-box__form" id="form">
-                        <input type="text" class="contact__content__container__form-box__form__input input" id="email" placeholder="E-mail">
-                        <input type="text" class="contact__content__container__form-box__form__input input" id="nome" placeholder="Nome Completo">
-                        <input type="text" class="contact__content__container__form-box__form__input input" id="posicao" placeholder="Cargo (opcional)">
-                        <input type="text" class="contact__content__container__form-box__form__input input" id="cargo" placeholder="Empresa">
-                        <textarea type="text" class="contact__content__container__form-box__form__input input" id="mensagem" placeholder="Mensagem"></textarea>
+                     <form action="envio.php" method="POST" class="contact__content__container__form-box__form" id="form">
+                        <input type="text" class="contact__content__container__form-box__form__input input" id="email" name="email" placeholder="E-mail">
+                        <input type="text" class="contact__content__container__form-box__form__input input" id="nome" name="nome" placeholder="Nome Completo">
+                        <input type="text" class="contact__content__container__form-box__form__input input" id="posicao" name="posicao" placeholder="Cargo">
+                        <input type="text" class="contact__content__container__form-box__form__input input" id="cargo" name="cargo" placeholder="Empresa">
+                        <textarea type="text" class="contact__content__container__form-box__form__input input" id="mensagem" name="mensagem" placeholder="Mensagem"></textarea>
 
-                        <button type="submit" class="secondary-button" id="reviewButton">
+                        <button type="submit" class="secondary-button" id="reviewButton" name="enviar">
                            <span class="secondary-button__text">Revisar mensagem</span>
                            <div class="secondary-button__arrow">
                               <div class="secondary-button__arrow__body"></div>
@@ -293,7 +293,6 @@
 
 
       <script src="main.js"></script>
-      <script src="js/contato.js"></script>
-      <script src="js/nodemailerConfig.js"></script>
+      <script type="module" src="js/contato.js"></script>
    </body>
 </html>
