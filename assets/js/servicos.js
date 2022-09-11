@@ -1,3 +1,4 @@
+
 const serviceCards = document.querySelectorAll('.serviceCard')
 const saibaMais = document.querySelector('.saiba-mais__box')
 
@@ -11,9 +12,7 @@ const saibaMaisButtons = document.querySelectorAll('.saiba-mais-button')
 saibaMaisButtons.forEach(saibaMaisButton => {
    saibaMaisButton.addEventListener('click', () => {
       const service = saibaMaisButton.getAttribute('service')
-      console.log(saibaMaisButton.getAttribute('service'))
       saibaMais.classList.add('active')
-      console.log(document.querySelector(`.popUp[service=${service}]`))
       document.querySelector(`.popUp[service=${service}]`).classList.add('active')
 
    })

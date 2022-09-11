@@ -1,3 +1,4 @@
+
 const horizontalSlide = document.querySelector('.slider')
 
 // horizontalSlide.addEventListener('wheel', event => {
@@ -15,7 +16,7 @@ let distFromTop = document.querySelector(".horizontal-section").offsetTop;
 
 let scrollDistance = distFromTop + horLength - windowWidth;
 
-document.querySelector(".horizontal-section").style.height = horLength + 1300 + "px";
+document.querySelector(".horizontal-section").style.height = horLength + 1400 + "px";
 
 
 window.onscroll = function(){

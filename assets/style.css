@@ -1,22 +1,3 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
-  \*****************************************************************************************************************************************/
-@font-face {
-     src: url("./assets/Aeonik-Regular.otf");
-     font-family: 'Aeonik Regular'
- }
-@font-face {
-     src: url("./assets/Aeonik-Bold.otf");
-     font-family: 'Aeonik Bold'
- }
-@font-face {
-     src: url("./assets/Aeonik-Light.otf");
-     font-family: 'Aeonik Light'
- }
-@font-face {
-     src: url("./assets/Aeonik-Thin.otf");
-     font-family: 'Aeonik Thin'
- }
 html {
   --color-primary: #E12121;
   --color-secondary: #1A1A1B;
@@ -53,6 +34,22 @@ html {
   }
 }
 
+@font-face {
+  src: url("medias/fonts/aeonik/Aeonik-Regular.otf");
+  font-family: "Aeonik Regular";
+}
+@font-face {
+  src: url("medias/fonts/aeonik/Aeonik-Bold.otf");
+  font-family: "Aeonik Bold";
+}
+@font-face {
+  src: url("medias/fonts/aeonik/Aeonik-Light.otf");
+  font-family: "Aeonik Light";
+}
+@font-face {
+  src: url("medias/fonts/aeonik/Aeonik-Thin.otf");
+  font-family: "Aeonik Thin";
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -61,10 +58,8 @@ html {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -99,12 +94,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -112,10 +104,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -132,12 +122,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -155,10 +143,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -208,14 +194,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -223,8 +205,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -233,8 +214,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -283,18 +263,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -317,10 +291,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -336,10 +308,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -354,10 +324,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -392,7 +360,7 @@ template {
   display: none;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -499,6 +467,16 @@ div selection {
   background-color: red;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: "Lato Regular";
+  -webkit-text-fill-color: #1A1A1B !important;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Aeonik Regular", "Segoe UI", "Arial", Verdana, sans-serif;
@@ -590,7 +568,8 @@ p.commum {
 }
 .noises__noise {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -693,7 +672,8 @@ p.commum {
 }
 .footer__noise {
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   mix-blend-mode: multiply;
   width: 100%;
 }
@@ -962,7 +942,8 @@ p.commum {
   top: 0;
   width: 100%;
   opacity: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   mix-blend-mode: multiply;
   transition: var(--transition-speed) var(--transition-timing-function);
 }
@@ -1106,8 +1087,9 @@ p.commum {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #00000060;
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   height: 100%;
   width: 100%;
   position: fixed;
@@ -1131,6 +1113,7 @@ p.commum {
   width: 100%;
   height: 100px;
   min-height: 100px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -1184,7 +1167,7 @@ p.commum {
   height: 1px;
   width: calc(100% + var(--horizontal-distance--mobile) * 2);
   transform: translateX(calc(var(--horizontal-distance--mobile) * -1));
-  background-color: #ffffff93;
+  background-color: rgba(255, 255, 255, 0.5764705882);
 }
 .toggle-menu__footer__icons__icon, .toggle-menu__footer__icons__icon:link, .toggle-menu__footer__icons__icon:visited {
   text-decoration: none;
@@ -1194,10 +1177,10 @@ p.commum {
   margin-right: 25px;
 }
 .toggle-menu__footer__icons__icon__media {
-  fill: #ffffff93;
+  fill: rgba(255, 255, 255, 0.5764705882);
 }
 .toggle-menu__footer__hp {
-  color: #ffffff93;
+  color: rgba(255, 255, 255, 0.5764705882);
   font-family: "Aeonik Thin";
   font-size: 2.2rem;
 }
@@ -1288,7 +1271,8 @@ p.commum {
 }
 .services__content__services__service__img {
   border-radius: 99px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   left: 0;
   top: 50%;
@@ -1389,7 +1373,8 @@ p.commum {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     height: 100%;
     margin-bottom: 200px;
     position: relative;
@@ -1397,15 +1382,17 @@ p.commum {
     transition: all 0.8s ease;
   }
   .services__content__services--mobile__services__service__img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
     position: absolute;
   }
   .services__content__services--mobile__services__service__blur {
-    background-color: #00000028;
+    background-color: rgba(0, 0, 0, 0.1568627451);
     position: absolute;
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     height: 100%;
     width: 100%;
   }
@@ -1447,7 +1434,8 @@ p.commum {
     justify-content: space-between;
     align-items: flex-start;
     background-color: var(--color-secondary);
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1552,8 +1540,9 @@ p.commum {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #0000003a;
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.2274509804);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   display: none;
 }
 .saiba-mais__box {
@@ -1608,7 +1597,8 @@ p.commum {
 .saiba-mais__popUp__img {
   height: 40%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 .saiba-mais__popUp__content {
@@ -1690,6 +1680,9 @@ p.commum {
   max-width: var(--max-width);
   mix-blend-mode: multiply;
   position: absolute;
+}
+.home .hero-section__noise::-moz-selection {
+  background-color: transparent;
 }
 .home .hero-section__noise::selection {
   background-color: transparent;
@@ -2215,7 +2208,7 @@ p.commum {
   line-height: 30px;
 }
 .home .about__box__text-box-box__text-box__titles__subtitle {
-  color: #424258af;
+  color: rgba(66, 66, 88, 0.6862745098);
   font-size: 1.6rem;
   font-weight: 1000;
   letter-spacing: 1px;
@@ -2230,7 +2223,8 @@ p.commum {
   height: 103vh;
   max-height: 1200px;
   width: 55%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 1030px) {
   .home .about__box {
@@ -2470,7 +2464,8 @@ p.commum {
 .home .horizontal-section__slide__content-box__img {
   background-color: lightblue;
   width: 60%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   right: 0;
 }
@@ -2485,7 +2480,8 @@ p.commum {
     display: none;
   }
   .home .horizontal-section__slide__content-box__img--portrait {
-    object-fit: unset;
+    -o-object-fit: unset;
+       object-fit: unset;
     width: 17%;
     height: unset;
     position: absolute;
@@ -2531,6 +2527,7 @@ p.commum {
   }
 }
 .home .sticky-wrapper {
+  position: -webkit-sticky;
   position: sticky;
   overflow: hidden;
   width: 100%;
@@ -2570,7 +2567,8 @@ p.commum {
 }
 .home .differential__differentials__noise {
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   mix-blend-mode: multiply;
   width: 100%;
 }
@@ -2618,6 +2616,7 @@ p.commum {
   }
 }
 .differential--mobile__slider {
+  cursor: -webkit-grab;
   cursor: grab;
   height: 100%;
   width: 100%;
@@ -3126,7 +3125,8 @@ p.commum {
   width: 100%;
 }
 .contact__content__image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   image-rendering: optimizeSpeed;
   width: 50%;
   height: 100%;
@@ -3213,6 +3213,16 @@ p.commum {
   margin-right: 0;
   width: 50%;
 }
+.contact__content__container__form-box__form__input::-moz-placeholder {
+  color: var(--color-secondary);
+  font-style: italic;
+  font-family: "Aeonik Light";
+}
+.contact__content__container__form-box__form__input:-ms-input-placeholder {
+  color: var(--color-secondary);
+  font-style: italic;
+  font-family: "Aeonik Light";
+}
 .contact__content__container__form-box__form__input::placeholder {
   color: var(--color-secondary);
   font-style: italic;
@@ -3263,8 +3273,9 @@ p.commum {
   display: none;
 }
 .contact__message__blur {
-  background-color: #0f0f0f46;
-  backdrop-filter: blur(3px);
+  background-color: rgba(15, 15, 15, 0.2745098039);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -3495,4 +3506,4 @@ p.commum {
     position: relative;
     bottom: -22px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

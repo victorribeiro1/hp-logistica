@@ -1,3 +1,4 @@
+
 const slider = document.querySelector('.differential--mobile__slider')
 const innerSlider = document.querySelector('.differential--mobile__differentials')
 
